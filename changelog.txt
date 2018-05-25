@@ -1,0 +1,48 @@
+## 2018-5-25
+• Updated app with updated pages for agreements
+
+## 2017-10-27
+• Added branches on edit agreements
+
+## 2017-10-10
+• Added agreements tab on dashboard
+
+## 2017-9-15
+• Added notes on agreements page
+
+## 2017-9-13
+• Updated Agreements page
+• Updated edit contact page
+
+## 2017-9-7
+• Added Agreements menu
+• Removed Carriers menu
+• Added Administration menu
+
+## 2017-7-23
+• Edit carrier contact search filter, page
+• Dashboard changed from carriers to carrier contacts
+• Add new contact acquisition checkbox created
+• Rest of changes on email
+
+## 2017-7-14
+• Dashboard list change from carrier contacts, to carriers
+• On carrier contact search filter -  state has been removed
+• On carrier contact search result -  agency, region, and state has been removed.
+• On add carrier contact - Phone Number is no longer required, as well as acquisition contact and Email
+• On edit carrier contact, notes has been removed from the tab and added on the same page below contact
+• Add notes on edit carrier contact, now has the option to flag red
+• On edit carrier contact search - when note is flag red, then display red icon
+
+## 2017-6-16
+• Created the ability to assign line of business to carriers
+• Edited carrier results search page
+
+## 2017-6-15
+• Re-organzied navigation menu
+• Created Add new carrier (carriers.html) 
+• Created Carrier search (carrier-search.html)
+
+
+## 2017-6-7
+• Initial commit

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Office of America - Carrier Contact Database</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/carriers.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Chosen Multi Select -->
+    <link rel="stylesheet" href="chosen_v1.6.2/docsupport/style.css">
+    <link rel="stylesheet" href="chosen_v1.6.2/docsupport/prism.css">
+    <link rel="stylesheet" href="chosen_v1.6.2/chosen.css">
+    <script type="text/javascript" src="chosen_v1.6.2/chosen.jquery.js"></script>
+    <script type="text/javascript" src="chosen_v1.6.2/docsupport/prism.js"></script>
+
+</head>
+
+<body class="portal-pad portal-page">
+    <nav class="navbar navbar-inverse navbar-fixed-top menu-top">
+        <div class="container-fluid menu-margin">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".sidebar1" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img src="img/logo.png" width="150" alt="Insurance Office of America">
+                </a>
+                <h4 class="company-title">Insurance Office of America</h4>
+                <h5>Carrier Contact Database</h5>
+            </div>
+            <div id="navbar" role="navigation" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Chris Robertson <i class="fa fa-cog" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu">
+                            <div class="arrow-up"></div>
+                            <li><a href="#">Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid content">
+        <div class="row sidebar-container">
+            <div id="sidebar" class="col-xs-12 col-sm-3 col-md-12 sidebar1 sidebar navbar-collapse collapse">
+                <ul class="nav nav-sidebar">
+                    <li>
+                        <a href="index.html">
+                            <i class="fa fa-dashboard fa-2x" aria-hidden="true"></i><span>Dashboard</span>
+                        </a>
+                        <hr />
+                    </li>
+
+                    <li>
+                        <a href="carrier-search.html">
+                            <i class="fa fa-file-text fa-2x" aria-hidden="true"></i><span>Agreements</span>
+                        </a>
+                        <hr />
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-id-card fa-2x" aria-hidden="true"></i><span>Contact</span><i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="add-carrier-contact.html">Add New Contacts</a>
+                                <hr>
+                            </li>
+                            <li><a href="carrier-contact-search.html">View Contacts</a>
+                                <hr>
+                            </li>
+                        </ul>
+                        <hr />
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-gears fa-2x" aria-hidden="true"></i><span> Administration </span><i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="carrier-search.html">Carriers</a>
+                                <hr>
+                            </li>
+                        </ul>
+                        <hr />
+                    </li>
+
+                    <ul class="nav nav-sidebar nav-sidebar2">
+                        <li class="dropdown">
+                            <hr>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-cog fa-3x" aria-hidden="true"></i><span> Chris Robertson</span>
+                     <i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Edit Profile</a>
+                                </li>
+                                <li><a href="#">Logout</a>
+                                </li>
+                            </ul>
+                            <hr>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+            <!-- Body -->
+            <div class="body-container">
+
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 title-header spacerbottom20">
+                    <div class="pull-left head-drop">
+                        <div class="btn-group">
+                            Carrier Contact Search
+                        </div>
+                    </div>
+                    <div class="pull-right">
+                        <a href="add-carrier-contact.html" class="btn carrier-btn pull-right"><i class="fa fa-plus"></i> Add New Contact</a>
+                    </div>
+                </div>
+
+                    <div class="container-content">
+                        <form>
+                            <div class="row">
+                                <div class="form-group col-sm-12 col-md-6 col-lg-3">
+                                    <label class="control-label" for="">Carrier</label>
+                                    <div class="input-group">
+                                        <input class="form-control" id="CarrierId" name="" type="search" value="" autocomplete="off">
+                                        <input name="" type="hidden" class="autocompletehidden" value="">
+                                        <div class="input-group-addon"><i class="fa fa-search"></i></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-sm-12 col-md-6 col-lg-3">
+                                    <label class="control-label" for="">Agency</label>
+                                    <select data-placeholder=" -- Select Agency --" multiple class="chosen-select-width" tabindex="16">
+                                        <option>IOA</option>
+                                        <option>Eagle</option>
+                                        <option>IOA National</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-sm-12 col-md-6 col-lg-3">
+                                    <label class="control-label" for="">Line of Business</label>
+                                    <select data-placeholder=" -- Select Line of Business --" multiple class="chosen-select-width" tabindex="16">
+                                        <option>Commercial</option>
+                                        <option>Personal</option>
+                                        <option>Benefits</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-sm-12 col-md-6 col-lg-3">
+                                    <label class="control-label" for="">Name:</label>
+                                    <input id="" name="" class="form-control input-md" required="" type="text">
+                                </div>
+
+                                <div class="form-group col-sm-12 col-md-6 col-lg-3">
+                                    <label class="control-label" for="">Role: </label>
+                                    <select data-placeholder="-- Select Role -- " multiple class="chosen-select-width" tabindex="16">
+                                        <option>Accounting</option>
+                                        <option>Acquisitions</option>
+                                        <option>Commission Statements</option>
+                                        <option>Contracting</option>
+                                        <option>Licensing</option>
+                                        <option>Logins</option>
+                                        <option>Marketing</option>
+                                        <option>Operations</option>
+                                        <option>Principal</option>
+                                        <option>Underwriter</option>
+                                    </select>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col-sm-12 col-md-6 col-lg-4 spacer20">
+                                    <button id="carriercontact" class="btn btn-primary">Clear Filters</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+
+                        <div class="tablecontainer spacer20">
+                            <div class="col-md-12 col-xs-12 panel-heading tableheader">
+                                <div class="pull-left head-drop">
+                                     Search Results
+                                </div>
+                            </div>
+
+                            <div class="panel-body">
+                                <div class="portal-tables">
+                                    <table class="table-hover table-striped table-condensed cf">
+                                        <thead class="cf">
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Email</th>
+                                                <th>Phone Number</th>
+                                                <th>Title</th>
+                                                <th>Carrier</th>
+                                                <th>Agency</th>
+                                                <th>Line of Business</th>
+                                                <th>Notes</th>
+                                                <th class="action">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            <tr>
+                                                <td data-title="Name">Bernard Ware</td>
+                                                <td data-title="Email"><a href="mailto:bernard.ware@company.com">bernard.ware@company.com</td>
+                                                <td data-title="Phone Number">407-788-3000</td>
+                                                <td data-title="Title">Supervisor</td>
+                                                <td data-title="Carrier">CNA</td>
+                                                <td data-title="Agency">IOA</td>
+                                                <td data-title="Line of Business">Commercial</td>
+                                                <td data-title="Notes"> <a href="#" data-toggle="tooltip" title="Call before 10am. After 10am, no one is reachable as his calendar is full. Out of office on Mondays and Tuesdays.">Call before 10am... </a></td>
+                                                <!--Only use first three words for tooltip-->
+                                                <td data-title="Action" class="actionBtn">
+                                                   <div class="btn-cell">
+                                                        <a href="edit-carrier-contact.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td data-title="Name">William Carter</td>
+                                                <td data-title="Email"><a href="mailto:william.carter@company.com">william.carter@company.com</td>
+                                                <td data-title="Phone Number">407-788-3000</td>
+                                                <td data-title="Title">Supervisor</td>
+                                                <td data-title="Carrier">CNA</td>
+                                                <td data-title="Agency">IOA</td>
+                                                <td data-title="Line of Business">Commercial</td>
+                                                <td data-title="Notes"><a href="#" data-toggle="tooltip" title="Please do not call. Only email in order to create a record.">Please do not... </a><i class="fa fa-flag red"></i> </td>
+                                                <td data-title="Action" class="actionBtn">
+                                                   <div class="btn-cell">
+                                                        <a href="edit-carrier-contact.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td data-title="Name">Graham Hazel</td>
+                                                <td data-title="Email"><a href="mailto:graham.hazel@company.com">graham.hazel@company.com</td>
+                                                <td data-title="Phone Number">407-788-3000</td>
+                                                <td data-title="Title">Supervisor</td>
+                                                <td data-title="Carrier">CNA</td>
+                                                <td data-title="Agency">IOA</td>
+                                                <td data-title="Line of Business">Commercial</td>
+                                                <td data-title="Notes"> <a href="#" data-toggle="tooltip" title="Call before 10am. After 10am, no one is reachable as his calendar is full. Out of office on Mondays and Tuesdays.">Call before 10am... </a></td>
+                                                <td data-title="Action" class="actionBtn">
+                                                   <div class="btn-cell">
+                                                        <a href="edit-carrier-contact.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td data-title="Name">Jason Pettway</td>
+                                                <td data-title="Email"><a href="mailto:bernard.ware@company.com">jason.pettway@company.com</td>
+                                                <td data-title="Phone Number">407-788-3000</td>
+                                                <td data-title="Title">Supervisor</td>
+                                                <td data-title="Carrier">CNA</td>
+                                                <td data-title="Agency">IOA</td>
+                                                <td data-title="Line of Business">Commercial</td>
+                                                <td data-title="Notes"> <a href="#" data-toggle="tooltip" title="Call before 10am. After 10am, no one is reachable as his calendar is full. Out of office on Mondays and Tuesdays.">Call before 10am... </a></td>
+                                                <td data-title="Action" class="actionBtn">
+                                                   <div class="btn-cell">
+                                                        <a href="edit-carrier-contact.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <nav aria-label="Page navigation">
+                                    <ul class="pagination">
+                                        <li>
+                                            <a href="#" aria-label="Previous">
+                                                <span aria-hidden="true">«</span>
+                                            </a>
+                                        </li>
+                                        <li class="active"><a href="#">1</a>
+                                        </li>
+                                        <li><a href="#">2</a>
+                                        </li>
+                                        <li><a href="#">3</a>
+                                        </li>
+                                        <li><a href="#">4</a>
+                                        </li>
+                                        <li><a href="#">5</a>
+                                        </li>
+                                        </li>
+                                        <li>
+                                            <a href="#" aria-label="Next">
+                                                <span aria-hidden="true">»</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center copyright">
+        <p>Copyright &#169; 2017 Insurance Office of America. All rights reserved. Version 1.0</p>
+    </div>
+    <script type="text/javascript" src="chosen_v1.6.2/docsupport/multi-select.js"></script>
+    <script type="text/javascript" src="js/tooltip.js"></script>
+
+</body>
+</html>

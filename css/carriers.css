@@ -1,0 +1,18 @@
+.view {
+    padding: 15px;
+}
+
+.form-group {
+	margin-bottom: 15px;
+}
+
+.buttons-footer {
+    padding: 15px;
+}
+
+@media only screen and (max-width: 1279px) {
+	th {
+		display: none !important;
+	}
+
+}

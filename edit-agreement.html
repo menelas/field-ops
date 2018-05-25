@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Office of America - Carrier Contact Database</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Chosen Multi Select -->
+    <link rel="stylesheet" href="chosen_v1.6.2/docsupport/style.css">
+    <link rel="stylesheet" href="chosen_v1.6.2/docsupport/prism.css">
+    <link rel="stylesheet" href="chosen_v1.6.2/chosen.css">
+    <script type="text/javascript" src="chosen_v1.6.2/chosen.jquery.js"></script>
+    <script type="text/javascript" src="chosen_v1.6.2/docsupport/prism.js"></script>
+
+    <!-- Bootstrap Date-Picker Plugin -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+    <script type="text/javascript" src="js/date-picker.js"></script>
+
+    <!-- Bootstrap Toggle -->
+    <link rel="stylesheet" href="bootstrap/css/toggle/bootstrap-toggle.min.css">
+    <script type="text/javascript" src="bootstrap/js/toggle/bootstrap-toggle.min.js"></script>
+
+</head>
+
+<body class="portal-pad portal-page">
+    <nav class="navbar navbar-inverse navbar-fixed-top menu-top">
+        <div class="container-fluid menu-margin">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".sidebar1" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img src="img/logo.png" width="150" alt="Insurance Office of America">
+                </a>
+                <h4 class="company-title">Insurance Office of America</h4>
+                <h5>Carrier Contact Database</h5>
+            </div>
+            <div id="navbar" role="navigation" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Chris Robertson <i class="fa fa-cog" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu">
+                            <div class="arrow-up"></div>
+                            <li><a href="#">Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid content">
+        <div class="row sidebar-container">
+            <div id="sidebar" class="col-xs-12 col-sm-3 col-md-12 sidebar1 sidebar navbar-collapse collapse">
+                <ul class="nav nav-sidebar">
+                    <li>
+                        <a href="index.html">
+                            <i class="fa fa-dashboard fa-2x" aria-hidden="true"></i><span>Dashboard</span>
+                        </a>
+                        <hr />
+                    </li>
+
+                    <li>
+                        <a href="carrier-search.html">
+                            <i class="fa fa-file-text fa-2x" aria-hidden="true"></i><span>Agreements</span>
+                        </a>
+                        <hr />
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-id-card fa-2x" aria-hidden="true"></i><span>Contact</span><i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="add-carrier-contact.html">Add New Contacts</a>
+                                <hr>
+                            </li>
+                            <li><a href="carrier-contact-search.html">View Contacts</a>
+                                <hr>
+                            </li>
+                        </ul>
+                        <hr />
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-gears fa-2x" aria-hidden="true"></i><span> Administration </span><i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="carrier-search.html">Carriers</a>
+                                <hr>
+                            </li>
+                        </ul>
+                        <hr />
+                    </li>
+
+                    <ul class="nav nav-sidebar nav-sidebar2">
+                        <li class="dropdown">
+                            <hr>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-cog fa-3x" aria-hidden="true"></i><span> Chris Robertson</span>
+                     <i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Edit Profile</a>
+                                </li>
+                                <li><a href="#">Logout</a>
+                                </li>
+                            </ul>
+                            <hr>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+            <!-- Body -->
+            <div class="body-container">
+
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 title-header spacerbottom20">
+                    <div class="pull-left head-drop">
+                        <div class="btn-group">
+                            Edit Agreement
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-content">
+                    <form>
+                        <div class="row">
+
+                            <div class="col-sm-12 col-md-12 col-lg-4">
+                                <label class="required control-label" for="">Carrier:</label>
+                                <input id="" name="" class="form-control input-md" value="Motionways, Inc." readonly type="text">
+                            </div>
+
+                            <div class="col-sm-12 col-md-4 col-lg-4">
+                                <label class="control-label" for="">Master Code</label>
+                                <input id="" name="" value="MNW453" class="form-control input-md" required="" type="text">
+                            </div>
+
+                            <div class="col-sm-12 col-md-4 col-lg-4">
+                                <label class="required control-label" for="">Branch</label>
+                                <div class="input-group">
+                                    <input class="form-control" id="CarrierId" name="" type="search" value="Longwood, FL" autocomplete="off">
+                                    <input name="" type="hidden" class="autocompletehidden" value="">
+                                    <div class="input-group-addon"><i class="fa fa-search"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <hr />
+
+                    <div class="butttons-footer spacerbottom20 clearfix">
+                        <button id="cancel" name="cancel" class="btn btn-default"> Cancel</button>
+                        <a role="button" id="save" name="save" href="edit-agreement.html" class="pull-right btn btn-primary"> Save</a>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <div id="nav-tabs">
+                                <ul class="nav nav-tabs spacer20">
+                                    <li class="active"><a data-toggle="tab" href="#agreements"><i class="fa fa-sitemap"></i> Branch Agreements</a>
+                                    </li>
+                                    <li class="sep"><a data-toggle="tab" href="#add-branch-code"><i class="fa fa-list-ol"></i> Codes</a>
+                                    </li>
+                                    <li class="sep"><a data-toggle="tab" href="#notes"><i class="fa fa-sticky-note"></i> Carrier Notes & History</a>
+                                    </li>
+                                    <li class="sep"><a data-toggle="tab" href="#contacts"><i class="fa fa-address-card"></i> Contacts</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="tab-content">
+                                <div id="agreements" class="tab-pane fade in active tabs-info">
+
+                                    <button id="add-new-branch" name="add-new-branch" data-toggle="modal" data-target="#add-branch-agreement" class="btn carrier-btn pull-right btn-table"> <i class="fa fa-plus"></i> Add Agreement</button>
+                                    <div class="portal-tables">
+                                        <table class="table-hover table-striped table-condensed cf no-border">
+                                            <thead class="cf">
+                                                <tr>
+                                                    <th>Branch</th>
+                                                    <th>Agency</th>
+                                                    <th>Line of Business</th>
+                                                    <th>Book</th>
+                                                    <th>Status</th>
+                                                    <th>Effective Date</th>
+                                                    <th>Inactive Date</th>
+                                                    <th class="col-lg-3 action">Action</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr>
+                                                    <td data-title="Branch">Longwood, FL</td>
+                                                    <td data-title="Agency">IOA, Eagle</td>
+                                                    <td data-title="Line of Business">Commercial, Personal</td>
+                                                    <td data-title="Book">-----</td>
+                                                    <td data-title="Status">Active</td>
+                                                    <td data-title="Effective Date">7/16/2017</td>
+                                                    <td data-title="Inactive Date">7/16/2018</td>
+                                                    <td data-title="Actions" class="actionBtn">
+                                                        <div class="btn-cell">
+                                                            <a href="#" data-target="#branch-agreement-modal" data-toggle="modal" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                        <div class="btn-cell">
+                                                            <a href="" data-toggle="tooltip" data-placement="top" class="actionRed"><i class="fa fa-close"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td data-title="Branch">Tampa, FL</td>
+                                                    <td data-title="Agency">Eagle</td>
+                                                    <td data-title="Line of Business">Personal</td>
+                                                    <td data-title="Book">-----</td>
+                                                    <td data-title="Status">Active</td>
+                                                    <td data-title="Effective Date">7/15/2017</td>
+                                                    <td data-title="Inactive Date">7/15/2018</td>
+                                                    <td data-title="Actions" class="actionBtn">
+                                                        <div class="btn-cell">
+                                                            <a href="#" data-target="#branch-agreement-modal" data-toggle="modal" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                        <div class="btn-cell">
+                                                            <a href="" data-toggle="tooltip" data-placement="top" class="actionRed"><i class="fa fa-close"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td data-title="Branch">Ft. Myers</td>
+                                                    <td data-title="Agency">IOA</td>
+                                                    <td data-title="Line of Business">Commercial</td>
+                                                    <td data-title="Book">-----</td>
+                                                    <td data-title="Status">Active</td>
+                                                    <td data-title="Effective Date">7/14/2017</td>
+                                                    <td data-title="Inactive Date">7/14/2018</td>
+                                                    <td data-title="Actions" class="actionBtn">
+                                                        <div class="btn-cell">
+                                                            <a href="#" data-target="#branch-agreement-modal" data-toggle="modal" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                        <div class="btn-cell">
+                                                            <a href="" data-toggle="tooltip" data-placement="top" class="actionRed"><i class="fa fa-close"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td data-title="Branch">Boca Raton</td>
+                                                    <td data-title="Agency">IOA National</td>
+                                                    <td data-title="Line of Business">Benefits</td>
+                                                    <td data-title="Book">-----</td>
+                                                    <td data-title="Status">-----</td>
+                                                    <td data-title="Effective Date">7/13/2017</td>
+                                                    <td data-title="Inactive Date">7/13/2018</td>
+                                                    <td data-title="Actions" class="actionBtn">
+                                                        <div class="btn-cell">
+                                                            <a href="#" data-target="#branch-agreement-modal" data-toggle="modal" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                        <div class="btn-cell">
+                                                            <a href="" data-toggle="tooltip" data-placement="top" class="actionRed"><i class="fa fa-close"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td data-title="Branch">Marathon, FL</td>
+                                                    <td data-title="Agency">Eagle</td>
+                                                    <td data-title="Line of Business">Benefits</td>
+                                                    <td data-title="Book">-----</td>
+                                                    <td data-title="Status">-----</td>
+                                                    <td data-title="Effective Date">7/12/2017</td>
+                                                    <td data-title="Inactive Date">7/12/2018</td>
+                                                    <td data-title="Actions" class="actionBtn">
+                                                        <div class="btn-cell">
+                                                            <a href="#" data-target="#branch-agreement-modal" data-toggle="modal" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                        <div class="btn-cell">
+                                                            <a href="" data-toggle="tooltip" data-placement="top" class="actionRed"><i class="fa fa-close"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <!-- Edit Modal -->
+                                    <div id="add-branch-agreement" class="modal fade" role="dialog">
+                                        <div class="modal-dialog modal-lg">
+
+                                            <!-- Modal content-->
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                    <h4 class="modal-title">Branch Agreement</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form role="form" class="">
+                                                        <fieldset>
+                                                            <div class="row">
+                                                                <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                                                    <label class="required control-label" for="">Branch:</label>
+                                                                    <input id="" name="" value="Longwood" class="form-control input-md" required type="text">
+
+                                                                    <div class="modal-checkbox">
+                                                                        <input id="inactive" name="" value="true" type="checkbox">
+                                                                        <label class="control-label" for="">Inactive</label>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                                                    <label class="control-label" for="">Agency</label>
+                                                                    <select data-placeholder=" -- Select Agency --" multiple class="chosen-select-width" tabindex="16">
+                                                                        <option selected>IOA</option>
+                                                                        <option selected>Eagle</option>
+                                                                        <option>IOA National</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                                                    <label class="control-label" for="">Line of Business</label>
+                                                                    <select data-placeholder=" -- Select Line of Business --" multiple class="chosen-select-width" tabindex="16">
+                                                                        <option selected>Commercial</option>
+                                                                        <option>Personal</option>
+                                                                        <option>Benefits</option>
+                                                                    </select>
+                                                                </div>
+
+                                                                <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                                                    <label class="control-label" for="">Book of Business</label>
+                                                                    <select data-placeholder=" -- Select Book of Business --" class="chosen-select-width" tabindex="16">
+                                                                        <option>NICS</option>
+                                                                        <option>Option 2</option>
+                                                                        <option>Option 3</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                                                    <label class="control-label" for="">Record Type</label>
+                                                                    <select data-placeholder=" -- Select Record Type --" multiple class="chosen-select-width" tabindex="16">
+                                                                        <option selected>Carrier</option>
+                                                                        <option>Broker</option>
+                                                                    </select>
+                                                                </div>
+
+                                                                <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                                                    <div class="inline">
+                                                                        <label class="control-label" for="">Effective Date:</label>
+                                                                        <input type="search" class="form-control input-sm" name="date" id="date" placeholder="">
+                                                                    </div>
+
+                                                                    <div class="inline">
+                                                                        <label class="control-label" for="">Inactive Date:</label>
+                                                                        <input type="search" class="form-control input-sm" name="date" id="date" placeholder="">
+                                                                    </div>
+
+                                                                    <div class="modal-checkbox">
+                                                                        <input id="perpetual" name="" value="true" type="checkbox">
+                                                                        <label class="control-label" for="">Perpetual</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                                                    <label class="control-label" for="">Master Code:</label>
+                                                                    <input id="" name="" value="MNW453" class="form-control input-md" required type="text">
+                                                                </div>
+
+                                                                <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                                                    <label class="control-label toggle-box" for="">Profit Sharing:</label>
+                                                                    <input type="checkbox" data-toggle="toggle">
+                                                                </div>
+                                                            </div>
+                                                        </fieldset>
+                                                    </form>
+
+                                                    <hr />
+                                                    <div class="butttons-footer spacerbottom15 clearfix">
+                                                        <button id="cancel" data-dismiss="modal" name="cancel" class="btn btn-default"> Cancel</button>
+                                                        <button id="save" data-dismiss="modal" name="save" class="pull-right btn btn-primary"> Save</button>
+                                                    </div>
+
+                                                    <div class="tablecontainer">
+                                                        <div class="col-md-12 col-xs-12 panel-heading tableheader">
+                                                            <form class="form-inline">
+                                                                <div class="form-group branch-sub-code">
+                                                                    <label class="control-label branch-sub-label" for="">Branch Sub Code</label>
+                                                                    <input id="" name="" class="form-control" type="search" value="" placeholder="Type here to search...">
+                                                                </div>
+                                                            </form>
+
+                                                            <button id="add-sub-code" name="add-sub-code" data-toggle="modal" data-target="#add-sub-code" class="btn carrier-btn pull-right btn-table sub-code-button"> <i class="fa fa-plus"></i> Add Sub Code</button>
+
+                                                        </div>
+                                                        <div class="panel-body">
+                                                            <div class="cams-tables">
+                                                                <table class="table-hover table-striped table-condensed cf parent-child-main-table">
+                                                                    <thead class="cf">
+
+                                                                        <tr>
+                                                                            <th>Sub Code</th>
+                                                                            <th>Effective Date</th>
+                                                                            <th>Inactive Date</th>
+                                                                            <th>Status</th>
+                                                                            <th class="action">Action</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+
+                                                                        <tr>
+                                                                            <td data-title="Sub Code">MSB123</td>
+                                                                            <td data-title="Effective Date">12/1/2017</td>
+                                                                            <td data-title="Inactive Date">12/1/2018</td>
+                                                                            <td data-title="Status">Active</td>
+                                                                            <td data-title="Action" class="actionBtn">
+                                                                                <div class="btn-cell">
+                                                                                    <a href="#" data-toggle="modal" data-target="#add-sub-code" data-dismiss="modal" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                                                </div>
+                                                                                <div class="btn-cell">
+                                                                                    <a href="#" class="actionRed"><i class="fa fa-close"></i></a>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+
+                                                                        <tr>
+                                                                            <td data-title="Sub Code">CJK434</td>
+                                                                            <td data-title="Effective Date">11/19/2017</td>
+                                                                            <td data-title="Inactive Date">11/19/2018</td>
+                                                                            <td data-title="Status">Active</td>
+                                                                            <td data-title="Action" class="actionBtn">
+                                                                                <div class="btn-cell">
+                                                                                    <a href="#" data-toggle="modal" data-target="#add-sub-code" data-dismiss="modal" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                                                </div>
+                                                                                <div class="btn-cell">
+                                                                                    <a href="#" class="actionRed"><i class="fa fa-close"></i></a>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+
+                                                            <div class="text-center">
+                                                                <nav aria-label="Page navigation">
+                                                                    <ul class="pagination">
+                                                                        <li>
+                                                                            <a href="#" aria-label="Previous">
+                                                                                    <span aria-hidden="true">«</span>
+                                                                                </a>
+                                                                        </li>
+                                                                        <li class="active"><a href="#">1</a>
+                                                                        </li>
+                                                                        <li><a href="#">2</a>
+                                                                        </li>
+                                                                        </li>
+                                                                        <li><a href="#">3</a>
+                                                                        </li>
+                                                                        </li>
+                                                                        <li><a href="#">4</a>
+                                                                        </li>
+                                                                        </li>
+                                                                        <li><a href="#">5</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#" aria-label="Next">
+                                                                                    <span aria-hidden="true">»</span>
+                                                                                </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </nav>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Modal -->
+                                </div>
+
+                                <div id="add-branch-code" class="tab-pane fade in tabs-info">
+                                    <button id="add-new-branch" name="add-new-branch" data-toggle="modal" data-target="#add-sub-code2" class="btn carrier-btn pull-right btn-table"> <i class="fa fa-plus"></i> Add Branch Code</button>
+
+                                    <div class="portal-tables">
+                                        <table class="table-hover table-striped table-condensed cf no-border">
+                                            <thead class="cf">
+                                                <tr>
+                                                    <th>Branch</th>
+                                                    <th class="col-lg-4">Master Code</th>
+                                                    <th class="col-lg-4 action">Action</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr>
+                                                    <td data-title="Branch"><i class="fa fa-plus-circle plus-sign" aria-hidden="true" data-tc="tg1"></i><i style="display: none;" class="fa fa-minus-circle minus-sign" aria-hidden="true" data-tc="tg1"></i> Longwood</td>
+                                                    <td data-title="Code(s)">MSB123</td>
+                                                    <td data-title="Actions" class="actionBtn">
+                                                        <div class="btn-cell">
+                                                            <a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="toggle-tr tg1" style="display: none;">
+                                                    <td data-title="Branch" class="hide-small-screen">&nbsp;</td>
+                                                    <td data-title="Code(s)">
+                                                        <table>
+                                                            <tr>
+                                                                <th>Sub Codes</th>
+                                                                <th>Effective Dates</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>MSB345</td>
+                                                                <td>09/1/2017</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>MSB346</td>
+                                                                <td>09/1/2017</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>MSB347</td>
+                                                                <td>09/1/2017</td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td data-title="Actions" class="actionBtn actionBtn2">
+
+                                                        <table>
+                                                            <tr>
+                                                                <th>Action</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><a name="edit-contact" data-toggle="modal" data-target="add-sub-code" class="actionBlue"><i class="fa fa-pencil"></i></a> <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a> <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a> <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a></td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td data-title="Branch"><i class="fa fa-plus-circle plus-sign" aria-hidden="true" data-tc="tg2"></i><i style="display: none;" class="fa fa-minus-circle minus-sign" aria-hidden="true" data-tc="tg2"></i> Key West</td>
+                                                    <td data-title="Code(s)">CJK434</td>
+                                                    <td data-title="Actions" class="actionBtn">
+                                                        <div class="btn-cell">
+                                                            <a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="toggle-tr tg2" style="display: none;">
+                                                    <td data-title="Branch" class="hide-small-screen">&nbsp;</td>
+                                                    <td data-title="Code(s)">
+                                                        <table>
+                                                            <tr>
+                                                                <th>Codes</th>
+                                                                <th>Start</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>MSB345</td>
+                                                                <td>09/1/2017</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>MSB346</td>
+                                                                <td>09/1/2017</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>MSB347</td>
+                                                                <td>09/1/2017</td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td data-title="Actions" class="actionBtn actionBtn2">
+
+                                                        <table>
+                                                            <tr>
+                                                                <th>Action</th>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td><a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a> <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a> <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a> <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a></td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td data-title="Branch"><i class="fa fa-plus-circle plus-sign" aria-hidden="true" data-tc="tg3"></i><i style="display: none;" class="fa fa-minus-circle minus-sign" aria-hidden="true" data-tc="tg3"></i> Birmingham</td>
+                                                    <td data-title="Code(s)">DKJ402</td>
+                                                    <td data-title="Actions" class="actionBtn">
+                                                        <div class="btn-cell">
+                                                            <a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="toggle-tr tg3" style="display: none;">
+                                                    <td data-title="Branch" class="hide-small-screen">&nbsp;</td>
+                                                    <td data-title="Code(s)">
+                                                        <table>
+                                                            <tr>
+                                                                <th>Codes</th>
+                                                                <th>Start</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>MSB345</td>
+                                                                <td>09/1/2017</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>MSB346</td>
+                                                                <td>09/1/2017</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>MSB347</td>
+                                                                <td>09/1/2017</td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td data-title="Actions" class="actionBtn actionBtn2">
+
+                                                        <table>
+                                                            <tr>
+                                                                <th>Action</th>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td><a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a> <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a> <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a> <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a></td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td data-title="Branch"><i class="fa fa-plus-circle plus-sign" aria-hidden="true" data-tc="tg4"></i><i style="display: none;" class="fa fa-minus-circle minus-sign" aria-hidden="true" data-tc="tg4"></i> Ocala</td>
+                                                    <td data-title="Code(s)">JHA323</td>
+                                                    <td data-title="Actions" class="actionBtn">
+                                                        <div class="btn-cell">
+                                                            <a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="toggle-tr tg4" style="display: none;">
+                                                    <td data-title="Branch" class="hide-small-screen">&nbsp;</td>
+                                                    <td data-title="Code(s)">
+                                                        <table>
+                                                            <tr>
+                                                                <th>Codes</th>
+                                                                <th>Start</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>MSB345</td>
+                                                                <td>09/1/2017</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>MSB346</td>
+                                                                <td>09/1/2017</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>MSB347</td>
+                                                                <td>09/1/2017</td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td data-title="Actions" class="actionBtn actionBtn2">
+
+                                                        <table>
+                                                            <tr>
+                                                                <th>Action</th>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td><a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a> <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a> <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a> <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a></td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td data-title="Branch"><i class="fa fa-plus-circle plus-sign" aria-hidden="true" data-tc="tg5"></i><i style="display: none;" class="fa fa-minus-circle minus-sign" aria-hidden="true" data-tc="tg5"></i> Jacksonville</td>
+                                                    <td data-title="Code(s)">EIR232</td>
+                                                    <td data-title="Actions" class="actionBtn">
+                                                        <div class="btn-cell">
+                                                            <a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="toggle-tr tg5" style="display: none;">
+                                                    <td data-title="Branch" class="hide-small-screen">&nbsp;</td>
+                                                    <td data-title="Code(s)">
+                                                        <table>
+                                                            <tr>
+                                                                <th>Codes</th>
+                                                                <th>Start</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>MSB345</td>
+                                                                <td>09/1/2017</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>MSB346</td>
+                                                                <td>09/1/2017</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>MSB347</td>
+                                                                <td>09/1/2017</td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td data-title="Actions" class="actionBtn actionBtn2">
+
+                                                        <table>
+                                                            <tr>
+                                                                <th>Action</th>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td><a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a> <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a> <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a> <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a></td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <!-- Edit Modal -->
+                                <div id="add-sub-code2" class="add-sub-code modal fade" role="dialog">
+                                    <div class="modal-dialog modal-lg">
+
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                <h4 class="modal-title">Sub Code</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form role="form" class="">
+                                                    <fieldset>
+                                                        <div class="row">
+                                                            <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                                                <label class="required control-label" for="">Sub Code:</label>
+                                                                <input id="" name="" value="MSB434" class="form-control input-md" required type="text">
+
+                                                                <div class="modal-checkbox">
+                                                                    <input id="inactive" name="" value="true" type="checkbox">
+                                                                    <label class="control-label" for="">Inactive</label>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                                                <div class="inline">
+                                                                    <label class="required control-label" for="">Effective Date:</label>
+                                                                    <input type="search" class="form-control input-sm" name="date" id="date" value=" 05/15/2018" placeholder="">
+                                                                </div>
+
+                                                                <div class="inline">
+                                                                    <label class="control-label" for="">Inactive Date:</label>
+                                                                    <input type="search" class="form-control input-sm" name="date" id="date" placeholder="">
+                                                                </div>
+
+                                                                <div class="modal-checkbox">
+                                                                    <input id="perpetual" name="" value="true" type="checkbox">
+                                                                    <label class="control-label" for="">Perpetual</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row">
+                                                            <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                                                <label class="control-label" for="">Book of Business</label>
+                                                                <select data-placeholder=" -- Select Book of Business --" class="chosen-select-width" tabindex="16">
+                                                                        <option>NICS</option>
+                                                                        <option>Option 2</option>
+                                                                        <option>Option 3</option>
+                                                                    </select>
+                                                            </div>
+
+                                                            <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                                                <label class="sr-only control-label" for="">Note:</label>
+                                                                <textarea class="form-control" maxlength="4000" spellcheck="true" rows="11" cols="20" placeholder="Please enter note (maximum of 4000 characters)" id=""></textarea>
+
+                                                                <i class="fa fa-flag red"></i>
+                                                                <label class="control-label" for="flag">Flag:</label>
+                                                                <label for="checkbox">
+                                                                    <input name="checkbox" id="checkbox-sample" value="1" type="checkbox">
+                                                                </label>
+                                                            </div>
+                                                        </div>
+
+                                                    </fieldset>
+                                                </form>
+
+                                                <hr />
+                                                <div class="butttons-footer spacerbottom15 clearfix">
+                                                    <button id="cancel" data-dismiss="modal" name="cancel" class="btn btn-default"> Cancel</button>
+                                                    <button id="save" data-dismiss="modal" name="save" class="pull-right btn btn-primary"> Save</button>
+                                                </div>
+
+                                                <div class="tablecontainer">
+                                                    <div class="col-md-12 col-xs-12 panel-heading tableheader">
+                                                        <form class="form-inline">
+                                                            <div class="form-group branch-sub-code">
+                                                                <label class="control-label branch-sub-label" for="">Branch Sub Code</label>
+                                                                <input id="" name="" class="form-control" type="search" value="" placeholder="Type here to search...">
+                                                            </div>
+                                                        </form>
+
+                                                        <button id="add-sub-code" name="add-sub-code" data-toggle="modal" data-target="#add-sub-code" class="btn carrier-btn pull-right btn-table sub-code-button"> <i class="fa fa-plus"></i> Add Sub Code</button>
+
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <div class="cams-tables">
+                                                            <table class="table-hover table-striped table-condensed cf parent-child-main-table">
+                                                                <thead class="cf">
+
+                                                                    <tr>
+                                                                        <th>Sub Code</th>
+                                                                        <th>Effective Date</th>
+                                                                        <th>Inactive Date</th>
+                                                                        <th>Status</th>
+                                                                        <th class="action">Action</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+
+                                                                    <tr>
+                                                                        <td data-title="Sub Code">MSB123</td>
+                                                                        <td data-title="Effective Date">12/1/2017</td>
+                                                                        <td data-title="Inactive Date">12/1/2018</td>
+                                                                        <td data-title="Status">Active</td>
+                                                                        <td data-title="Action" class="actionBtn">
+                                                                            <div class="btn-cell">
+                                                                                <a href="#" data-toggle="modal" data-target="#add-sub-code" data-dismiss="modal" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                                            </div>
+                                                                            <div class="btn-cell">
+                                                                                <a href="#" class="actionRed"><i class="fa fa-close"></i></a>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td data-title="Sub Code">CJK434</td>
+                                                                        <td data-title="Effective Date">11/19/2017</td>
+                                                                        <td data-title="Inactive Date">11/19/2018</td>
+                                                                        <td data-title="Status">Active</td>
+                                                                        <td data-title="Action" class="actionBtn">
+                                                                            <div class="btn-cell">
+                                                                                <a href="#" data-toggle="modal" data-target="#add-sub-code" data-dismiss="modal" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                                            </div>
+                                                                            <div class="btn-cell">
+                                                                                <a href="#" class="actionRed"><i class="fa fa-close"></i></a>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+
+                                                        <div class="text-center">
+                                                            <nav aria-label="Page navigation">
+                                                                <ul class="pagination">
+                                                                    <li>
+                                                                        <a href="#" aria-label="Previous">
+                                                                                    <span aria-hidden="true">«</span>
+                                                                                </a>
+                                                                    </li>
+                                                                    <li class="active"><a href="#">1</a>
+                                                                    </li>
+                                                                    <li><a href="#">2</a>
+                                                                    </li>
+                                                                    </li>
+                                                                    <li><a href="#">3</a>
+                                                                    </li>
+                                                                    </li>
+                                                                    <li><a href="#">4</a>
+                                                                    </li>
+                                                                    </li>
+                                                                    <li><a href="#">5</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#" aria-label="Next">
+                                                                            <span aria-hidden="true">»</span>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </nav>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Modal -->
+
+                                <div id="notes" class="tab-pane fade in tabs-info">
+
+                                    <button id="" name="" data-toggle="modal" data-target="#add-notes" class="btn carrier-btn pull-right btn-table"> <i class="fa fa-plus"></i> Add Note</button>
+
+                                    <div class="portal-tables">
+                                        <table class="table-hover table-striped table-condensed cf no-border">
+                                            <thead class="cf">
+                                                <tr>
+                                                    <th>Date</th>
+                                                    <th class="col-lg-4">Note</th>
+                                                    <th>Created By
+                                                        <div class="dropdown inline">
+                                                            <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">Users
+                                                            <span class="caret"></span></button>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a href="#">System</a></li>
+                                                                <li><a href="#">All</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </th>
+                                    </div>
+                                    <th>Modified By</th>
+                                    <th class="col-lg-3 action">Action</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-title="Date">12/24/2017</td>
+                                            <td data-title="Note">Added <strong>Longwood</strong> agreement.</td>
+                                            <td data-title="Created By">Donna Kline</td>
+                                            <td data-title="Modified By">Donna Kline</td>
+                                            <td data-title="Action" class="actionBtn">
+                                                <div class="btn-cell">
+                                                    <a href="#" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td data-title="Date">11/23/2017</td>
+                                            <td data-title="Note">Changed master code from <strong>ERT3920</strong> to <strong>MNW453</strong>.</td>
+                                            <td data-title="Created By">Yielena Loubriel</td>
+                                            <td data-title="Modified By">Jason Lacroix</td>
+                                            <td data-title="Action" class="actionBtn">
+                                                <div class="btn-cell">
+                                                    <a href="#" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td data-title="Date">10/1/2017</td>
+                                            <td data-title="Note">Deleted <strong>Ocala</strong> agreement.</td>
+                                            <td data-title="Created By">Jason Dotson</td>
+                                            <td data-title="Modified By">Donna Kline</td>
+                                            <td data-title="Action" class="actionBtn">
+                                                <div class="btn-cell">
+                                                    <a href="#" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td data-title="Date">9/21/2017</td>
+                                            <td data-title="Note"><a href="#" data-toggle="tooltip" data-placement="top" title="Only reachable during 10am-11am through phone. Do not try calling on Fridays after 12pm. If you do they simply with not answer...">Note: Only reachable during 10am-11am through phone...</a>
+                                                <i
+                                                    class="fa fa-flag red"></i>
+                                            </td>
+                                            <td data-title="Created By">Jason Lacroix</td>
+                                            <td data-title="Modified By">Donna Kline</td>
+                                            <td data-title="Action" class="actionBtn">
+                                                <div class="btn-cell">
+                                                    <a href="#" data-target="#modify-note" data-toggle="modal" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td data-title="Date">6/3/2017</td>
+                                            <td data-title="Note">Turned <strong>on</strong> profit sharing.</td>
+                                            <td data-title="Created By">Jonathan Ruthersford</td>
+                                            <td data-title="Modified By">Donna Kline</td>
+                                            <td data-title="Action" class="actionBtn">
+                                                <div class="btn-cell">
+                                                    <a href="#" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div id="contacts" class="tab-pane fade in tabs-info">
+
+                                <a href="add-carrier-contact.html" class="btn carrier-btn pull-right btn-table" role="button"> <i class="fa fa-plus"></i> Add Contact</a>
+
+                                <div class="portal-tables">
+                                    <table class="table-hover table-striped table-condensed cf no-border">
+                                        <thead class="cf">
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Phone Number</th>
+                                                <th>Title</th>
+                                                <th>Agency</th>
+                                                <th>Line of Business</th>
+                                                <th class="col-lg-3 action">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td data-title="Name">Bernard Ware</td>
+                                                <td data-title="Phone Number">407-788-3000</td>
+                                                <td data-title="Title">Director</td>
+                                                <td data-title="Agency">IOA</td>
+                                                <td data-title="Line of Business">Commercial</td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a href="edit-carrier-contact.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                    <div class="btn-cell">
+                                                        <a href="mailto:bernard.ware@company.com" class="actionBlue"><i class="fa fa-envelope"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td data-title="Name">William Carter</td>
+                                                <td data-title="Phone Number">407-788-3000</td>
+                                                <td data-title="Title">Supervisor</td>
+                                                <td data-title="Agency">Eagle</td>
+                                                <td data-title="Line of Business">Personal</td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a href="edit-carrier-contact.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                    <div class="btn-cell">
+                                                        <a href="mailto:william.carter@company.com" class="actionBlue"><i class="fa fa-envelope"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td data-title="Name">Graham Hazel</td>
+                                                <td data-title="Phone Number">407-788-3000</td>
+                                                <td data-title="Title">Manager</td>
+                                                <td data-title="Agency">Eagle</td>
+                                                <td data-title="Line of Business">Personal</td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a href="edit-carrier-contact.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                    <div class="btn-cell">
+                                                        <a href="mailto:graham.hazel@company.com" class="actionBlue"><i class="fa fa-envelope"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td data-title="Name">Jason Pettway</td>
+                                                <td data-title="Phone Number">407-788-3000</td>
+                                                <td data-title="Title">Support</td>
+                                                <td data-title="Agency">Eagle</td>
+                                                <td data-title="Line of Business">Personal</td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a href="edit-carrier-contact.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                    <div class="btn-cell">
+                                                        <a href="mailto:jason.pettway@company.com" class="actionBlue"><i class="fa fa-envelope"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td data-title="Name">Donna Kline</td>
+                                                <td data-title="Phone Number">407-788-3000</td>
+                                                <td data-title="Title">Support</td>
+                                                <td data-title="Agency">IOA National</td>
+                                                <td data-title="Line of Business">Personal</td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a href="edit-carrier-contact.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                    <div class="btn-cell">
+                                                        <a href="mailto:donna.kline@company.com" class="actionBlue"><i class="fa fa-envelope"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <nav aria-label="Page navigation">
+                                    <ul class="pagination">
+                                        <li>
+                                            <a href="#" aria-label="Previous">
+                                                    <span aria-hidden="true">«</span>
+                                                </a>
+                                        </li>
+                                        <li class="active"><a href="#">1</a>
+                                        </li>
+                                        <li><a href="#">2</a>
+                                        </li>
+                                        </li>
+                                        <li><a href="#">3</a>
+                                        </li>
+                                        </li>
+                                        <li><a href="#">4</a>
+                                        </li>
+                                        </li>
+                                        <li><a href="#">5</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" aria-label="Next">
+                                                    <span aria-hidden="true">»</span>
+                                                </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+                            <!-- Edit Modal -->
+                            <div id="add-notes" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">Add Note </h4>
+                                        </div>
+                                        <div class="modal-body">
+
+                                            <label class="sr-only control-label" for="">Note:</label>
+                                            <textarea class="form-control" maxlength="4000" spellcheck="true" rows="11" cols="20" placeholder="Please enter note (maximum of 4000 characters)" id=""></textarea>
+
+                                            <i class="fa fa-flag red"></i>
+                                            <label class="control-label" for="flag">Flag:</label>
+                                            <label for="checkbox">
+                                                    <input name="checkbox" id="checkbox-sample" value="1" type="checkbox">
+                                                </label>
+                                        </div>
+
+                                        <div class="modal-footer">
+                                            <button id="cancel" data-dismiss="modal" name="cancel" class="btn btn-default"> Cancel</button>
+                                            <button id="save" data-dismiss="modal" name="save" class="pull-right btn btn-primary"> Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Modal -->
+
+                            <!-- Edit Modal -->
+                            <div id="modify-note" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">Modify Note </h4>
+                                        </div>
+                                        <div class="modal-body">
+
+                                            <label class="sr-only control-label" for="">Note:</label>
+                                            <textarea class="form-control" maxlength="4000" spellcheck="true" rows="11" cols="20" placeholder="" id="">Only reachable during 10am-11am through phone. Do not try calling on Fridays after 12pm. If you do they simply will not answer. Contact Betty Ross at extension 4562.</textarea>
+
+                                            <i class="fa fa-flag red"></i>
+                                            <label class="control-label" for="flag">Flag:</label>
+                                            <label for="checkbox">
+                                                    <input name="checkbox" checked id="checkbox-sample" value="1" type="checkbox">
+                                                </label>
+                                        </div>
+
+                                        <div class="modal-footer">
+                                            <button id="save" name="save" class="btn btn-primary">Save</button>
+                                            <button id="cancel" name="cancel" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Modal -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="text-center copyright">
+        <p>Copyright &#169; 2017 Insurance Office of America. All rights reserved. Version 1.0</p>
+    </div>
+    <script type="text/javascript" src="chosen_v1.6.2/docsupport/multi-select.js"></script>
+    <script type="text/javascript" src="js/tooltip.js"></script>
+    <script type="text/javascript" src="js/agreement.js"></script>
+
+</body>
+
+</html>

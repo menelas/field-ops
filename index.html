@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Office of America - Carrier Contact Database</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+</head>
+
+<body class="portal-pad portal-page">
+    <nav class="navbar navbar-inverse navbar-fixed-top menu-top">
+        <div class="container-fluid menu-margin">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".sidebar1" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img src="img/logo.png" width="150" alt="Insurance Office of America">
+                </a>
+                <h4 class="company-title">Insurance Office of America</h4>
+                <h5>Carrier Contact Database</h5>
+            </div>
+            <div id="navbar" role="navigation" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Chris Robertson <i class="fa fa-cog" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu">
+                            <div class="arrow-up"></div>
+                            <li><a href="#">Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid content">
+        <div class="row sidebar-container">
+            <div id="sidebar" class="col-xs-12 col-sm-3 col-md-12 sidebar1 sidebar navbar-collapse collapse">
+                <ul class="nav nav-sidebar">
+                    <li>
+                        <a href="index.html">
+                            <i class="fa fa-dashboard fa-2x" aria-hidden="true"></i><span>Dashboard</span>
+                        </a>
+                        <hr />
+                    </li>
+
+                    <li>
+                        <a href="carrier-search.html">
+                            <i class="fa fa-file-text fa-2x" aria-hidden="true"></i><span>Agreements</span>
+                        </a>
+                        <hr />
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-id-card fa-2x" aria-hidden="true"></i><span>Contact</span><i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="add-carrier-contact.html">Add New Contacts</a>
+                                <hr>
+                            </li>
+                            <li><a href="carrier-contact-search.html">View Contacts</a>
+                                <hr>
+                            </li>
+                        </ul>
+                        <hr />
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-gears fa-2x" aria-hidden="true"></i><span> Administration </span><i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="carrier-search.html">Carriers</a>
+                                <hr>
+                            </li>
+                        </ul>
+                        <hr />
+                    </li>
+
+                    <ul class="nav nav-sidebar nav-sidebar2">
+                        <li class="dropdown">
+                            <hr>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-cog fa-3x" aria-hidden="true"></i><span> Chris Robertson</span>
+                     <i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Edit Profile</a>
+                                </li>
+                                <li><a href="#">Logout</a>
+                                </li>
+                            </ul>
+                            <hr>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+            <!-- Body -->
+            <div class="body-container">
+                <div class="tablecontainer">
+
+                    <div id="nav-tabs">
+                        <ul class="nav nav-tabs spacer20">
+                            <li class="active"><a data-toggle="tab" href="#carrier-contacts">Carrier Contacts</a>
+                            </li>
+                            <li class="sep"><a data-toggle="tab" href="#agreements">Agreements</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-content">
+                        <div id="carrier-contacts" class="tab-pane fade in active tabs-info">
+
+                            <a id="search" href="carrier-contact-search.html" class="btn carrier-btn pull-right btn-table"> Search</a>
+
+                            <div class="panel-body">
+                                <div class="portal-tables">
+                                    <table class="table-hover table-striped table-condensed cf no-border">
+                                        <thead class="cf">
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Phone Number</th>
+                                                <th>Title</th>
+                                                <th>Carrier</th>
+                                                <th>Agency</th>
+                                                <th>Line of Business</th>
+                                                <th class="action">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            <tr>
+                                                <td data-title="Name">Bernard Ware</td>
+                                                <td data-title="Phone Number">407-788-3000</td>
+                                                <td data-title="Title">Supervisor</td>
+                                                <td data-title="Carrier">CNA</td>
+                                                <td data-title="Agency">IOA</td>
+                                                <td data-title="Line of Business">Commercial</td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a href="edit-carrier-contact.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                    <div class="btn-cell">
+                                                        <a href="mailto:bernard.ware@company.com" data-toggle="tooltip" data-placement="top" title="Email" class="actionBlue"><i class="fa fa-envelope"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td data-title="Name">Willam Carter</td>
+                                                </td>
+                                                <td data-title="Phone Number">407-788-3000</td>
+                                                <td data-title="Title">Supervisor</td>
+                                                <td data-title="Carrier">Nationwide</td>
+                                                <td data-title="Agency">Eagle</td>
+                                                <td data-title="Line of Business">Personal</td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a href="edit-carrier-contact.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                    <div class="btn-cell">
+                                                        <a href="mailto:william.carter@company.com" data-toggle="tooltip" data-placement="top" title="Email" class="actionBlue"><i class="fa fa-envelope"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td data-title="Name">Graham Hazel</td>
+                                                </td>
+                                                <td data-title="Phone Number">407-788-3000</td>
+                                                <td data-title="Title">Supervisor</td>
+                                                <td data-title="Carrier">Hartford</td>
+                                                <td data-title="Agency">IOA National</td>
+                                                <td data-title="Line of Business">Benefits</td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a href="edit-carrier-contact.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                    <div class="btn-cell">
+                                                        <a href="mailto:graham.hazel@company.com" data-toggle="tooltip" data-placement="top" title="Email" class="actionBlue"><i class="fa fa-envelope"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td data-title="Name">Jason Pettway</td>
+                                                <td data-title="Phone Number">407-788-3000</td>
+                                                <td data-title="Title">Supervisor</td>
+                                                <td data-title="Carrier">Liberty Mutual</td>
+                                                <td data-title="Agency">Eagle</td>
+                                                <td data-title="Line of Business">Personal</td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a href="edit-carrier-contact.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                    <div class="btn-cell">
+                                                        <a href="mailto:jason.pettway@company.com" data-toggle="tooltip" data-placement="top" title="Email" class="actionBlue"><i class="fa fa-envelope"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td data-title="Name">Shawn Walters</td>
+                                                <td data-title="Phone Number">407-788-3000</td>
+                                                <td data-title="Title">Supervisor</td>
+                                                <td data-title="Carrier">Nationwide</td>
+                                                <td data-title="Agency">IOA</td>
+                                                <td data-title="Line of Business">Commercial</td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a href="edit-carrier-contact.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                    <div class="btn-cell">
+                                                        <a href="mailto:shawn.walters@company.com" data-toggle="tooltip" data-placement="top" title="Email" class="actionBlue"><i class="fa fa-envelope"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td data-title="Name">Donald Marshall</td>
+                                                <td data-title="Phone Number">407-788-3000</td>
+                                                <td data-title="Title">Supervisor</td>
+                                                <td data-title="Carrier">CNA</td>
+                                                <td data-title="Agency">IOA</td>
+                                                <td data-title="Line of Business">Commercial</td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a href="edit-carrier-contact.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                    <div class="btn-cell">
+                                                        <a href="mailto:donald.marshall@company.com" data-toggle="tooltip" data-placement="top" title="Email" class="actionBlue"><i class="fa fa-envelope"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td data-title="Name">Gregory Webb</td>
+                                                <td data-title="Phone Number">407-788-3000</td>
+                                                <td data-title="Title">Supervisor</td>
+                                                <td data-title="Carrier">Nationwide</td>
+                                                <td data-title="Agency">Eagle</td>
+                                                <td data-title="Line of Business">Personal</td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a href="edit-carrier-contact.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                    <div class="btn-cell">
+                                                        <a href="mailto:gregory.webb@company.com" data-toggle="tooltip" data-placement="top" title="Email" class="actionBlue"><i class="fa fa-envelope"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td data-title="Name">Jonathan Fowler</td>
+                                                <td data-title="Phone Number">407-788-3000</td>
+                                                <td data-title="Title">Supervisor</td>
+                                                <td data-title="Carrier">Hartford</td>
+                                                <td data-title="Agency">IOA National</td>
+                                                <td data-title="Line of Business">Benefits</td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a href="edit-carrier-contact.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                    <div class="btn-cell">
+                                                        <a href="mailto:jonathan.fowler@company.com" data-toggle="tooltip" data-placement="top" title="Email" class="actionBlue"><i class="fa fa-envelope"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td data-title="Name">Dennis Snyder</td>
+                                                <td data-title="Phone Number">407-788-3000</td>
+                                                <td data-title="Title">Supervisor</td>
+                                                <td data-title="Carrier">Liberty Mutual</td>
+                                                <td data-title="Agency">Eagle</td>
+                                                <td data-title="Line of Business">Personal</td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a href="edit-carrier-contact.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                    <div class="btn-cell">
+                                                        <a href="mailto:dennis.snyder@company.com" data-toggle="tooltip" data-placement="top" title="Email" class="actionBlue"><i class="fa fa-envelope"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td data-title="Name">Stephen Marshall</td>
+                                                <td data-title="Phone Number">407-788-3000</td>
+                                                <td data-title="Title">Supervisor</td>
+                                                <td data-title="Carrier">Nationwide</td>
+                                                <td data-title="Agency">IOA</td>
+                                                <td data-title="Line of Business">Commercial</td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a href="edit-carrier-contact.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                    <div class="btn-cell">
+                                                        <a href="mailto:stephen.marshall@company.com" data-toggle="tooltip" data-placement="top" title="Email" class="actionBlue"><i class="fa fa-envelope"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <nav aria-label="Page navigation">
+                                    <ul class="pagination">
+                                        <li>
+                                            <a href="#" aria-label="Previous">
+                                                <span aria-hidden="true">«</span>
+                                            </a>
+                                        </li>
+                                        <li class="active"><a href="#">1</a>
+                                        </li>
+                                        <li><a href="#">2</a>
+                                        </li>
+                                        <li><a href="#">3</a>
+                                        </li>
+                                        <li><a href="#">4</a>
+                                        </li>
+                                        <li><a href="#">5</a>
+                                        </li>
+                                        </li>
+                                        <li>
+                                            <a href="#" aria-label="Next">
+                                                <span aria-hidden="true">»</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+
+                        <div id="agreements" class="tab-pane fade in tabs-info">
+
+                            <a id="agreement-search" href="agreement-search.html" class="btn carrier-btn pull-right btn-table"> Search</a>
+                            <div class="portal-tables">
+                                <table class="table-hover table-striped table-condensed cf no-border">
+                                    <thead class="cf">
+                                        <tr>
+                                            <th>Carrier</th>
+                                            <th>Agency</th>
+                                            <th>Line of Business</th>
+                                            <th>Location</th>
+                                            <th>Effective Date</th>
+                                            <th>Master Code</th>
+                                            <th class="action">Action</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td data-title="Carrier">CNA</td>
+                                            <td data-title="Agency">IOA, Eagle</td>
+                                            <td data-title="Line of Business">Commercial, Personal</td>
+                                            <td data-title="Location">Location 1</td>
+                                            <td data-title="Effective Date">09/07/2017</td>
+                                            <td data-title="Master Code">SUC2001</td>
+                                            <td data-title="Actions" class="actionBtn">
+                                                <div class="btn-cell">
+                                                    <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td data-title="Carrier">Nationwide</td>
+                                            <td data-title="Agency">Eagle</td>
+                                            <td data-title="Line of Business">Personal</td>
+                                            <td data-title="Location">Location 2</td>
+                                            <td data-title="Effective Date">09/08/2017</td>
+                                            <td data-title="Master Code">NAT4001</td>
+                                            <td data-title="Actions" class="actionBtn">
+                                                <div class="btn-cell">
+                                                    <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td data-title="Carrier">Hartford</td>
+                                            <td data-title="Agency">IOA</td>
+                                            <td data-title="Line of Business">Commercial</td>
+                                            <td data-title="Location">Location 3</td>
+                                            <td data-title="Effective Date">09/09/2017</td>
+                                            <td data-title="Master Code">HAR3201</td>
+                                            <td data-title="Actions" class="actionBtn">
+                                                <div class="btn-cell">
+                                                    <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td data-title="Carrier">Liberty Mutual</td>
+                                            <td data-title="Agency">IOA National</td>
+                                            <td data-title="Line of Business">Benefits</td>
+                                            <td data-title="Location">Location 4</td>
+                                            <td data-title="Effective Date">09/10/2017</td>
+                                            <td data-title="Master Code">LIB3201</td>
+                                            <td data-title="Actions" class="actionBtn">
+                                                <div class="btn-cell">
+                                                    <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td data-title="Carrier">Nationwide</td>
+                                            <td data-title="Agency">Eagle</td>
+                                            <td data-title="Line of Business">Commercial</td>
+                                            <td data-title="Location">Location 5</td>
+                                            <td data-title="Effective Date">09/11/2017</td>
+                                            <td data-title="Master Code">NAT4201</td>
+                                            <td data-title="Actions" class="actionBtn">
+                                                <div class="btn-cell">
+                                                    <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td data-title="Carrier">CNA</td>
+                                            <td data-title="Agency">IOA, Eagle</td>
+                                            <td data-title="Line of Business">Commercial, Personal</td>
+                                            <td data-title="Location">Location 6</td>
+                                            <td data-title="Effective Date">09/12/2017</td>
+                                            <td data-title="Master Code">SUC2001</td>
+                                            <td data-title="Actions" class="actionBtn">
+                                                <div class="btn-cell">
+                                                    <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td data-title="Carrier">Nationwide</td>
+                                            <td data-title="Agency">Eagle</td>
+                                            <td data-title="Line of Business">Personal</td>
+                                            <td data-title="Location">Location 7</td>
+                                            <td data-title="Effective Date">09/13/2017</td>
+                                            <td data-title="Master Code">NAT4001</td>
+                                            <td data-title="Actions" class="actionBtn">
+                                                <div class="btn-cell">
+                                                    <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td data-title="Carrier">Hartford</td>
+                                            <td data-title="Agency">IOA</td>
+                                            <td data-title="Line of Business">Commercial</td>
+                                            <td data-title="Location">Location 8</td>
+                                            <td data-title="Effective Date">09/14/2017</td>
+                                            <td data-title="Master Code">HAR3201</td>
+                                            <td data-title="Actions" class="actionBtn">
+                                                <div class="btn-cell">
+                                                    <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td data-title="Carrier">Liberty Mutual</td>
+                                            <td data-title="Agency">IOA National</td>
+                                            <td data-title="Line of Business">Benefits</td>
+                                            <td data-title="Location">Location 9</td>
+                                            <td data-title="Effective Date">09/15/2017</td>
+                                            <td data-title="Master Code">LIB3201</td>
+                                            <td data-title="Actions" class="actionBtn">
+                                                <div class="btn-cell">
+                                                    <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td data-title="Carrier">Nationwide</td>
+                                            <td data-title="Agency">Eagle</td>
+                                            <td data-title="Line of Business">Commercial</td>
+                                            <td data-title="Location">Location 10</td>
+                                            <td data-title="Effective Date">09/16/2017</td>
+                                            <td data-title="Master Code">NAT4201</td>
+                                            <td data-title="Actions" class="actionBtn">
+                                                <div class="btn-cell">
+                                                    <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="text-center">
+                                <nav aria-label="Page navigation">
+                                    <ul class="pagination">
+                                        <li>
+                                            <a href="#" aria-label="Previous">
+                                                <span aria-hidden="true">«</span>
+                                            </a>
+                                        </li>
+                                        <li class="active"><a href="#">1</a>
+                                        </li>
+                                        <li><a href="#">2</a>
+                                        </li>
+                                        <li><a href="#">3</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" aria-label="Next">
+                                                <span aria-hidden="true">»</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center copyright">
+        <p>Copyright &#169; 2017 Insurance Office of America. All rights reserved. Version 1.0</p>
+    </div>
+    <script type="text/javascript" src="js/tooltip.js"></script>
+
+</body>
+
+</html>
