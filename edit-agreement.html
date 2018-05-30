@@ -127,6 +127,11 @@
                             Edit Agreement
                         </div>
                     </div>
+
+                    <div class="pull-right">
+                        <button id="add-new-branch" name="add-new-branch" data-toggle="modal" data-target="#add-branch-agreement" class="btn carrier-btn pull-right btn-table"> <i class="fa fa-plus"></i> Add Agreement</button>
+                    </div>
+
                 </div>
 
                 <div class="container-content">
@@ -136,6 +141,9 @@
                             <div class="col-sm-12 col-md-12 col-lg-4">
                                 <label class="required control-label" for="">Carrier:</label>
                                 <input id="" name="" class="form-control input-md" value="Motionways, Inc." readonly type="text">
+
+                                <label class="control-label" for="">Include inactive agreements</label>
+                                <input id="" name="" value="true" type="checkbox" class="spacer20">
                             </div>
 
                             <div class="col-sm-12 col-md-4 col-lg-4">
@@ -144,7 +152,7 @@
                             </div>
 
                             <div class="col-sm-12 col-md-4 col-lg-4">
-                                <label class="required control-label" for="">Branch:</label>
+                                <label class="control-label" for="">Branch:</label>
                                 <div class="input-group">
                                     <input class="form-control" id="CarrierId" name="" type="search" value="Longwood, FL" autocomplete="off">
                                     <input name="" type="hidden" class="autocompletehidden" value="">
@@ -158,8 +166,7 @@
                     <hr />
 
                     <div class="butttons-footer spacerbottom20 clearfix">
-                        <button id="cancel" name="cancel" class="btn btn-default"> Cancel</button>
-                        <a role="button" id="save" name="save" href="edit-agreement.html" class="pull-right btn btn-primary"> Save</a>
+                        <button id="carriercontact" class="btn btn-primary">Clear Filters</button>
                     </div>
 
                     <div class="row">
@@ -179,8 +186,6 @@
 
                             <div class="tab-content">
                                 <div id="agreements" class="tab-pane fade in active tabs-info">
-
-                                    <button id="add-new-branch" name="add-new-branch" data-toggle="modal" data-target="#add-branch-agreement" class="btn carrier-btn pull-right btn-table"> <i class="fa fa-plus"></i> Add Agreement</button>
                                     <div class="portal-tables">
                                         <table class="table-hover table-striped table-condensed cf no-border">
                                             <thead class="cf">
@@ -264,7 +269,7 @@
                                                             <a id="add-new-branch5" name="add-new-branch" data-target="#add-branch-agreement" data-toggle="modal" class="actionBlue"><i class="fa fa-pencil"></i></a>
                                                         </div>
                                                         <div class="btn-cell">
-                                                            <a href="" data-toggle="tooltip" data-placement="top" class="actionRed"><i class="fa fa-close"></i></a>
+                                                            <a href="" data-toggle="tooltip" data-placement="top" class="actionRed disabled"><i class="fa fa-close"></i></a>
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -282,7 +287,7 @@
                                                             <a id="add-new-branch6" name="add-new-branch" data-target="#add-branch-agreement" data-toggle="modal" class="actionBlue"><i class="fa fa-pencil"></i></a>
                                                         </div>
                                                         <div class="btn-cell">
-                                                            <a href="" data-toggle="tooltip" data-placement="top" class="actionRed"><i class="fa fa-close"></i></a>
+                                                            <a href="" data-toggle="tooltip" data-placement="top" class="actionRed disabled"><i class="fa fa-close"></i></a>
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -584,7 +589,7 @@
                                                     <td data-title="Agency">Eagle</td>
                                                     <td data-title="Effective Dates">7/14/2017</td>
                                                     <td data-title="Inactive Date">7/16/2018</td>
-                                                    <td data-title="Status">------</td>
+                                                    <td data-title="Status">Active</td>
                                                     <td data-title="Actions" class="actionBtn">
                                                         <div class="btn-cell">
                                                             <a data-dismiss="modal" data-toggle="modal" data-target="#add-sub-code" class="actionBlue"><i class="fa fa-pencil"></i></a>
@@ -1185,7 +1190,7 @@
             </div>
         </div>
     <div class="text-center copyright">
-        <p>Copyright &#169; 2017 Insurance Office of America. All rights reserved. Version 1.0</p>
+        <p>Copyright &#169; 2018 Insurance Office of America. All rights reserved. Version 1.0</p>
     </div>
     <script type="text/javascript" src="chosen_v1.6.2/docsupport/multi-select.js"></script>
     <script type="text/javascript" src="js/tooltip.js"></script>

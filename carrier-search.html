@@ -131,7 +131,7 @@
                 <div class="container-content">
                     <form>
                         <div class="row">
-                            <div class="form-group col-sm-12 col-md-4 col-lg-4">
+                            <div class="col-sm-12 col-md-4 col-lg-4">
                                 <label class="control-label" for="">Carrier:</label>
                                 <div class="custom-group-form">
                                     <div class="input-group carrier-add">
@@ -143,13 +143,13 @@
                                 </div>
                             </div>
 
-                            <div class="form-group col-sm-12 col-md-4 col-lg-4">
+                            <div class="col-sm-12 col-md-4 col-lg-4">
                                 <label class="control-label" for="">Code:</label>
                                 <input id="" name="" class="form-control input-md" required="" value="1201" type="text">
                             </div>
 
-                            <div class="form-group col-sm-12 col-md-4 col-lg-4">
-                                <label class="required control-label" for="">Branch:</label>
+                            <div class="col-sm-12 col-md-4 col-lg-4">
+                                <label class=" control-label" for="">Branch:</label>
                                 <div class="input-group">
                                     <input class="form-control" id="CarrierId" name="" type="search" value="" autocomplete="off">
                                     <input name="" type="hidden" class="autocompletehidden" value="">
@@ -159,6 +159,12 @@
                             </div>
                         </div>
                     </form>
+
+                    <hr />
+
+                    <div class="butttons-footer spacerbottom20 clearfix">
+                        <button id="carriercontact" class="btn btn-primary">Clear Filters</button>
+                    </div>
                 </div>
 
                 <div class="tablecontainer">
@@ -395,14 +401,13 @@
                                                     <input type="search" class="form-control input-sm" name="date" id="date" placeholder="">
                                                 </div>
 
-                                                <div class="inline">
+                                                <div class="inline valign-top">
                                                     <label class="control-label" for="">Inactive Date:</label>
                                                     <input type="search" class="form-control input-sm" name="date" id="date" placeholder="">
-                                                </div>
-
-                                                <div class="modal-checkbox">
-                                                    <input id="perpetual" name="" value="true" type="checkbox">
-                                                    <label class="control-label" for="">Perpetual</label>
+                                                    <div class="modal-checkbox">
+                                                        <input id="perpetual" name="" value="true" type="checkbox">
+                                                        <label class="control-label" for="">Perpetual</label>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -698,7 +703,7 @@
     </div>
 
     <div class="text-center copyright">
-        <p>Copyright &#169; 2017 Insurance Office of America. All rights reserved. Version 1.0</p>
+        <p>Copyright &#169; 2018 Insurance Office of America. All rights reserved. Version 1.0</p>
     </div>
 
     <script type="text/javascript" src="chosen_v1.6.2/docsupport/multi-select.js"></script>

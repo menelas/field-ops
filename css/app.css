@@ -1378,6 +1378,11 @@ a.view:visited, a.view:hover {
     background-color: #ededed;
 }
 
+.disabled {
+   pointer-events: none;
+   opacity: .65;
+}
+
 .margin-bottom15 {
    margin-bottom: 15px;
 }
