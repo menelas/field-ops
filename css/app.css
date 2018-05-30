@@ -1550,3 +1550,6 @@ a.view:visited, a.view:hover {
 .inline {
    display: inline-block;
 }
+.valign-top{
+   vertical-align: top;
+}

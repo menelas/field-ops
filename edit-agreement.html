@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/edit-agreement.css">
 
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
@@ -138,12 +139,12 @@
                             </div>
 
                             <div class="col-sm-12 col-md-4 col-lg-4">
-                                <label class="control-label" for="">Master Code</label>
+                                <label class="control-label" for="">Master Code:</label>
                                 <input id="" name="" value="MNW453" class="form-control input-md" required="" type="text">
                             </div>
 
                             <div class="col-sm-12 col-md-4 col-lg-4">
-                                <label class="required control-label" for="">Branch</label>
+                                <label class="required control-label" for="">Branch:</label>
                                 <div class="input-group">
                                     <input class="form-control" id="CarrierId" name="" type="search" value="Longwood, FL" autocomplete="off">
                                     <input name="" type="hidden" class="autocompletehidden" value="">
@@ -206,7 +207,7 @@
                                                     <td data-title="Inactive Date">7/16/2018</td>
                                                     <td data-title="Actions" class="actionBtn">
                                                         <div class="btn-cell">
-                                                            <a href="#" data-target="#branch-agreement-modal" data-toggle="modal" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                            <a id="add-new-branch2" name="add-new-branch" data-toggle="modal" data-target="#add-branch-agreement" class="actionBlue"><i class="fa fa-pencil"></i></a>
                                                         </div>
                                                         <div class="btn-cell">
                                                             <a href="" data-toggle="tooltip" data-placement="top" class="actionRed"><i class="fa fa-close"></i></a>
@@ -224,7 +225,7 @@
                                                     <td data-title="Inactive Date">7/15/2018</td>
                                                     <td data-title="Actions" class="actionBtn">
                                                         <div class="btn-cell">
-                                                            <a href="#" data-target="#branch-agreement-modal" data-toggle="modal" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                            <a id="add-new-branch3" name="add-new-branch" data-target="#add-branch-agreement" data-toggle="modal" class="actionBlue"><i class="fa fa-pencil"></i></a>
                                                         </div>
                                                         <div class="btn-cell">
                                                             <a href="" data-toggle="tooltip" data-placement="top" class="actionRed"><i class="fa fa-close"></i></a>
@@ -242,7 +243,7 @@
                                                     <td data-title="Inactive Date">7/14/2018</td>
                                                     <td data-title="Actions" class="actionBtn">
                                                         <div class="btn-cell">
-                                                            <a href="#" data-target="#branch-agreement-modal" data-toggle="modal" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                            <a id="add-new-branch4" name="add-new-branch" data-target="#add-branch-agreement" data-toggle="modal" class="actionBlue"><i class="fa fa-pencil"></i></a>
                                                         </div>
                                                         <div class="btn-cell">
                                                             <a href="" data-toggle="tooltip" data-placement="top" class="actionRed"><i class="fa fa-close"></i></a>
@@ -260,7 +261,7 @@
                                                     <td data-title="Inactive Date">7/13/2018</td>
                                                     <td data-title="Actions" class="actionBtn">
                                                         <div class="btn-cell">
-                                                            <a href="#" data-target="#branch-agreement-modal" data-toggle="modal" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                            <a id="add-new-branch5" name="add-new-branch" data-target="#add-branch-agreement" data-toggle="modal" class="actionBlue"><i class="fa fa-pencil"></i></a>
                                                         </div>
                                                         <div class="btn-cell">
                                                             <a href="" data-toggle="tooltip" data-placement="top" class="actionRed"><i class="fa fa-close"></i></a>
@@ -278,7 +279,7 @@
                                                     <td data-title="Inactive Date">7/12/2018</td>
                                                     <td data-title="Actions" class="actionBtn">
                                                         <div class="btn-cell">
-                                                            <a href="#" data-target="#branch-agreement-modal" data-toggle="modal" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                            <a id="add-new-branch6" name="add-new-branch" data-target="#add-branch-agreement" data-toggle="modal" class="actionBlue"><i class="fa fa-pencil"></i></a>
                                                         </div>
                                                         <div class="btn-cell">
                                                             <a href="" data-toggle="tooltip" data-placement="top" class="actionRed"><i class="fa fa-close"></i></a>
@@ -353,20 +354,20 @@
                                                                 </div>
 
                                                                 <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-6">
-                                                                    <div class="inline">
+                                                                    <div class="inline valign-top">
                                                                         <label class="control-label" for="">Effective Date:</label>
                                                                         <input type="search" class="form-control input-sm" name="date" id="date" placeholder="">
                                                                     </div>
 
-                                                                    <div class="inline">
+                                                                    <div class="inline valign-top">
                                                                         <label class="control-label" for="">Inactive Date:</label>
                                                                         <input type="search" class="form-control input-sm" name="date" id="date" placeholder="">
+                                                                        <div class="modal-checkbox">
+                                                                            <input id="perpetual" name="" value="true" type="checkbox">
+                                                                            <label class="control-label" for="">Perpetual</label>
+                                                                        </div>
                                                                     </div>
 
-                                                                    <div class="modal-checkbox">
-                                                                        <input id="perpetual" name="" value="true" type="checkbox">
-                                                                        <label class="control-label" for="">Perpetual</label>
-                                                                    </div>
                                                                 </div>
                                                             </div>
 
@@ -399,7 +400,7 @@
                                                                 </div>
                                                             </form>
 
-                                                            <button id="add-sub-code" name="add-sub-code" data-toggle="modal" data-target="#add-sub-code" class="btn carrier-btn pull-right btn-table sub-code-button"> <i class="fa fa-plus"></i> Add Sub Code</button>
+                                                            <button data-dismiss="modal" name="add-sub-code" data-toggle="modal" data-target="#add-sub-code" class="btn carrier-btn pull-right btn-table sub-code-button"> <i class="fa fa-plus"></i> Add Sub Code</button>
 
                                                         </div>
                                                         <div class="panel-body">
@@ -424,7 +425,7 @@
                                                                             <td data-title="Status">Active</td>
                                                                             <td data-title="Action" class="actionBtn">
                                                                                 <div class="btn-cell">
-                                                                                    <a href="#" data-toggle="modal" data-target="#add-sub-code" data-dismiss="modal" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                                                    <a data-dismiss="modal" data-toggle="modal" data-target="#add-sub-code" class="actionBlue"><i class="fa fa-pencil"></i></a>
                                                                                 </div>
                                                                                 <div class="btn-cell">
                                                                                     <a href="#" class="actionRed"><i class="fa fa-close"></i></a>
@@ -439,7 +440,7 @@
                                                                             <td data-title="Status">Active</td>
                                                                             <td data-title="Action" class="actionBtn">
                                                                                 <div class="btn-cell">
-                                                                                    <a href="#" data-toggle="modal" data-target="#add-sub-code" data-dismiss="modal" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                                                    <a data-dismiss="modal" data-toggle="modal" data-target="#add-sub-code" class="actionBlue"><i class="fa fa-pencil"></i></a>
                                                                                 </div>
                                                                                 <div class="btn-cell">
                                                                                     <a href="#" class="actionRed"><i class="fa fa-close"></i></a>
@@ -490,270 +491,229 @@
                                 </div>
 
                                 <div id="add-branch-code" class="tab-pane fade in tabs-info">
-                                    <button id="add-new-branch" name="add-new-branch" data-toggle="modal" data-target="#add-sub-code2" class="btn carrier-btn pull-right btn-table"> <i class="fa fa-plus"></i> Add Branch Code</button>
 
                                     <div class="portal-tables">
                                         <table class="table-hover table-striped table-condensed cf no-border">
                                             <thead class="cf">
                                                 <tr>
                                                     <th>Branch</th>
-                                                    <th class="col-lg-4">Master Code</th>
-                                                    <th class="col-lg-4 action">Action</th>
+                                                    <th>Sub codes</th>
+                                                    <th>Book</th>
+                                                    <th>Agency</th>
+                                                    <th>Effective Dates</th>
+                                                    <th>Inactive Date</th>
+                                                    <th>Status</th>
+                                                    <th>Action</th>
                                                 </tr>
                                             </thead>
 
                                             <tbody>
-                                                <tr>
-                                                    <td data-title="Branch"><i class="fa fa-plus-circle plus-sign" aria-hidden="true" data-tc="tg1"></i><i style="display: none;" class="fa fa-minus-circle minus-sign" aria-hidden="true" data-tc="tg1"></i> Longwood</td>
-                                                    <td data-title="Code(s)">MSB123</td>
+                                                <tr class="even">
+                                                    <td data-title="Branch"><i class="fa fa-plus-circle plus-sign" aria-hidden="true" data-tc="tg1"></i><i style="display: none;" class="fa fa-minus-circle minus-sign" aria-hidden="true" data-tc="tg1"></i> Longwood, FL</td>
+                                                    <td data-title="Sub codes">LNG123</td>
+                                                    <td data-title="Book">NICS</td>
+                                                    <td data-title="Agency">IOA, Eagle</td>
+                                                    <td data-title="Effective Dates">7/14/2017</td>
+                                                    <td data-title="Inactive Date">7/16/2018</td>
+                                                    <td data-title="Status">Active</td>
                                                     <td data-title="Actions" class="actionBtn">
                                                         <div class="btn-cell">
-                                                            <a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                            <a data-dismiss="modal" data-toggle="modal" data-target="#add-sub-code" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                        <div class="btn-cell">
+                                                            <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a>
                                                         </div>
                                                     </td>
                                                 </tr>
-                                                <tr class="toggle-tr tg1" style="display: none;">
-                                                    <td data-title="Branch" class="hide-small-screen">&nbsp;</td>
-                                                    <td data-title="Code(s)">
-                                                        <table>
-                                                            <tr>
-                                                                <th>Sub Codes</th>
-                                                                <th>Effective Dates</th>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>MSB345</td>
-                                                                <td>09/1/2017</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>MSB346</td>
-                                                                <td>09/1/2017</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>MSB347</td>
-                                                                <td>09/1/2017</td>
-                                                            </tr>
-                                                        </table>
-                                                    </td>
+                                                <tr class="toggle-tr tg1 even" style="display: none;">
+                                                    <td class="hide-small-screen"></td>
+                                                    <td class="hide-small-screen">LNG345</td>
+                                                    <td class="hide-small-screen">------</td>
+                                                    <td class="hide-small-screen">------</td>
+                                                    <td class="hide-small-screen">7/14/2017</td>
+                                                    <td class="hide-small-screen">7/16/2018</td>
+                                                    <td class="hide-small-screen">Active</td>
                                                     <td data-title="Actions" class="actionBtn actionBtn2">
-
-                                                        <table>
-                                                            <tr>
-                                                                <th>Action</th>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><a name="edit-contact" data-toggle="modal" data-target="add-sub-code" class="actionBlue"><i class="fa fa-pencil"></i></a> <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a> <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a> <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a></td>
-                                                            </tr>
-                                                        </table>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td data-title="Branch"><i class="fa fa-plus-circle plus-sign" aria-hidden="true" data-tc="tg2"></i><i style="display: none;" class="fa fa-minus-circle minus-sign" aria-hidden="true" data-tc="tg2"></i> Key West</td>
-                                                    <td data-title="Code(s)">CJK434</td>
-                                                    <td data-title="Actions" class="actionBtn">
                                                         <div class="btn-cell">
-                                                            <a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                            <a data-dismiss="modal" data-toggle="modal" data-target="#add-sub-code" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                        <div class="btn-cell">
+                                                            <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a>
                                                         </div>
                                                     </td>
                                                 </tr>
-                                                <tr class="toggle-tr tg2" style="display: none;">
-                                                    <td data-title="Branch" class="hide-small-screen">&nbsp;</td>
-                                                    <td data-title="Code(s)">
-                                                        <table>
-                                                            <tr>
-                                                                <th>Codes</th>
-                                                                <th>Start</th>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>MSB345</td>
-                                                                <td>09/1/2017</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>MSB346</td>
-                                                                <td>09/1/2017</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>MSB347</td>
-                                                                <td>09/1/2017</td>
-                                                            </tr>
-                                                        </table>
-                                                    </td>
+                                                <tr class="toggle-tr tg1 even" style="display: none;">
+                                                    <td class="hide-small-screen"></td>
+                                                    <td class="hide-small-screen">LNG456</td>
+                                                    <td class="hide-small-screen">------</td>
+                                                    <td class="hide-small-screen">------</td>
+                                                    <td class="hide-small-screen">7/14/2017</td>
+                                                    <td class="hide-small-screen">7/16/2018</td>
+                                                    <td class="hide-small-screen">Active</td>
                                                     <td data-title="Actions" class="actionBtn actionBtn2">
-
-                                                        <table>
-                                                            <tr>
-                                                                <th>Action</th>
-
-                                                            </tr>
-                                                            <tr>
-                                                                <td><a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a> <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a> <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a> <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a></td>
-                                                            </tr>
-                                                        </table>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td data-title="Branch"><i class="fa fa-plus-circle plus-sign" aria-hidden="true" data-tc="tg3"></i><i style="display: none;" class="fa fa-minus-circle minus-sign" aria-hidden="true" data-tc="tg3"></i> Birmingham</td>
-                                                    <td data-title="Code(s)">DKJ402</td>
-                                                    <td data-title="Actions" class="actionBtn">
                                                         <div class="btn-cell">
-                                                            <a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                            <a name="edit-contact" data-toggle="modal" data-target="add-sub-code" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                        <div class="btn-cell">
+                                                            <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a>
                                                         </div>
                                                     </td>
                                                 </tr>
-                                                <tr class="toggle-tr tg3" style="display: none;">
-                                                    <td data-title="Branch" class="hide-small-screen">&nbsp;</td>
-                                                    <td data-title="Code(s)">
-                                                        <table>
-                                                            <tr>
-                                                                <th>Codes</th>
-                                                                <th>Start</th>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>MSB345</td>
-                                                                <td>09/1/2017</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>MSB346</td>
-                                                                <td>09/1/2017</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>MSB347</td>
-                                                                <td>09/1/2017</td>
-                                                            </tr>
-                                                        </table>
-                                                    </td>
+                                                <tr class="toggle-tr tg1 even" style="display: none;">
+                                                    <td class="hide-small-screen"></td>
+                                                    <td class="hide-small-screen">LNG347</td>
+                                                    <td class="hide-small-screen">------</td>
+                                                    <td class="hide-small-screen">------</td>
+                                                    <td class="hide-small-screen">7/14/2017</td>
+                                                    <td class="hide-small-screen">7/16/2018</td>
+                                                    <td class="hide-small-screen">------</td>
                                                     <td data-title="Actions" class="actionBtn actionBtn2">
-
-                                                        <table>
-                                                            <tr>
-                                                                <th>Action</th>
-
-                                                            </tr>
-                                                            <tr>
-                                                                <td><a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a> <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a> <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a> <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a></td>
-                                                            </tr>
-                                                        </table>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td data-title="Branch"><i class="fa fa-plus-circle plus-sign" aria-hidden="true" data-tc="tg4"></i><i style="display: none;" class="fa fa-minus-circle minus-sign" aria-hidden="true" data-tc="tg4"></i> Ocala</td>
-                                                    <td data-title="Code(s)">JHA323</td>
-                                                    <td data-title="Actions" class="actionBtn">
                                                         <div class="btn-cell">
-                                                            <a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                            <a name="edit-contact" data-toggle="modal" data-target="add-sub-code" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                        <div class="btn-cell">
+                                                            <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a>
                                                         </div>
                                                     </td>
                                                 </tr>
-                                                <tr class="toggle-tr tg4" style="display: none;">
-                                                    <td data-title="Branch" class="hide-small-screen">&nbsp;</td>
-                                                    <td data-title="Code(s)">
-                                                        <table>
-                                                            <tr>
-                                                                <th>Codes</th>
-                                                                <th>Start</th>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>MSB345</td>
-                                                                <td>09/1/2017</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>MSB346</td>
-                                                                <td>09/1/2017</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>MSB347</td>
-                                                                <td>09/1/2017</td>
-                                                            </tr>
-                                                        </table>
-                                                    </td>
-                                                    <td data-title="Actions" class="actionBtn actionBtn2">
 
-                                                        <table>
-                                                            <tr>
-                                                                <th>Action</th>
-
-                                                            </tr>
-                                                            <tr>
-                                                                <td><a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a> <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a> <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a> <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a></td>
-                                                            </tr>
-                                                        </table>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td data-title="Branch"><i class="fa fa-plus-circle plus-sign" aria-hidden="true" data-tc="tg5"></i><i style="display: none;" class="fa fa-minus-circle minus-sign" aria-hidden="true" data-tc="tg5"></i> Jacksonville</td>
-                                                    <td data-title="Code(s)">EIR232</td>
+                                                <tr class="odd">
+                                                    <td data-title="Branch"><i class="fa fa-plus-circle plus-sign" aria-hidden="true" data-tc="tg2"></i><i style="display: none;" class="fa fa-minus-circle minus-sign" aria-hidden="true" data-tc="tg2"></i> Tampa, FL</td>
+                                                    <td data-title="Sub codes">LNG345</td>
+                                                    <td data-title="Book">------</td>
+                                                    <td data-title="Agency">Eagle</td>
+                                                    <td data-title="Effective Dates">7/14/2017</td>
+                                                    <td data-title="Inactive Date">7/16/2018</td>
+                                                    <td data-title="Status">------</td>
                                                     <td data-title="Actions" class="actionBtn">
                                                         <div class="btn-cell">
-                                                            <a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                            <a data-dismiss="modal" data-toggle="modal" data-target="#add-sub-code" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                        <div class="btn-cell">
+                                                            <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a>
                                                         </div>
                                                     </td>
                                                 </tr>
-                                                <tr class="toggle-tr tg5" style="display: none;">
-                                                    <td data-title="Branch" class="hide-small-screen">&nbsp;</td>
-                                                    <td data-title="Code(s)">
-                                                        <table>
-                                                            <tr>
-                                                                <th>Codes</th>
-                                                                <th>Start</th>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>MSB345</td>
-                                                                <td>09/1/2017</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>MSB346</td>
-                                                                <td>09/1/2017</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>MSB347</td>
-                                                                <td>09/1/2017</td>
-                                                            </tr>
-                                                        </table>
-                                                    </td>
+                                                <tr class="toggle-tr tg2 odd" style="display: none;">
+                                                    <td class="hide-small-screen"></td>
+                                                    <td class="hide-small-screen">LNG345</td>
+                                                    <td class="hide-small-screen">------</td>
+                                                    <td class="hide-small-screen">------</td>
+                                                    <td class="hide-small-screen">7/14/2017</td>
+                                                    <td class="hide-small-screen">7/16/2018</td>
+                                                    <td class="hide-small-screen">Active</td>
                                                     <td data-title="Actions" class="actionBtn actionBtn2">
+                                                        <div class="btn-cell">
+                                                            <a data-dismiss="modal" data-toggle="modal" data-target="#add-sub-code" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                        <div class="btn-cell">
+                                                            <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
 
-                                                        <table>
-                                                            <tr>
-                                                                <th>Action</th>
+                                                <tr class="even">
+                                                    <td data-title="Branch"><i class="fa fa-plus-circle plus-sign" aria-hidden="true" data-tc="tg3"></i><i style="display: none;" class="fa fa-minus-circle minus-sign" aria-hidden="true" data-tc="tg3"></i> Ft. Myers</td>
+                                                    <td data-title="Sub codes">FTM239</td>
+                                                    <td data-title="Book">------</td>
+                                                    <td data-title="Agency">IOA National</td>
+                                                    <td data-title="Effective Dates">7/13/2017</td>
+                                                    <td data-title="Inactive Date">7/15/2018</td>
+                                                    <td data-title="Status">Active</td>
+                                                    <td data-title="Actions" class="actionBtn">
+                                                        <div class="btn-cell">
+                                                            <a data-dismiss="modal" data-toggle="modal" data-target="#add-sub-code" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                        <div class="btn-cell">
+                                                            <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="toggle-tr tg3 even" style="display: none;">
+                                                    <td class="hide-small-screen"></td>
+                                                    <td class="hide-small-screen">LNG345</td>
+                                                    <td class="hide-small-screen">------</td>
+                                                    <td class="hide-small-screen">------</td>
+                                                    <td class="hide-small-screen">7/14/2017</td>
+                                                    <td class="hide-small-screen">7/16/2018</td>
+                                                    <td class="hide-small-screen">Active</td>
+                                                    <td data-title="Actions" class="actionBtn actionBtn2">
+                                                        <div class="btn-cell">
+                                                            <a data-dismiss="modal" data-toggle="modal" data-target="#add-sub-code" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                        <div class="btn-cell">
+                                                            <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
 
-                                                            </tr>
-                                                            <tr>
-                                                                <td><a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a> <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a> <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a> <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a></td>
-                                                            </tr>
-                                                        </table>
+                                                <tr class="odd">
+                                                    <td data-title="Branch"><i class="fa fa-plus-circle plus-sign" aria-hidden="true" data-tc="tg4"></i><i style="display: none;" class="fa fa-minus-circle minus-sign" aria-hidden="true" data-tc="tg4"></i> Boca Raton</td>
+                                                    <td data-title="Sub codes">BRT239</td>
+                                                    <td data-title="Book">------</td>
+                                                    <td data-title="Agency">IOA</td>
+                                                    <td data-title="Effective Dates">7/13/2017</td>
+                                                    <td data-title="Inactive Date">7/15/2018</td>
+                                                    <td data-title="Status">Active</td>
+                                                    <td data-title="Actions" class="actionBtn">
+                                                        <div class="btn-cell">
+                                                            <a data-dismiss="modal" data-toggle="modal" data-target="#add-sub-code" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                        <div class="btn-cell">
+                                                            <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="toggle-tr tg4 odd" style="display: none;">
+                                                    <td class="hide-small-screen"></td>
+                                                    <td class="hide-small-screen">LNG345</td>
+                                                    <td class="hide-small-screen">------</td>
+                                                    <td class="hide-small-screen">------</td>
+                                                    <td class="hide-small-screen">7/14/2017</td>
+                                                    <td class="hide-small-screen">7/16/2018</td>
+                                                    <td class="hide-small-screen">Active</td>
+                                                    <td data-title="Actions" class="actionBtn actionBtn2">
+                                                        <div class="btn-cell">
+                                                            <a data-dismiss="modal" data-toggle="modal" data-target="#add-sub-code" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                        <div class="btn-cell">
+                                                            <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr class="even">
+                                                    <td data-title="Branch"><i class="fa fa-plus-circle plus-sign" aria-hidden="true" data-tc="tg5"></i><i style="display: none;" class="fa fa-minus-circle minus-sign" aria-hidden="true" data-tc="tg5"></i> Marathon, FL</td>
+                                                    <td data-title="Sub codes">MRH43</td>
+                                                    <td data-title="Book">------</td>
+                                                    <td data-title="Agency">IOA</td>
+                                                    <td data-title="Effective Dates">7/12/2017</td>
+                                                    <td data-title="Inactive Date">7/14/2018</td>
+                                                    <td data-title="Status">Active</td>
+                                                    <td data-title="Actions" class="actionBtn">
+                                                        <div class="btn-cell">
+                                                            <a data-dismiss="modal" data-toggle="modal" data-target="#add-sub-code" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                        <div class="btn-cell">
+                                                            <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="toggle-tr tg5 even" style="display: none;">
+                                                    <td class="hide-small-screen"></td>
+                                                    <td class="hide-small-screen">LNG345</td>
+                                                    <td class="hide-small-screen">------</td>
+                                                    <td class="hide-small-screen">------</td>
+                                                    <td class="hide-small-screen">7/14/2017</td>
+                                                    <td class="hide-small-screen">7/16/2018</td>
+                                                    <td class="hide-small-screen">Active</td>
+                                                    <td data-title="Actions" class="actionBtn actionBtn2">
+                                                        <div class="btn-cell">
+                                                            <a data-dismiss="modal" data-toggle="modal" data-target="#add-sub-code" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                        <div class="btn-cell">
+                                                            <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a>
+                                                        </div>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -762,7 +722,7 @@
                                 </div>
 
                                 <!-- Edit Modal -->
-                                <div id="add-sub-code2" class="add-sub-code modal fade" role="dialog">
+                                <div id="add-sub-code" class="add-sub-code modal fade" role="dialog">
                                     <div class="modal-dialog modal-lg">
 
                                         <!-- Modal content-->
@@ -786,20 +746,20 @@
                                                             </div>
 
                                                             <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-6">
-                                                                <div class="inline">
+                                                                <div class="inline valign-top">
                                                                     <label class="required control-label" for="">Effective Date:</label>
                                                                     <input type="search" class="form-control input-sm" name="date" id="date" value=" 05/15/2018" placeholder="">
                                                                 </div>
 
-                                                                <div class="inline">
+                                                                <div class="inline valign-top">
                                                                     <label class="control-label" for="">Inactive Date:</label>
                                                                     <input type="search" class="form-control input-sm" name="date" id="date" placeholder="">
-                                                                </div>
-
                                                                 <div class="modal-checkbox">
                                                                     <input id="perpetual" name="" value="true" type="checkbox">
                                                                     <label class="control-label" for="">Perpetual</label>
                                                                 </div>
+                                                            </div>
+
                                                             </div>
                                                         </div>
 
@@ -843,7 +803,7 @@
                                                             </div>
                                                         </form>
 
-                                                        <button id="add-sub-code" name="add-sub-code" data-toggle="modal" data-target="#add-sub-code" class="btn carrier-btn pull-right btn-table sub-code-button"> <i class="fa fa-plus"></i> Add Sub Code</button>
+                                                        <button id="add-sub-code" data-toggle="modal" data-target="#add-sub-code" class="btn carrier-btn pull-right btn-table sub-code-button"> <i class="fa fa-plus"></i> Add Sub Code</button>
 
                                                     </div>
                                                     <div class="panel-body">
@@ -868,7 +828,7 @@
                                                                         <td data-title="Status">Active</td>
                                                                         <td data-title="Action" class="actionBtn">
                                                                             <div class="btn-cell">
-                                                                                <a href="#" data-toggle="modal" data-target="#add-sub-code" data-dismiss="modal" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                                                <a id="add-sub-code4" data-dismiss="modal" data-toggle="modal" data-target="#add-sub-code" class="actionBlue"><i class="fa fa-pencil"></i></a>
                                                                             </div>
                                                                             <div class="btn-cell">
                                                                                 <a href="#" class="actionRed"><i class="fa fa-close"></i></a>
@@ -883,7 +843,7 @@
                                                                         <td data-title="Status">Active</td>
                                                                         <td data-title="Action" class="actionBtn">
                                                                             <div class="btn-cell">
-                                                                                <a href="#" data-toggle="modal" data-target="#add-sub-code" data-dismiss="modal" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                                                <a id="add-sub-code5" data-dismiss="modal" data-toggle="modal" data-target="#add-sub-code" class="actionBlue"><i class="fa fa-pencil"></i></a>
                                                                             </div>
                                                                             <div class="btn-cell">
                                                                                 <a href="#" class="actionRed"><i class="fa fa-close"></i></a>
@@ -964,7 +924,7 @@
                                             <td data-title="Modified By">Donna Kline</td>
                                             <td data-title="Action" class="actionBtn">
                                                 <div class="btn-cell">
-                                                    <a href="#" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    <a data-dismiss="modal" data-toggle="modal" data-target="#modify-note" class="actionBlue"><i class="fa fa-pencil"></i></a>
                                                 </div>
                                             </td>
                                         </tr>
@@ -976,7 +936,7 @@
                                             <td data-title="Modified By">Jason Lacroix</td>
                                             <td data-title="Action" class="actionBtn">
                                                 <div class="btn-cell">
-                                                    <a href="#" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    <a data-dismiss="modal" data-toggle="modal" data-target="#modify-note" class="actionBlue"><i class="fa fa-pencil"></i></a>
                                                 </div>
                                             </td>
                                         </tr>
@@ -988,7 +948,7 @@
                                             <td data-title="Modified By">Donna Kline</td>
                                             <td data-title="Action" class="actionBtn">
                                                 <div class="btn-cell">
-                                                    <a href="#" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    <a data-dismiss="modal" data-toggle="modal" data-target="#modify-note" class="actionBlue"><i class="fa fa-pencil"></i></a>
                                                 </div>
                                             </td>
                                         </tr>
@@ -1003,7 +963,7 @@
                                             <td data-title="Modified By">Donna Kline</td>
                                             <td data-title="Action" class="actionBtn">
                                                 <div class="btn-cell">
-                                                    <a href="#" data-target="#modify-note" data-toggle="modal" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    <a data-dismiss="modal" data-toggle="modal" data-target="#modify-note" class="actionBlue"><i class="fa fa-pencil"></i></a>
                                                 </div>
                                             </td>
                                         </tr>
@@ -1015,7 +975,7 @@
                                             <td data-title="Modified By">Donna Kline</td>
                                             <td data-title="Action" class="actionBtn">
                                                 <div class="btn-cell">
-                                                    <a href="#" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    <a data-dismiss="modal" data-toggle="modal" data-target="#modify-note" class="actionBlue"><i class="fa fa-pencil"></i></a>
                                                 </div>
                                             </td>
                                         </tr>

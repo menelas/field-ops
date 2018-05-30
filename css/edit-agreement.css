@@ -1,0 +1,10 @@
+#add-branch-code .toggle-tr td, #add-branch-code .toggle-tr th {
+	padding-left: 10px !important;
+	height: auto !important;
+}
+#add-branch-code tr.even {
+	background-color: #efefef !important;
+}
+#add-branch-code tr.odd {
+	background-color: #fff !important;
+}

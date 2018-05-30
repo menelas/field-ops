@@ -1,0 +1,29 @@
+.input-group-search{
+	max-width: 90%;
+	float: left;
+}
+.carrier-btn-plus {
+	float: right;
+	max-width: 8%;
+	background: #296097;
+	border: none;
+	color: #fff;
+	margin-top: 8px;
+	padding: 10px;
+	border-radius: 3px;
+}
+.table-striped>tbody>tr.odd {
+	background-color: #fff;
+}
+.table-striped>tbody>tr.even {
+	background-color: #efefef;
+}
+.tablecontainer .cf.tb-car-search td {
+	width: auto
+}
+.align-top{
+	vertical-align: top;
+}
+.flag-icon{
+	color: #ff0e00;
+}

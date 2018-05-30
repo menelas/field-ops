@@ -1,3 +1,6 @@
+## 2018-5-30
+• Updated app with updated carrier-search page and edit-agreement page
+
 ## 2018-5-25
 • Updated app with updated pages for agreements
 

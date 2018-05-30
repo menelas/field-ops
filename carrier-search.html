@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/carriers-search.css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 
@@ -130,7 +132,7 @@
                     <form>
                         <div class="row">
                             <div class="form-group col-sm-12 col-md-4 col-lg-4">
-                                <label class="control-label" for="">Carrier</label>
+                                <label class="control-label" for="">Carrier:</label>
                                 <div class="custom-group-form">
                                     <div class="input-group carrier-add">
                                         <input class="form-control" id="CarrierId" name="" type="search" value="" autocomplete="off">
@@ -147,7 +149,7 @@
                             </div>
 
                             <div class="form-group col-sm-12 col-md-4 col-lg-4">
-                                <label class="required control-label" for="">Branch</label>
+                                <label class="required control-label" for="">Branch:</label>
                                 <div class="input-group">
                                     <input class="form-control" id="CarrierId" name="" type="search" value="" autocomplete="off">
                                     <input name="" type="hidden" class="autocompletehidden" value="">
@@ -159,103 +161,170 @@
                     </form>
                 </div>
 
-                <div class="col-md-12 col-xs-12 panel-heading title-header">
-                    <div class="pull-left head-drop">
-                        Search Results
-                    </div>
-                </div>
+                <div class="tablecontainer">
+                            <div class="col-md-12 col-xs-12 panel-heading tableheader">
+                                <div class="pull-left head-drop">
+                                     <strong>Search Results</strong>
+                                </div>
+                            </div>
 
-                <div class="portal-tables">
-                    <table class="table-hover table-striped table-condensed cf">
-                        <thead class="cf">
-                            <tr>
-                                <th>Carrier</th>
-                                <th class="col-lg-4">Master Code</th>
-                                <th class="col-lg-4 action">Action</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr>
-                                <td data-title="Branch"><i class="fa fa-plus-circle plus-sign" aria-hidden="true" data-tc="tg1"></i><i style="display: none;" class="fa fa-minus-circle minus-sign" aria-hidden="true" data-tc="tg1"></i> Longwood</td>
-                                <td data-title="Code(s)">MSB123</td>
-                                <td data-title="Actions" class="actionBtn">
-                                    <div class="btn-cell">
-                                        <a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="toggle-tr tg1" style="display: none;">
-                                <td data-title="Branch" class="hide-small-screen">&nbsp;</td>
-                                <td data-title="Code(s)">
-                                    <table>
-                                        <tr>
-                                            <th>Sub Codes</th>
-                                            <th>Effective Dates</th>
-                                        </tr>
-                                        <tr>
-                                            <td>MSB345</td>
-                                            <td>09/1/2017</td>
-                                        </tr>
-                                        <tr>
-                                            <td>MSB346</td>
-                                            <td>09/1/2017</td>
-                                        </tr>
-                                        <tr>
-                                            <td>MSB347</td>
-                                            <td>09/1/2017</td>
-                                        </tr>
+                            <div class="panel-body">
+                                <div class="portal-tables">
+                                    <table class="table-hover table-striped table-condensed cf tb-car-search">
+                                        <thead class="cf">
+                                            <tr>
+                                                <th>Carrier</th>
+                                                <th>Master Code</th>
+                                                <th>Book</th>
+                                                <th>Sub Code</th>
+                                                <th>Branch Agreement</th>
+                                                <th>Agency</th>
+                                                <th class="action">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td data-title="Carrier">
+                                                    <i class="fa fa-plus-circle plus-sign" aria-hidden="true" data-car-class="car-class-1"></i><i style="display: none" class="fa fa-minus-circle minus-sign" aria-hidden="true" data-car-class="car-class-1"></i> CNA
+                                                </td>
+                                                <td data-title="Master Code">CNA1201</td>
+                                                <td data-title="Books">NICS</td>
+                                                <td data-title="Sub Code"></td>
+                                                <td data-title="Branch Agreement">Longwood, FL</td>
+                                                <td data-title="Agency">IOA</td>
+                                                <td data-title="Action" class="actionBtn">
+                                                   <div class="btn-cell">
+                                                        <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="car-class-1 even" style="display: none">
+                                                <td></td>
+                                                <td></td>
+                                                <td data-title="Books">NICS</td>
+                                                <td data-title="Sub Code">ERT1201</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="car-class-1 even" style="display: none">
+                                                <td></td>
+                                                <td></td>
+                                                <td data-title="Books">NICS</td>
+                                                <td data-title="Sub Code">OJE1201</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="car-class-1 even" style="display: none">
+                                                <td></td>
+                                                <td></td>
+                                                <td data-title="Books">NICS</td>
+                                                <td data-title="Sub Code">BOL1201</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="odd">
+                                                <td data-title="Carrier">
+                                                    <i class="fa fa-plus-circle plus-sign" aria-hidden="true" data-car-class="car-class-2"></i><i style="display: none" class="fa fa-minus-circle minus-sign" aria-hidden="true" data-car-class="car-class-2"></i> Nationwide <i class="fa fa-flag flag-icon" aria-hidden="true"></i>
+                                                </td>
+                                                <td data-title="Master Code"></td>
+                                                <td data-title="Books">----</td>
+                                                <td data-title="Sub Code">----</td>
+                                                <td data-title="Branch Agreement">Marathon, FL</td>
+                                                <td data-title="Agency">IOA</td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="car-class-2 odd" style="display: none">
+                                                <td></td>
+                                                <td></td>
+                                                <td data-title="Books">NICS</td>
+                                                <td data-title="Sub Code">BOL1201</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="even">
+                                                <td data-title="Carrier">
+                                                    <i class="fa fa-plus-circle plus-sign" aria-hidden="true" data-car-class="car-class-3"></i><i style="display: none" class="fa fa-minus-circle minus-sign" aria-hidden="true" data-car-class="car-class-3"></i> Hartford
+                                                </td>
+                                                <td data-title="Master Code"></td>
+                                                <td data-title="Books">----</td>
+                                                <td data-title="Sub Code">----</td>
+                                                <td data-title="Branch Agreement">Lakeland, FL</td>
+                                                <td data-title="Agency">Eagle</td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="car-class-3 even" style="display: none">
+                                                <td></td>
+                                                <td></td>
+                                                <td data-title="Books">NICS</td>
+                                                <td data-title="Sub Code">BOL1201</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
                                     </table>
-                                </td>
-                                <td data-title="Actions" class="actionBtn actionBtn2">
-
-                                    <table>
-                                        <tr>
-                                            <th>Action</th>
-                                        </tr>
-                                        <tr>
-                                            <td><a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a> <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a> <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a> <a href="#" class="actionRed"><i class="fa fa-close" aria-hidden="true"></i></a></td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="text-center">
-                    <nav aria-label="Page navigation">
-                        <ul class="pagination">
-                            <li>
-                                <a href="#" aria-label="Previous">
-                                            <span aria-hidden="true">«</span>
-                                        </a>
-                            </li>
-                            <li class="active"><a href="#">1</a>
-                            </li>
-                            <li><a href="#">2</a>
-                            </li>
-                            <li><a href="#">3</a>
-                            </li>
-                            <li><a href="#">4</a>
-                            </li>
-                            <li><a href="#">5</a>
-                            </li>
-                            <li>
-                                <a href="#" aria-label="Next">
-                                            <span aria-hidden="true">»</span>
-                                        </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <nav aria-label="Page navigation">
+                                    <ul class="pagination">
+                                        <li>
+                                            <a href="#" aria-label="Previous">
+                                                <span aria-hidden="true">«</span>
+                                            </a>
+                                        </li>
+                                        <li class="active"><a href="#">1</a>
+                                        </li>
+                                        <li><a href="#">2</a>
+                                        </li>
+                                        <li><a href="#">3</a>
+                                        </li>
+                                        <li><a href="#">4</a>
+                                        </li>
+                                        <li><a href="#">5</a>
+                                        </li>
+                                        </li>
+                                        <li>
+                                            <a href="#" aria-label="Next">
+                                                <span aria-hidden="true">»</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
 
                 <!-- Edit Modal -->
                 <div id="add-branch-agreement" class="modal fade" role="dialog">
@@ -634,7 +703,7 @@
 
     <script type="text/javascript" src="chosen_v1.6.2/docsupport/multi-select.js"></script>
     <script type="text/javascript" src="js/tooltip.js"></script>
-    <script type="text/javascript" src="js/agreement.js"></script>
+    <script type="text/javascript" src="js/carrier-search.js"></script>
 </body>
 
 </html>
