@@ -1543,6 +1543,11 @@ a.view:visited, a.view:hover {
     margin-right: 30px;
 }
 
+.btn-submit, .btn-cancel {
+   margin-left: 5px;
+   min-width: 75px;
+}
+
 .datepicker table {
    border:none;
 }

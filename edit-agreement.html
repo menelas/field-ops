@@ -392,8 +392,11 @@
 
                                                     <hr />
                                                     <div class="butttons-footer spacerbottom15 clearfix">
-                                                        <button id="cancel" data-dismiss="modal" name="cancel" class="btn btn-default"> Cancel</button>
-                                                        <button id="save" data-dismiss="modal" name="save" class="pull-right btn btn-primary"> Save</button>
+                                                        <div class="pull-right">
+                                                            <button id="cancel" data-dismiss="modal" name="cancel" class="btn btn-default btn-cancel pull-right"> Cancel</button>
+
+                                                            <button id="save" data-dismiss="modal" name="save" class="btn btn-primary btn-submit pull-right"> Save</button>
+                                                        </div>
                                                     </div>
 
                                                     <div class="tablecontainer">
@@ -779,7 +782,7 @@
                                                             </div>
 
                                                             <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-6">
-                                                                <label class="sr-only control-label" for="">Note:</label>
+                                                                <label class="control-label" for="">Note:</label>
                                                                 <textarea class="form-control" maxlength="4000" spellcheck="true" rows="11" cols="20" placeholder="Please enter note (maximum of 4000 characters)" id=""></textarea>
 
                                                                 <i class="fa fa-flag red"></i>
@@ -795,101 +798,13 @@
 
                                                 <hr />
                                                 <div class="butttons-footer spacerbottom15 clearfix">
-                                                    <button id="cancel" data-dismiss="modal" name="cancel" class="btn btn-default"> Cancel</button>
-                                                    <button id="save" data-dismiss="modal" name="save" class="pull-right btn btn-primary"> Save</button>
-                                                </div>
+                                                    <div class="pull-right">
+                                                        <button id="cancel" data-dismiss="modal" name="cancel" class="btn btn-default btn-cancel pull-right"> Cancel</button>
 
-                                                <div class="tablecontainer">
-                                                    <div class="col-md-12 col-xs-12 panel-heading tableheader">
-                                                        <form class="form-inline">
-                                                            <div class="form-group branch-sub-code">
-                                                                <label class="control-label branch-sub-label" for="">Branch Sub Code</label>
-                                                                <input id="" name="" class="form-control" type="search" value="" placeholder="Type here to search...">
-                                                            </div>
-                                                        </form>
-
-                                                        <button id="add-sub-code" data-toggle="modal" data-target="#add-sub-code" class="btn carrier-btn pull-right btn-table sub-code-button"> <i class="fa fa-plus"></i> Add Sub Code</button>
-
-                                                    </div>
-                                                    <div class="panel-body">
-                                                        <div class="cams-tables">
-                                                            <table class="table-hover table-striped table-condensed cf parent-child-main-table">
-                                                                <thead class="cf">
-
-                                                                    <tr>
-                                                                        <th>Sub Code</th>
-                                                                        <th>Effective Date</th>
-                                                                        <th>Inactive Date</th>
-                                                                        <th>Status</th>
-                                                                        <th class="action">Action</th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-
-                                                                    <tr>
-                                                                        <td data-title="Sub Code">MSB123</td>
-                                                                        <td data-title="Effective Date">12/1/2017</td>
-                                                                        <td data-title="Inactive Date">12/1/2018</td>
-                                                                        <td data-title="Status">Active</td>
-                                                                        <td data-title="Action" class="actionBtn">
-                                                                            <div class="btn-cell">
-                                                                                <a id="add-sub-code4" data-dismiss="modal" data-toggle="modal" data-target="#add-sub-code" class="actionBlue"><i class="fa fa-pencil"></i></a>
-                                                                            </div>
-                                                                            <div class="btn-cell">
-                                                                                <a href="#" class="actionRed"><i class="fa fa-close"></i></a>
-                                                                            </div>
-                                                                        </td>
-                                                                    </tr>
-
-                                                                    <tr>
-                                                                        <td data-title="Sub Code">CJK434</td>
-                                                                        <td data-title="Effective Date">11/19/2017</td>
-                                                                        <td data-title="Inactive Date">11/19/2018</td>
-                                                                        <td data-title="Status">Active</td>
-                                                                        <td data-title="Action" class="actionBtn">
-                                                                            <div class="btn-cell">
-                                                                                <a id="add-sub-code5" data-dismiss="modal" data-toggle="modal" data-target="#add-sub-code" class="actionBlue"><i class="fa fa-pencil"></i></a>
-                                                                            </div>
-                                                                            <div class="btn-cell">
-                                                                                <a href="#" class="actionRed"><i class="fa fa-close"></i></a>
-                                                                            </div>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-
-                                                        <div class="text-center">
-                                                            <nav aria-label="Page navigation">
-                                                                <ul class="pagination">
-                                                                    <li>
-                                                                        <a href="#" aria-label="Previous">
-                                                                                    <span aria-hidden="true">«</span>
-                                                                                </a>
-                                                                    </li>
-                                                                    <li class="active"><a href="#">1</a>
-                                                                    </li>
-                                                                    <li><a href="#">2</a>
-                                                                    </li>
-                                                                    </li>
-                                                                    <li><a href="#">3</a>
-                                                                    </li>
-                                                                    </li>
-                                                                    <li><a href="#">4</a>
-                                                                    </li>
-                                                                    </li>
-                                                                    <li><a href="#">5</a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="#" aria-label="Next">
-                                                                            <span aria-hidden="true">»</span>
-                                                                        </a>
-                                                                    </li>
-                                                                </ul>
-                                                            </nav>
-                                                        </div>
+                                                        <button id="save" data-dismiss="modal" name="save" class="btn btn-primary btn-submit pull-right"> Save</button>
                                                     </div>
                                                 </div>
+
                                             </div>
                                         </div>
                                     </div>
