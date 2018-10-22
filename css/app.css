@@ -57,7 +57,78 @@ a, a:active, a:hover, a:focus, a:visited {
    border-bottom: 1px solid #eee;
    padding-bottom: 10px;
 }
-
+/*new*/
+.sidebar .nav li.dropdown >a:hover,.sidebar .nav li.dropdown >a:focus {
+   background-color: #0a3762  !important;
+   color: #fff !important;
+}
+.sidebar .nav li.dropdown >a:focus i{
+   color: #fff !important;
+}
+.sidebar .nav li.dropdown:hover >a, .sidebar .nav li.dropdown:hover >a i {
+   color: #fff !important;
+}
+.nav > li.dropdown menu{
+   position: relative;
+}
+.nav li.dropdown a.desktop-link{
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   background: transparent !important: ;
+}
+.nav li.dropdown li.dropdown > a:first-child:before{
+   color: #fff !important;
+   transition: background-color .1s ease;
+   content: "\f0da";
+   position: absolute;
+   top: 50%;
+   margin-top: -11px;
+   right: 10px;
+   font-family: FontAwesome;
+}
+.nav li.dropdown a.desktop-link:before{
+   color: #fff !important;
+   transition: background-color .1s ease;
+   position: absolute;
+   top: 0;
+   left: 0;
+}
+.nav-sidebar li.dropdown:hover > a:first-child:after{
+   content: "";
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   top: 0;
+   left: 0;
+   background-color: #0a3762 !important;
+   border-left: 4px solid red;
+   color: #fff !important;
+   padding-left: 16px;
+   z-index: -1;
+   transition: background-color .1s ease;
+}
+.nav li.dropdown li.dropdown > a.desktop-link:after {
+   content: "";
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   top: 0;
+   left: 0;
+   background-color: transparent !important;
+   border-left: 4px solid red;
+   color: #fff !important;
+   padding-left: 16px;
+   z-index: -1;
+   transition: background-color .1s ease;
+}
+.sidebar .nav li.dropdown a.desktop-link:hover, .sidebar .nav li.dropdown > a.desktop-link:focus {
+   background-color: transparent !important;
+   color: #fff !important;
+}
+/**new**/
 @media (min-width: 771px) {
    .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
       margin-left: -45px !important;
@@ -95,7 +166,7 @@ a, a:active, a:hover, a:focus, a:visited {
       top: -1px;
       z-index: 1000;
    }
-   .sidebar .nav>li.dropdown:hover ul.dropdown-menu {
+   .sidebar .nav li.dropdown:hover > ul.dropdown-menu {
       display: block;
    }
 }
@@ -255,7 +326,7 @@ a, a:active, a:hover, a:focus, a:visited {
 .nav-sidebar .dropdown-menu>li>a {
    color: #fff;
    font-size: 16px;
-   padding: 27px 20px;
+   padding: 23px 20px;
 }
 
 .nav-sidebar .dropdown-menu>li>a:focus {
@@ -400,6 +471,9 @@ body.portal-pad {
    }
    .location {
       display: block !important;
+   }
+   .desktop-link{
+      display: none !important;
    }
 }
 
@@ -1039,17 +1113,22 @@ form .form-group:before, form .form-group:after {
 }
 
 .form-group {
-   margin-bottom: 60px;
+   margin-bottom: 30px;
 }
 
 .form-control {
    margin-top: 8px;
+
 }
 
 .form {
     margin-bottom: 20px;
     margin-left: -7px;
     margin-right: 7px;
+}
+
+.form-control-static {
+   display: block;
 }
 
 .checkbox input {
@@ -1081,6 +1160,12 @@ form .form-group:before, form .form-group:after {
    color: #3f3f3f;
    padding-bottom: 6px;
    font-weight: bold;
+}
+
+@media (max-width: 992px) {
+   .control-label {
+      margin: 15px 0px -5px 0px;
+   }
 }
 
 .field-button-group select,
@@ -1153,6 +1238,7 @@ form .form-group:before, form .form-group:after {
    margin-left: -2px;
    margin-bottom: 1px;
    border-radius: 5px 0px 0px 0px;
+   padding: 13px;
 }
 
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover, .nav>li>a:focus, .nav>li>a:hover {
@@ -1295,6 +1381,7 @@ a.view:visited, a.view:hover {
    font-size: 12px;
    margin-top: 4px;
    margin-right: 4px;
+   margin-bottom: 0px;
    text-transform: uppercase;
    position: sticky;
    z-index: 100;
@@ -1308,6 +1395,7 @@ a.view:visited, a.view:hover {
    font-size: 12px;
    margin-top: 4px;
    margin-right: 4px;
+   margin-bottom: 0px;
    text-transform: uppercase;
    position: sticky;
    z-index: 100;
@@ -1403,6 +1491,14 @@ a.view:visited, a.view:hover {
    margin-top: 30px !important;
 }
 
+.spacer28 {
+   margin-top: 28px !important;
+}
+
+.spacer25 {
+   margin-top: 25px !important;
+}
+
 .spacer20 {
    margin-top: 20px !important;
 }
@@ -1451,7 +1547,8 @@ a.view:visited, a.view:hover {
    border: 1px solid #ccc !important;
    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
    margin-top: 8px !important;
-   height: 34px !important;
+   height: auto !important;
+   min-height: 34px !important;
 }
 
 .search-choice {
@@ -1464,11 +1561,20 @@ a.view:visited, a.view:hover {
 
 .title-button select, .carrier-add, .branch-add {
 	float: left;
-   width: 89%;	
+   width: 89% !important;	
 }
 
 .add-button, .add-button:hover {
    margin-top: -35px;
+}
+
+.add-button-table, .add-button-table:hover {
+   margin-top: -41px;
+}
+
+.include-system, .include-inactive {
+   padding: 10px;
+   color: #FFF;
 }
 
 .title-button .add-button, .title-button .add-button:hover {
@@ -1508,7 +1614,7 @@ a.view:visited, a.view:hover {
 }
 .custom-group-form .carrier-add{
 	float: left;
-	width: 89%;
+	width: 85%;
 }
 .custom-group-form .chosen-container{
 	float: left;
@@ -1521,17 +1627,14 @@ a.view:visited, a.view:hover {
 	margin: 10px 0 0;
 }
 @media (min-width: 992px) and (max-width: 1190px){
-	.title-button select {
-		width: 75%;
+	.title-button select, .custom-group-form .carrier-add {
+		width: 75% !important;
 	}
+   .custom-group-form .chosen-container{
+      width: 75% !important;
+   }
 	.box-with-plus-btn .add-button {
 		margin-left: 0;
-	}
-	.custom-group-form .carrier-add {
-		width: 75%;
-	}
-	.custom-group-form .chosen-container{
-		width: 75% !important;
 	}
 }
 
@@ -1560,6 +1663,11 @@ a.view:visited, a.view:hover {
 .inline {
    display: inline-block;
 }
+
 .valign-top{
    vertical-align: top;
+}
+
+.visible-hidden {
+    visibility: hidden;
 }

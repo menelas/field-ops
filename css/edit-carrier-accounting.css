@@ -1,0 +1,16 @@
+.fa.pw-toggle:hover{
+	cursor: pointer;
+}
+.input-pw-toggle{
+	border: 0;
+	background: none;
+}
+.control-label {
+ 	margin-right: 15px;
+ }
+.tab-search {
+	margin: -4px 165px -55px 50px;
+}
+.carrier-btn {
+	margin-bottom: -50px;
+}

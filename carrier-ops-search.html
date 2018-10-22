@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -143,17 +144,19 @@
                             <li><a href="carrier-ops-search.html">Carriers</a>
                                 <hr />
                             </li>
+                            <li class="dropdown menu"><a href="#">Contacts</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="add-carrier-contact.html">Add New Contact</a></li>
+                                    <li><a href="carrier-contact-search.html">View Contacts</a></li>
+                                </ul>
+                                <hr />
+                            </li>
                             <li class="dropdown menu"><a href="#">Administration</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="add-user.html">Add User</a>
-                                        <hr>
-                                    </li>
-                                    <li><a href="view-users.html">View Users</a>
-                                        <hr>
-                                    </li>
-                                    <li><a href="admin-carrier-search.html">Carriers</a>
-                                        <hr>
-                                    </li>
+                                    <li><a href="add-user.html">Add User</a><hr></li>
+                                    <li><a href="view-users.html">View Users</a><hr></li>
+                                    <li><a href="admin-carrier-search.html">Carriers</a><hr></li>
+                                    <li><a href="specialty.html">Specialties</a><hr></li>
                                 </ul>
                                 <hr />
                             </li>
@@ -194,25 +197,8 @@
                 <div class="container-content">
                     <form>
                         <div class="row">
-                            <div class="col-sm-12 col-md-4 col-lg-3">
+                            <div class="col-sm-12 col-md-3 col-lg-3">
                                 <label class="control-label" for="">Carrier:</label>
-                                <div class="custom-group-form">
-                                    <div class="input-group carrier-add">
-                                        <input class="form-control" id="CarrierId" name="" type="search" value="" autocomplete="off">
-                                        <input name="" type="hidden" class="autocompletehidden" value="">
-                                        <div class="input-group-addon"><i class="fa fa-search"></i></div>
-                                    </div>
-                                    <a data-toggle="modal" data-target="#add-branch-agreement" class="btn icon-btn add-button pull-right"><i class="fa fa-plus"></i></a>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-12 col-md-4 col-lg-3">
-                                <label class="control-label" for="">Code:</label>
-                                <input id="" name="" class="form-control input-md" required="" value="1201" type="text">
-                            </div>
-
-                            <div class="col-sm-12 col-md-4 col-lg-3">
-                                <label class=" control-label" for="">Branch:</label>
                                 <div class="input-group">
                                     <input class="form-control" id="CarrierId" name="" type="search" value="" autocomplete="off">
                                     <input name="" type="hidden" class="autocompletehidden" value="">
@@ -221,178 +207,317 @@
                                 </div>
                             </div>
 
-                            <div class="col-sm-12 col-md-4 col-lg-3 spacer28">
-                                <button id="" class="btn btn-primary">Clear Filters</button>
+                            <div class="col-sm-12 col-md-3 col-lg-3">
+                                <label class=" control-label" for="">Branch:</label>
+                                <div class="input-group">
+                                    <input class="form-control" id="CarrierId" name="" type="search" value="Longwood, FL" autocomplete="off">
+                                    <input name="" type="hidden" class="autocompletehidden" value="">
+                                    <div class="input-group-addon"><i class="fa fa-search"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-3 col-lg-3">
+                                <label class="control-label" for="">Line of Business:</label>
+                                <select data-placeholder=" -- Select Line of Business --" multiple class="chosen-select-width" tabindex="16">
+                                    <option>Accident & Health</option>
+                                    <option>Agribusiness & Agriculture</option>
+                                    <option>Aviation</option>
+                                    <option>Boiler & Machinery</option>
+                                    <option>Business Income</option>
+                                    <option>Business Interruption</option>
+                                    <option>Business Owners Policy</option>
+                                    <option>Cargo</option>
+                                    <option>Casualty</option>
+                                    <option>Commercial Auto</option>
+                                    <option>Commercial Flood</option>
+                                    <option>Commercial Property</option>
+                                    <option>Commercial Umbrella</option>
+                                    <option>Construction</option>
+                                    <option>Contingency</option>
+                                    <option>Credit Insurance</option>
+                                    <option>Crime</option>
+                                    <option>Cyber Liability</option>
+                                    <option>Directors & Officers</option>
+                                    <option>Employed Lawyers</option>
+                                    <option>Employers Liability</option>
+                                    <option>Employment Practices Liability</option>
+                                    <option>Employee Benefits</option>
+                                    <option>Environmental</option>
+                                    <option>Equine</option>
+                                    <option>Equipment Breakdown</option>
+                                    <option>Excess Liability</option>
+                                    <option>Executive & Financial Risks</option>
+                                    <option>Fiduciary Liability</option>
+                                    <option>General Liability</option>
+                                    <option>Inland Marine</option>
+                                    <option>International</option>
+                                    <option>Kidnap & Ransom</option>
+                                    <option>Product Liability</option>
+                                    <option>Professional Liability (E&O)</option>
+                                    <option>Reinsurance</option>
+                                    <option>Representations & Warranties</option>
+                                    <option>Specie & Fine Art</option>
+                                    <option>Supply Chain Risk</option>
+                                    <option>Trade Credit & Political Risk</option>
+                                    <option>Transportation</option>
+                                    <option>War & Terrorism</option>
+                                    <option>Workers Compensation</option>
+                                    <option>Workplace Violence</option>
+                                </select>
+                            </div>
+
+                            <div class="col-sm-12 col-md-3 col-lg-3">
+                                <label class="control-label" for="">Code:</label>
+                                <input id="" name="" class="form-control input-md" required="" value="" type="text">
                             </div>
                         </div>
 
+                        <div class="row spacer10">
+                            <div class="col-sm-12 col-md-4 col-lg-3">
+                                <label class="control-label" for="">Include Inactive</label>
+                                <input type="checkbox" value="true">
+                                <br />
+                                <label class="control-label preferred-broker" for="">Is a Preferred Broker</label>
+                                <input type="checkbox" value="true">
+                            </div>
+                        </div>
                     </form>
+
+                    <div class="butttons-footer clearfix spacer10">
+                        <button id="carriercontact" class="btn btn-primary">Clear Filters</button>
+                    </div>
+
+                    <hr />
+
                 </div>
 
-                <div class="tablecontainer spacer30">
-                    <div class="col-md-12 col-xs-12 panel-heading tableheader">
-                        <div class="pull-left head-drop">
-                            Search Results
-                        </div>
-                    </div>
+                <div class="tablecontainer">
+                            <div class="col-md-12 col-xs-12 panel-heading tableheader">
+                                <div class="pull-left head-drop">
+                                    Search Results
+                                </div>
+                            </div>
 
-                    <div class="panel-body">
-                        <div class="portal-tables">
-                            <table class="table-hover table-striped table-condensed cf tb-car-search">
-                                <thead class="cf">
-                                    <tr>
-                                        <th>Carrier</th>
-                                        <th>Master Code</th>
-                                        <th>Book</th>
-                                        <th>Sub Code</th>
-                                        <th>Branch Agreement</th>
-                                        <th>Agency</th>
-                                        <th class="action">Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td data-title="Carrier">
-                                            <i class="fa fa-plus-circle plus-sign" aria-hidden="true" data-car-class="car-class-1"></i><i style="display: none" class="fa fa-minus-circle minus-sign" aria-hidden="true" data-car-class="car-class-1"></i>                                            CNA
-                                        </td>
-                                        <td data-title="Master Code">CNA1201</td>
-                                        <td data-title="Books">NICS</td>
-                                        <td data-title="Sub Code"></td>
-                                        <td data-title="Branch Agreement">Longwood, FL</td>
-                                        <td data-title="Agency">IOA</td>
-                                        <td data-title="Action" class="actionBtn">
-                                            <div class="btn-cell">
-                                                <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="car-class-1 even" style="display: none">
-                                        <td></td>
-                                        <td></td>
-                                        <td data-title="Books">NICS</td>
-                                        <td data-title="Sub Code">ERT1201</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td data-title="Action" class="actionBtn">
-                                            <div class="btn-cell">
-                                                <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="car-class-1 even" style="display: none">
-                                        <td></td>
-                                        <td></td>
-                                        <td data-title="Books">NICS</td>
-                                        <td data-title="Sub Code">OJE1201</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td data-title="Action" class="actionBtn">
-                                            <div class="btn-cell">
-                                                <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="car-class-1 even" style="display: none">
-                                        <td></td>
-                                        <td></td>
-                                        <td data-title="Books">NICS</td>
-                                        <td data-title="Sub Code">BOL1201</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td data-title="Action" class="actionBtn">
-                                            <div class="btn-cell">
-                                                <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="odd">
-                                        <td data-title="Carrier">
-                                            <i class="fa fa-plus-circle plus-sign" aria-hidden="true" data-car-class="car-class-2"></i><i style="display: none" class="fa fa-minus-circle minus-sign" aria-hidden="true" data-car-class="car-class-2"></i>                                            Nationwide <i class="fa fa-flag flag-icon" aria-hidden="true"></i>
-                                        </td>
-                                        <td data-title="Master Code"></td>
-                                        <td data-title="Books">----</td>
-                                        <td data-title="Sub Code">----</td>
-                                        <td data-title="Branch Agreement">Marathon, FL</td>
-                                        <td data-title="Agency">IOA</td>
-                                        <td data-title="Action" class="actionBtn">
-                                            <div class="btn-cell">
-                                                <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="car-class-2 odd" style="display: none">
-                                        <td></td>
-                                        <td></td>
-                                        <td data-title="Books">NICS</td>
-                                        <td data-title="Sub Code">BOL1201</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td data-title="Action" class="actionBtn">
-                                            <div class="btn-cell">
-                                                <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="even">
-                                        <td data-title="Carrier">
-                                            <i class="fa fa-plus-circle plus-sign" aria-hidden="true" data-car-class="car-class-3"></i><i style="display: none" class="fa fa-minus-circle minus-sign" aria-hidden="true" data-car-class="car-class-3"></i>                                            Hartford
-                                        </td>
-                                        <td data-title="Master Code"></td>
-                                        <td data-title="Books">----</td>
-                                        <td data-title="Sub Code">----</td>
-                                        <td data-title="Branch Agreement">Lakeland, FL</td>
-                                        <td data-title="Agency">Eagle</td>
-                                        <td data-title="Action" class="actionBtn">
-                                            <div class="btn-cell">
-                                                <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="car-class-3 even" style="display: none">
-                                        <td></td>
-                                        <td></td>
-                                        <td data-title="Books">NICS</td>
-                                        <td data-title="Sub Code">BOL1201</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td data-title="Action" class="actionBtn">
-                                            <div class="btn-cell">
-                                                <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="text-center">
-                        <nav aria-label="Page navigation">
-                            <ul class="pagination">
-                                <li>
-                                    <a href="#" aria-label="Previous">
+                            <div class="panel-body">
+                                <div class="portal-tables">
+                                    <table class="table-hover table-striped table-condensed cf tb-car-search">
+                                        <thead class="cf">
+                                            <tr>
+                                                <th>Carrier</th>
+                                                <th>Branch</th>
+                                                <th>Line of Business</th>
+                                                <th>Master Code</th>
+                                                <th>Sub Codes</th>
+                                                <th class="action">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td data-title="Carrier">
+                                                    <i class="fa fa-plus-circle plus-sign" aria-hidden="true" data-car-class="car-class-1"></i><i style="display: none" class="fa fa-minus-circle minus-sign" aria-hidden="true" data-car-class="car-class-1"></i> CNA <i class="fa fa-star" data-toggle="tooltip" data-placement="top" title="Preferred Broker"></i>
+                                                </td>
+                                                <td data-title="Branch">Longwood, FL</td>
+                                                <td data-title="Line of Business">Accident & Health, Commercial Auto, Inland Marine</td>
+                                                <td data-title="Master Code">MNW343</td>
+                                                <td data-title="Sub Code">LNG202</td>
+                                                <td data-title="Action" class="actionBtn">
+                                                   <div class="btn-cell">
+                                                        <a href="edit-carrier.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="car-class-1 even" style="display: none">
+                                                <td></td>
+                                                <td data-title="Branch">Marathon, FL</td>
+                                                <td data-title="Line of Business"></td>
+                                                <td></td>
+                                                <td data-title="Sub Code">MRT210</td>
+                                                <td data-title="Action" class="actionBtn"></td>
+                                            </tr>
+                                            <tr class="car-class-1 even" style="display: none">
+                                                <td></td>
+                                                <td data-title="Branch">Lakeland, FL</td>
+                                                <td data-title="Line of Business"></td>
+                                                <td></td>
+                                                <td data-title="Sub Code">LKL101</td>
+                                                <td data-title="Action" class="actionBtn"></td>
+                                            </tr>
+                                            <tr class="odd">
+                                                <td data-title="Carrier">
+                                                    <i class="fa fa-plus-circle plus-sign" aria-hidden="true" data-car-class="car-class-2"></i><i style="display: none" class="fa fa-minus-circle minus-sign" aria-hidden="true" data-car-class="car-class-2"></i> Nationwide <i class="fa fa-star" data-toggle="tooltip" data-placement="top" title="Preferred Broker"></i>
+                                                </td>
+                                                <td data-title="Branch">Longwood, FL</td>
+                                                <td data-title="Line of Business">Cyber Liability, Employee Benefits</td>
+                                                <td data-title="Master Code">NTN120</td>
+                                                <td data-title="Sub Code">LNG019</td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="car-class-2 odd" style="display: none">
+                                                <td></td>
+                                                <td data-title="Branch">Ormond Beach, FL</td>
+                                                <td data-title="Line of Business"></td>
+                                                <td></td>
+                                                <td data-title="Sub Code">ORM203</td>
+                                                <td data-title="Action" class="actionBtn"></td>
+
+                                            </tr>
+
+                                            <tr class="car-class-2 odd" style="display: none">
+                                                <td></td>
+                                                <td data-title="Branch">Tallahassee, FL</td>
+                                                <td data-title="Line of Business"></td>
+                                                <td></td>
+                                                <td data-title="Sub Code">TLH182</td>
+                                                <td data-title="Action" class="actionBtn"></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td data-title="Carrier">
+                                                    <i class="fa fa-plus-circle plus-sign" aria-hidden="true" data-car-class="car-class-3"></i><i style="display: none" class="fa fa-minus-circle minus-sign" aria-hidden="true" data-car-class="car-class-3"></i> Hartford <i class="fa fa-star" data-toggle="tooltip" data-placement="top" title="Preferred Broker"></i>
+                                                </td>
+                                                <td data-title="Branch">Longwood, FL</td>
+                                                <td data-title="Line of Business">Accident & Health, Commercial Auto, Inland Marine</td>
+                                                <td data-title="Master Code">HTF320</td>
+                                                <td data-title="Sub Code">LNG012</td>
+                                                <td data-title="Action" class="actionBtn">
+                                                   <div class="btn-cell">
+                                                        <a href="edit-carrier.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="car-class-3 even" style="display: none">
+                                                <td></td>
+                                                <td data-title="Branch">Marathon, FL</td>
+                                                <td data-title="Line of Business"></td>
+                                                <td></td>
+                                                <td data-title="Sub Code">MRT329</td>
+                                                <td data-title="Action" class="actionBtn"></td>
+                                            </tr>
+                                            <tr class="car-class-3 even" style="display: none">
+                                                <td></td>
+                                                <td data-title="Branch">Lakeland, FL</td>
+                                                <td data-title="Line of Business"></td>
+                                                <td></td>
+                                                <td data-title="Sub Code">LKL210</td>
+                                                <td data-title="Action" class="actionBtn"></td>
+                                            </tr>
+
+                                            <tr class="odd">
+                                                <td data-title="Carrier">
+                                                    <i class="fa fa-plus-circle plus-sign" aria-hidden="true" data-car-class="car-class-4"></i><i style="display: none" class="fa fa-minus-circle minus-sign" aria-hidden="true" data-car-class="car-class-4"></i> Liberty Mutual <i class="fa fa-star" data-toggle="tooltip" data-placement="top" title="Preferred Broker"></i>
+                                                </td>
+                                                <td data-title="Branch">Longwood, FL</td>
+                                                <td data-title="Line of Business">Cyber Liability, Employee Benefits</td>
+                                                <td data-title="Master Code">LMT392</td>
+                                                <td data-title="Sub Code">LNG012</td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="car-class-4 odd" style="display: none">
+                                                <td></td>
+                                                <td data-title="Branch">Ormond Beach, FL</td>
+                                                <td data-title="Line of Business"></td>
+                                                <td></td>
+                                                <td data-title="Sub Code">ORM102</td>
+                                                <td data-title="Action" class="actionBtn"></td>
+
+                                            </tr>
+
+                                            <tr class="car-class-4 odd" style="display: none">
+                                                <td></td>
+                                                <td data-title="Branch">Tallahassee, FL</td>
+                                                <td data-title="Line of Business"></td>
+                                                <td></td>
+                                                <td data-title="Sub Code">TLH129</td>
+                                                <td data-title="Action" class="actionBtn"></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td data-title="Carrier">
+                                                    <i class="fa fa-plus-circle plus-sign" aria-hidden="true" data-car-class="car-class-5"></i><i style="display: none" class="fa fa-minus-circle minus-sign" aria-hidden="true" data-car-class="car-class-5"></i> Travelers <i class="fa fa-star" data-toggle="tooltip" data-placement="top" title="Preferred Broker"></i>
+                                                </td>
+                                                <td data-title="Branch">Longwood, FL</td>
+                                                <td data-title="Line of Business">Accident & Health, Commercial Auto, Inland Marine</td>
+                                                <td data-title="Master Code">TVL320</td>
+                                                <td data-title="Sub Code">LNG293</td>
+                                                <td data-title="Action" class="actionBtn">
+                                                   <div class="btn-cell">
+                                                        <a href="edit-carrier.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="car-class-5 even" style="display: none">
+                                                <td></td>
+                                                <td data-title="Branch">Marathon, FL</td>
+                                                <td data-title="Line of Business"></td>
+                                                <td></td>
+                                                <td data-title="Sub Code">MRT392</td>
+                                                <td data-title="Action" class="actionBtn"></td>
+                                            </tr>
+                                            <tr class="car-class-5 even" style="display: none">
+                                                <td></td>
+                                                <td data-title="Branch">Lakeland, FL</td>
+                                                <td data-title="Line of Business"></td>
+                                                <td></td>
+                                                <td data-title="Sub Code">LKL292</td>
+                                                <td data-title="Action" class="actionBtn"></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td data-title="Carrier">
+                                                    American National
+                                                </td>
+                                                <td data-title="Branch">Longwood, FL</td>
+                                                <td data-title="Line of Business">Commercial Auto, Inland Marine</td>
+                                                <td data-title="Master Code">AMN0320</td>
+                                                <td data-title="Sub Code">LNG293</td>
+                                                <td data-title="Action" class="actionBtn">
+                                                   <div class="btn-cell">
+                                                        <a href="edit-carrier.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <nav aria-label="Page navigation">
+                                    <ul class="pagination">
+                                        <li>
+                                            <a href="#" aria-label="Previous">
                                                 <span aria-hidden="true">«</span>
                                             </a>
-                                </li>
-                                <li class="active"><a href="#">1</a>
-                                </li>
-                                <li><a href="#">2</a>
-                                </li>
-                                <li><a href="#">3</a>
-                                </li>
-                                <li><a href="#">4</a>
-                                </li>
-                                <li><a href="#">5</a>
-                                </li>
-                                </li>
-                                <li>
-                                    <a href="#" aria-label="Next">
+                                        </li>
+                                        <li class="active"><a href="#">1</a>
+                                        </li>
+                                        <li><a href="#">2</a>
+                                        </li>
+                                        <li><a href="#">3</a>
+                                        </li>
+                                        <li><a href="#">4</a>
+                                        </li>
+                                        <li><a href="#">5</a>
+                                        </li>
+                                        </li>
+                                        <li>
+                                            <a href="#" aria-label="Next">
                                                 <span aria-hidden="true">»</span>
                                             </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
 
                 <!-- Edit Modal -->
                 <div id="add-branch-agreement" class="modal fade" role="dialog">
@@ -506,7 +631,7 @@
                                             </div>
                                         </form>
 
-                                        <button id="add-sub-code" name="add-sub-code" data-toggle="modal" data-target="#add-sub-code" data-dismiss="modal" class="btn carrier-btn pull-right btn-table sub-code-button"> <i class="fa fa-plus"></i> Add Sub Code</button>
+                                        <button id="add-sub-code" name="add-sub-code" data-toggle="modal" data-target="#add-sub-code" data-dismiss="modal"  class="btn carrier-btn pull-right btn-table sub-code-button"> <i class="fa fa-plus"></i> Add Sub Code</button>
 
                                     </div>
                                     <div class="panel-body">

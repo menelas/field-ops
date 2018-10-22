@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Office of America - Carrier Contact Database</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/edit-carrier.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Chosen Multi Select -->
+    <link rel="stylesheet" href="chosen_v1.6.2/docsupport/style.css">
+    <link rel="stylesheet" href="chosen_v1.6.2/docsupport/prism.css">
+    <link rel="stylesheet" href="chosen_v1.6.2/chosen.css">
+    <script type="text/javascript" src="chosen_v1.6.2/chosen.jquery.js"></script>
+    <script type="text/javascript" src="chosen_v1.6.2/docsupport/prism.js"></script>
+
+    <!-- Bootstrap Date-Picker Plugin -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+    <script type="text/javascript" src="js/date-picker.js"></script>
+
+    <!-- Bootstrap Toggle -->
+    <link rel="stylesheet" href="bootstrap/css/toggle/bootstrap-toggle.min.css">
+    <script type="text/javascript" src="bootstrap/js/toggle/bootstrap-toggle.min.js"></script>
+
+</head>
+
+<body class="portal-pad portal-page">
+    <nav class="navbar navbar-inverse navbar-fixed-top menu-top">
+        <div class="container-fluid menu-margin">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".sidebar1" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img src="img/logo.png" width="150" alt="Insurance Office of America">
+                </a>
+                <h4 class="company-title">Insurance Office of America</h4>
+                <h5>Carrier Contact Database</h5>
+            </div>
+            <div id="navbar" role="navigation" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Chris Robertson <i class="fa fa-cog" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu">
+                            <div class="arrow-up"></div>
+                            <li><a href="#">Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid content">
+        <div class="row sidebar-container">
+            <div id="sidebar" class="col-xs-12 col-sm-3 col-md-12 sidebar1 sidebar navbar-collapse collapse">
+                <ul class="nav nav-sidebar">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="accounting-dashboard.html"><i class="fa fa-calculator fa-2x" aria-hidden="true"></i><span>Accounting</span><i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                        <a class="desktop-link" href="accounting-dashboard.html">&nbsp;</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="carrier-accounting-search.html">Carriers</a>
+                                <hr />
+                            </li>
+                            <li class="dropdown menu"><a href="#">Administration</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="add-user.html">Add User</a>
+                                        <hr>
+                                    </li>
+                                    <li><a href="view-users.html">View Users</a>
+                                        <hr>
+                                    </li>
+                                    <li><a href="admin-carrier-search-accounting.html">Carriers</a>
+                                        <hr>
+                                    </li>
+                                    <li><a href="admin-accounting-report.html">Report</a>
+                                        <hr>
+                                    </li>
+                                </ul>
+                                <hr />
+                            </li>
+                        </ul>
+                    </li>
+                    <hr />
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="index.html"><i class="fa fa-briefcase fa-2x" aria-hidden="true"></i><span>Field Ops</span><i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                        <a class="desktop-link" href="index.html">&nbsp;</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="carrier-agreement-search.html">Agreements</a>
+                                <hr />
+                            </li>
+                            <li class="dropdown menu"><a href="#">Contacts</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="add-carrier-contact.html">Add New Contact</a></li>
+                                    <li><a href="carrier-contact-search.html">View Contacts</a></li>
+                                </ul>
+                                <hr />
+                            </li>
+                            <li><a href="#">Personnel</a>
+                                <hr />
+                            </li>
+                            <li class="dropdown menu"><a href="#">Administration</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="add-user.html">Add User</a>
+                                        <hr>
+                                    </li>
+                                    <li><a href="view-users.html">View Users</a>
+                                        <hr>
+                                    </li>
+                                    <li><a href="admin-carrier-search.html">Carriers</a>
+                                        <hr>
+                                    </li>
+                                    <li><a href="#">Contact Labels</a>
+                                        <hr>
+                                    </li>
+                                    <li><a href="#">Book of Business</a>
+                                        <hr>
+                                    </li>
+                                    <li><a href="#">Branches</a>
+                                        <hr>
+                                    </li>
+                                </ul>
+                                <hr />
+                            </li>
+                        </ul>
+                    </li>
+                    <hr />
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="carrier-ops-search.html"><i class="fa fa-archive fa-2x" aria-hidden="true"></i><span>Operations</span><i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                        <a class="desktop-link" href="carrier-ops-search.html">&nbsp;</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="carrier-ops-search.html">Carriers</a>
+                                <hr />
+                            </li>
+                            <li class="dropdown menu"><a href="#">Contacts</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="add-carrier-contact.html">Add New Contact</a></li>
+                                    <li><a href="carrier-contact-search.html">View Contacts</a></li>
+                                </ul>
+                                <hr />
+                            </li>
+                            <li class="dropdown menu"><a href="#">Administration</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="add-user.html">Add User</a>
+                                        <hr>
+                                    </li>
+                                    <li><a href="view-users.html">View Users</a>
+                                        <hr>
+                                    </li>
+                                    <li><a href="admin-carrier-search.html">Carriers</a>
+                                        <hr>
+                                    </li>
+                                    <li><a href="specialty.html">Specialties</a>
+                                        <hr>
+                                    </li>
+                                </ul>
+                                <hr />
+                            </li>
+                        </ul>
+                    </li>
+                    <hr />
+                    <li>
+                        <a href="real-estate-dashboard.html"><i class="fa fa-building fa-2x" aria-hidden="true"></i><span>RE & CA</span></a>
+                    </li>
+                    <hr />
+                    <ul class="nav nav-sidebar nav-sidebar2">
+                        <li class="dropdown">
+                            <hr>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-cog fa-3x" aria-hidden="true"></i><span> Chris Robertson</span>
+                            <i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Edit Profile</a>
+                                </li>
+                                <li><a href="#">Logout</a>
+                                </li>
+                            </ul>
+                            <hr>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+            <!-- Body -->
+            <div class="body-container">
+
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 title-header spacerbottom20">
+                    <div class="pull-left head-drop">
+                        <div class="btn-group">
+                            Edit Carrier
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-content">
+
+                    <form>
+                        <div class="row">
+                            <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-3">
+                                <label class="required control-label" for="">Name:</label>
+                                <span class="form-control-static">CNA</span>
+                                <label class="control-label radio-inline">
+                                        <input id="radio-sample-0" value="Carrier" checked="checked" type="radio" name="radio-sample"" >Carrier
+                                    </label>
+
+                                <label class="control-label radio-inline">
+                                        <input id="radio-sample-1" value="Wholesaler" type="radio" name="radio-sample"" >Wholesaler
+                                    </label>
+
+                                <div class="clearfix"></div>
+
+                                <input type="checkbox" value="true">
+                                <label class="control-label" for="">Is Active</label>
+                            </div>
+
+                            <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-3">
+                                <label class="control-label" for="">Master Code:</label>
+                                <input id="" name="" value="MNW453" class="form-control input-md" required="" type="text">
+                            </div>
+
+                            <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-3">
+                                <label class="control-label" for="">Carrier URL:</label>
+                                <input id="" name="" value="https://www.cna.com" class="form-control input-md" type="text">
+                                <div class="external"><i class="fa fa-external-link"></i> <a href="https://www.cna.com" target="_blank">Go to site</a></div>
+                            </div>
+
+                            <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-3">
+                                <label class="control-label" for="">Carrier Agent Portal Link:</label>
+                                <input id="" name="" value="https://www.travelers.com/foragents" class="form-control input-md" type="text">
+                                <div class="external"><i class="fa fa-external-link"></i> <a href="https://www.travelers.com/foragents" target="_blank">Go to site</a></div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-3">
+                                <label class="control-label loss-run-title" for="">Access:</label>
+
+                                <a data-toggle="modal" class="btn icon-btn add-button" data-toggle="modal" data-target="#add-loss-run"><i class="fa fa-plus"></i></a>
+
+                                <span class="loss-run-text">Title Sample 1: sample@company.com</span>
+                                <span class="loss-run-text">Title Sample 2: sample@company.com</span>
+                                <span class="loss-run-text">Title Sample 3: sample@company.com</span>
+                                <span class="loss-run-text">Title Sample 4: sample@company.com</span>
+                                <span class="loss-run-text">Title Sample 5: sample@company.com</span>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9">
+                                <label class="control-label" for="">Downloads:</label>
+
+                                <div class="tablecontainer">
+                                    <div class="panel-body">
+                                        <div class="portal-tables">
+                                            <table class="table-hover table-striped table-condensed cf tb-car-search">
+                                                <tbody>
+                                                    <tr>
+                                                        <td data-title="Policy Download">
+                                                            <label class="control-label toggle-box" for="">Policy Download:</label>
+                                                        </td>
+                                                        <td data-title="Choice">
+                                                            <input type="checkbox" data-toggle="toggle" data-size="mini" data-on="Yes" data-off="No">
+                                                        </td>
+
+                                                        <td data-title="Edocs Download">
+                                                            <label class="control-label toggle-box" for="">Edocs Download:</label>
+                                                        </td>
+                                                        <td data-title="Choice">
+                                                            <input type="checkbox" checked data-toggle="toggle" data-size="mini" data-on="Yes" data-off="No">
+                                                        </td>
+
+                                                        <td data-title="Claims Download">
+                                                            <label class="control-label toggle-box" for="">Claims Download:</label></td>
+                                                        <td data-title="Choice">
+                                                            <input type="checkbox" checked data-toggle="toggle" data-size="mini" data-on="Yes" data-off="No">
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <label class="control-label toggle-boxes-btn carrier-lines" for=""><i class="fa fa-plus-circle plus-sign" aria-hidden="true"></i><i style="display: none" class="fa fa-minus-circle minus-sign" aria-hidden="true"></i>Carrier Lines of Business:</label>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                                <div class="carrier-lines-checked">Casualty</div>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                                <div class="carrier-lines-checked">Contingency</div>
+                                <div class="carrier-lines-checked">Directors & Officers</div>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                                <div class="carrier-lines-checked">Excess Liability</div>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                                <div class="carrier-lines-checked">Reinsurance</div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-3 col-specialty" style="display: none;">
+                                <label class="control-label" for="">Specialty</label>
+                                <select data-placeholder="-- Select Specialty -- " multiple class="chosen-select-width" tabindex="16">
+                                    <option>Specialty 1</option>
+                                    <option>Specialty 2</option>
+                                    <option>Specialty 3</option>
+                                    <option>Specialty 4</option>
+                                </select>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 toggle-boxes" style="display: none">
+                                <div class="checkbox">
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Accident & Health</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Agribusiness & Agriculture</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Aviation</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Boiler & Machinery</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Business Income</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Business Interruption</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Business Owners Policy</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Cargo</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox" checked>Casualty</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Commercial Auto</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Commercial Flood</label>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 toggle-boxes" style="display: none">
+                                <div class="checkbox">
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Commercial Property</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Commercial Umbrella</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Construction</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox" checked>Contingency</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Credit Insurance</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Crime</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Cyber Liability</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox" checked>Directors & Officers</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Employers Liability</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Employment Practices Liability</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Employee Benefits</label>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 toggle-boxes" style="display: none">
+                                <div class="checkbox">
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Environmental</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Equine</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Equipment Breakdown</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox" checked>Excess Liability</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Executive & Financial Risks</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Fiduciary Liability</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">General Liability</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Inland Marine</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">International</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Kidnap & Ransom</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Professional Liability (Architects & Engineers)</label>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 toggle-boxes" style="display: none">
+                                <div class="checkbox">
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Professional Liability (E&O)</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Professional Liability (Lawyers)</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox" checked>Reinsurance</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Representations & Warranties</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Specie & Fine Art</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Supply Chain Risk</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Trade Credit & Political Risk</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Transportation</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">War & Terrorism</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Workers Compensation</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Workplace Violence</label>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="butttons-footer">
+                            <button id="cancel" name="cancel" class="btn btn-default"> Cancel</button>
+                            <button id="save" name="save" class="pull-right btn btn-primary"> Save</button>
+                        </div>
+                    </form>
+
+                    <!-- Edit Modal -->
+                    <div id="add-loss-run" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Add Access</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                            <label class="required control-label" for="">Title:</label>
+                                            <input id="" name="" class="form-control input-md" required type="text">
+                                        </div>
+
+                                        <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                            <label class="control-label" for="">Email Address:</label>
+                                            <input id="" name="" class="form-control input-md" required type="text">
+                                        </div>
+
+                                        <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                            <label class="control-label" for="">Link:</label>
+                                            <input id="" name="" class="form-control input-md" required type="text">
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button id="save" name="save" class="btn btn-primary">Save</button>
+                                    <button id="cancel" name="cancel" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <div id="nav-tabs">
+                                <ul class="nav nav-tabs spacer20">
+                                    <li class="active"><a data-toggle="tab" href="#contacts"><i class="fa fa-address-card"></i> Contacts</a></li>
+                                    <li class="sep"><a data-toggle="tab" href="#branches"><i class="fa fa-sitemap"></i> Branches</a></li>
+                                    <li class="sep"><a data-toggle="tab" href="#notes"><i class="fa fa-sticky-note"></i> Carrier Notes & History</a></li>
+                                    <li class="sep"><a data-toggle="tab" href="#add-branch-code"><i class="fa fa-list-ol"></i> Codes</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="tab-content">
+
+                                <div id="contacts" class="tab-pane fade in active tabs-info">
+                                    <div class="portal-tables">
+                                        <table class="table-hover table-striped table-condensed cf no-border">
+                                            <thead class="cf">
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Phone Number</th>
+                                                    <th>Title</th>
+                                                    <th>Agency</th>
+                                                    <th>Line of Business</th>
+                                                    <th class="col-lg-3 action">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td data-title="Name">Bernard Ware</td>
+                                                    <td data-title="Phone Number">407-788-3000</td>
+                                                    <td data-title="Title">Director</td>
+                                                    <td data-title="Agency">IOA</td>
+                                                    <td data-title="Line of Business">Commercial</td>
+                                                    <td data-title="Action" class="actionBtn">
+                                                        <div class="btn-cell">
+                                                            <a href="mailto:bernard.ware@company.com" class="actionBlue"><i class="fa fa-envelope"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td data-title="Name">William Carter</td>
+                                                    <td data-title="Phone Number">407-788-3000</td>
+                                                    <td data-title="Title">Supervisor</td>
+                                                    <td data-title="Agency">Eagle</td>
+                                                    <td data-title="Line of Business">Personal</td>
+                                                    <td data-title="Action" class="actionBtn">
+                                                        <div class="btn-cell">
+                                                            <a href="mailto:bernard.ware@company.com" class="actionBlue"><i class="fa fa-envelope"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td data-title="Name">Graham Hazel</td>
+                                                    <td data-title="Phone Number">407-788-3000</td>
+                                                    <td data-title="Title">Manager</td>
+                                                    <td data-title="Agency">Eagle</td>
+                                                    <td data-title="Line of Business">Personal</td>
+                                                    <td data-title="Action" class="actionBtn">
+                                                        <div class="btn-cell">
+                                                            <a href="mailto:bernard.ware@company.com" class="actionBlue"><i class="fa fa-envelope"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td data-title="Name">Jason Pettway</td>
+                                                    <td data-title="Phone Number">407-788-3000</td>
+                                                    <td data-title="Title">Support</td>
+                                                    <td data-title="Agency">Eagle</td>
+                                                    <td data-title="Line of Business">Personal</td>
+                                                    <td data-title="Action" class="actionBtn">
+                                                        <div class="btn-cell">
+                                                            <a href="mailto:bernard.ware@company.com" class="actionBlue"><i class="fa fa-envelope"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td data-title="Name">Donna Kline</td>
+                                                    <td data-title="Phone Number">407-788-3000</td>
+                                                    <td data-title="Title">Support</td>
+                                                    <td data-title="Agency">IOA National</td>
+                                                    <td data-title="Line of Business">Personal</td>
+                                                    <td data-title="Action" class="actionBtn">
+                                                        <div class="btn-cell">
+                                                            <a href="mailto:bernard.ware@company.com" class="actionBlue"><i class="fa fa-envelope"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div id="branches" class="tab-pane fade in tabs-info">
+                                    <div class="pull-right add-button-table">
+                                        <a name="" data-toggle="modal" data-target="#add-branch" class="btn carrier-btn pull-right"><i class="fa fa-plus"></i> Add Branch</a>
+                                    </div>
+
+                                    <div class="portal-tables">
+                                        <table class="table-hover table-striped table-condensed cf no-border">
+                                            <thead class="cf">
+                                                <tr>
+                                                    <th>Branch</th>
+                                                    <th>Status</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr>
+                                                    <td data-title="Branch">Longwood, FL</td>
+                                                    <td data-title="Status">Active</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td data-title="Branch">Tampa, FL</td>
+                                                    <td data-title="Status">Active</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td data-title="Branch">Ft. Myers</td>
+                                                    <td data-title="Status">Active</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td data-title="Branch">Boca Raton</td>
+                                                    <td data-title="Status">-----</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td data-title="Branch">Marathon, FL</td>
+                                                    <td data-title="Status">-----</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <!-- Edit Modal -->
+                                <div id="add-branch" class="modal fade" role="dialog">
+                                    <div class="modal-dialog">
+
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                <h4 class="modal-title">Add Branch </h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="row">
+                                                    <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-12">
+                                                        <label class="required control-label" for="">Branch Name:</label>
+                                                        <input id="" name="" value="CNA" class="form-control input-md" required type="text">
+                                                    </div>
+
+                                                    <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-12">
+                                                        <label class="control-label" for="">Status:</label>
+                                                        <select id="" name="" class="form-control">
+                                                                <option value="">-- Please Select Status--</option>
+                                                                <option value="">Active</option>
+                                                                <option value="">Inactive</option>
+                                                            </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button id="cancel" data-dismiss="modal" name="cancel" class="btn btn-default"> Cancel</button>
+                                                <button id="save" data-dismiss="modal" name="save" class="pull-right btn btn-primary"> Save</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Modal -->
+
+                                <div id="notes" class="tab-pane fade in tabs-info">
+                                    <div class="pull-right add-button-table add-notes">
+                                        <a name="" data-toggle="modal" data-target="#add-notes" class="btn carrier-btn pull-right add-note"><i class="fa fa-plus"></i> Add Note</a>
+                                        <label for="" class="control-label branch-sub-label include-system"><input type="checkbox" id="" name="" value="true"> Include System</label>
+                                    </div>
+
+                                    <div class="portal-tables">
+                                        <table class="table-hover table-striped table-condensed cf no-border">
+                                            <thead class="cf">
+                                                <tr>
+                                                    <th>Date</th>
+                                                    <th class="col-lg-4">Note</th>
+                                                    <th>Created By</th>
+                                                    <th>Modified By</th>
+                                                    <th class="col-lg-3 action">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td data-title="Date">12/24/2017</td>
+                                                    <td data-title="Note">Added <strong>Casualty</strong> on carrier appetite.</td>
+                                                    <td data-title="Created By">Donna Kline</td>
+                                                    <td data-title="Modified By">Donna Kline</td>
+                                                    <td data-title="Action" class="actionBtn">
+                                                        <div class="btn-cell">
+                                                            <a class="actionBlue disabled"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td data-title="Date">11/23/2017</td>
+                                                    <td data-title="Note">Updated agent portal link from <a href="https://www.cna.com/web/guest/cna/agentcenterpublic/">previous link</a> to <a href="https://www.travelers.com/foragents">new link.</a></td>
+                                                    <td data-title="Created By">Yielena Loubriel</td>
+                                                    <td data-title="Modified By">Jason Lacroix</td>
+                                                    <td data-title="Action" class="actionBtn">
+                                                        <div class="btn-cell">
+                                                            <a class="actionBlue disabled"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td data-title="Date">10/1/2017</td>
+                                                    <td data-title="Note">Removed <strong>Business Income</strong> from carrier appetite.</td>
+                                                    <td data-title="Created By">Jason Dotson</td>
+                                                    <td data-title="Modified By">Donna Kline</td>
+                                                    <td data-title="Action" class="actionBtn">
+                                                        <div class="btn-cell">
+                                                            <a class="actionBlue disabled"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td data-title="Date">9/21/2017</td>
+                                                    <td data-title="Note"><a href="#" data-toggle="tooltip" data-placement="top" title="Only reachable during 10am-11am through phone. Do not try calling on Fridays after 12pm. If you do they simply with not answer...">Note: Only reachable during 10am-11am through phone...</a>
+                                                        <i class="fa fa-flag red"></i>
+                                                    </td>
+                                                    <td data-title="Created By">Jason Lacroix</td>
+                                                    <td data-title="Modified By">Donna Kline</td>
+                                                    <td data-title="Action" class="actionBtn">
+                                                        <div class="btn-cell">
+                                                            <a data-dismiss="modal" data-toggle="modal" data-target="#modify-note" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td data-title="Date">6/3/2017</td>
+                                                    <td data-title="Note">Added <strong>Excess Liability</strong> on carrier appetite.</td>
+                                                    <td data-title="Created By">Jonathan Ruthersford</td>
+                                                    <td data-title="Modified By">Donna Kline</td>
+                                                    <td data-title="Action" class="actionBtn">
+                                                        <div class="btn-cell">
+                                                            <a class="actionBlue disabled"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <!-- Edit Modal -->
+                                <div id="add-notes" class="modal fade" role="dialog">
+                                    <div class="modal-dialog">
+
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                <h4 class="modal-title">Add Note </h4>
+                                            </div>
+                                            <div class="modal-body">
+
+                                                <label class="sr-only control-label" for="">Note:</label>
+                                                <textarea class="form-control" maxlength="4000" spellcheck="true" rows="11" cols="20" placeholder="Please enter note (maximum of 4000 characters)" id=""></textarea>
+
+                                                <i class="fa fa-flag red"></i>
+                                                <label class="control-label" for="flag">Flag:</label>
+                                                <label for="checkbox">
+                                                        <input name="checkbox" id="checkbox-sample" value="1" type="checkbox">
+                                                    </label>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button id="cancel" data-dismiss="modal" name="cancel" class="btn btn-default"> Cancel</button>
+                                                <button id="save" data-dismiss="modal" name="save" class="pull-right btn btn-primary"> Save</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Modal -->
+
+                                <!-- Edit Modal -->
+                                <div id="modify-note" class="modal fade" role="dialog">
+                                    <div class="modal-dialog">
+
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                <h4 class="modal-title">Modify Note </h4>
+                                            </div>
+                                            <div class="modal-body">
+
+                                                <label class="sr-only control-label" for="">Note:</label>
+                                                <textarea class="form-control" maxlength="4000" spellcheck="true" rows="11" cols="20" placeholder="" id="">Only reachable during 10am-11am through phone. Do not try calling on Fridays after 12pm. If you do they simply will not answer. Contact Betty Ross at extension 4562.</textarea>
+
+                                                <i class="fa fa-flag red"></i>
+                                                <label class="control-label" for="flag">Flag:</label>
+                                                <label for="checkbox">
+                                                        <input name="checkbox" checked id="checkbox-sample" value="1" type="checkbox">
+                                                    </label>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button id="save" name="save" class="btn btn-primary">Save</button>
+                                                <button id="cancel" name="cancel" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div id="add-branch-code" class="tab-pane fade in tabs-info">
+                                    <div class="pull-right tab-search">
+                                        <div class="form-group">
+                                            <label class="sr-only control-label" for="">Search</label>
+                                            <input id="" name="" class="form-control" type="search" value="" placeholder="Type here to search...">
+                                        </div>
+                                    </div>
+                                    <div class="portal-tables">
+                                        <table class="table-hover table-striped table-condensed cf no-border">
+                                            <thead class="cf">
+                                                <tr>
+                                                    <th>Branch <input id="all-codes" name="all-codes" type="checkbox"> <label class="all-code-toggle" fo="all-codes">Hide  all sub codes</label></th>
+                                                    <th>Sub codes</th>
+                                                    <th>Book</th>
+                                                    <th>Agency</th>
+                                                    <th>Effective Dates</th>
+                                                    <th>Inactive Date</th>
+                                                    <th>Status</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr class="even">
+                                                    <td data-title="Branch"><i style="display: none;" class="fa fa-plus-circle plus-sign" aria-hidden="true" data-tc="tg1"></i><i class="fa fa-minus-circle minus-sign" aria-hidden="true" data-tc="tg1"></i> Longwood, FL</td>
+                                                    <td data-title="Sub codes">LNG123</td>
+                                                    <td data-title="Book">NICS</td>
+                                                    <td data-title="Agency">IOA, Eagle</td>
+                                                    <td data-title="Effective Dates">7/14/2017</td>
+                                                    <td data-title="Inactive Date">7/16/2018</td>
+                                                    <td data-title="Status">Active</td>
+                                                </tr>
+                                                <tr class="toggle-tr tg1 even">
+                                                    <td class="hide-small-screen"></td>
+                                                    <td class="hide-small-screen">LNG345</td>
+                                                    <td class="hide-small-screen">------</td>
+                                                    <td class="hide-small-screen">------</td>
+                                                    <td class="hide-small-screen">7/14/2017</td>
+                                                    <td class="hide-small-screen">7/16/2018</td>
+                                                    <td class="hide-small-screen">Active</td>
+                                                </tr>
+                                                <tr class="toggle-tr tg1 even">
+                                                    <td class="hide-small-screen"></td>
+                                                    <td class="hide-small-screen">LNG456</td>
+                                                    <td class="hide-small-screen">------</td>
+                                                    <td class="hide-small-screen">------</td>
+                                                    <td class="hide-small-screen">7/14/2017</td>
+                                                    <td class="hide-small-screen">7/16/2018</td>
+                                                    <td class="hide-small-screen">Active</td>
+                                                </tr>
+                                                <tr class="toggle-tr tg1 even">
+                                                    <td class="hide-small-screen"></td>
+                                                    <td class="hide-small-screen">LNG347</td>
+                                                    <td class="hide-small-screen">------</td>
+                                                    <td class="hide-small-screen">------</td>
+                                                    <td class="hide-small-screen">7/14/2017</td>
+                                                    <td class="hide-small-screen">7/16/2018</td>
+                                                    <td class="hide-small-screen">------</td>
+                                                </tr>
+
+                                                <tr class="odd">
+                                                    <td data-title="Branch"><i style="display: none;" class="fa fa-plus-circle plus-sign" aria-hidden="true" data-tc="tg2"></i><i class="fa fa-minus-circle minus-sign" aria-hidden="true" data-tc="tg2"></i> Tampa, FL</td>
+                                                    <td data-title="Sub codes">LNG345</td>
+                                                    <td data-title="Book">------</td>
+                                                    <td data-title="Agency">Eagle</td>
+                                                    <td data-title="Effective Dates">7/14/2017</td>
+                                                    <td data-title="Inactive Date">7/16/2018</td>
+                                                    <td data-title="Status">Active</td>
+                                                </tr>
+                                                <tr class="toggle-tr tg2 odd">
+                                                    <td class="hide-small-screen"></td>
+                                                    <td class="hide-small-screen">LNG345</td>
+                                                    <td class="hide-small-screen">------</td>
+                                                    <td class="hide-small-screen">------</td>
+                                                    <td class="hide-small-screen">7/14/2017</td>
+                                                    <td class="hide-small-screen">7/16/2018</td>
+                                                    <td class="hide-small-screen">Active</td>
+                                                </tr>
+
+                                                <tr class="even">
+                                                    <td data-title="Branch"><i style="display: none;" class="fa fa-plus-circle plus-sign" aria-hidden="true" data-tc="tg3"></i><i class="fa fa-minus-circle minus-sign" aria-hidden="true" data-tc="tg3"></i> Ft. Myers</td>
+                                                    <td data-title="Sub codes">FTM239</td>
+                                                    <td data-title="Book">------</td>
+                                                    <td data-title="Agency">IOA National</td>
+                                                    <td data-title="Effective Dates">7/13/2017</td>
+                                                    <td data-title="Inactive Date">7/15/2018</td>
+                                                    <td data-title="Status">Active</td>
+                                                </tr>
+                                                <tr class="toggle-tr tg3 even">
+                                                    <td class="hide-small-screen"></td>
+                                                    <td class="hide-small-screen">LNG345</td>
+                                                    <td class="hide-small-screen">------</td>
+                                                    <td class="hide-small-screen">------</td>
+                                                    <td class="hide-small-screen">7/14/2017</td>
+                                                    <td class="hide-small-screen">7/16/2018</td>
+                                                    <td class="hide-small-screen">Active</td>
+                                                </tr>
+
+                                                <tr class="odd">
+                                                    <td data-title="Branch"><i style="display: none;" class="fa fa-plus-circle plus-sign" aria-hidden="true" data-tc="tg4"></i><i class="fa fa-minus-circle minus-sign" aria-hidden="true" data-tc="tg4"></i> Boca Raton</td>
+                                                    <td data-title="Sub codes">BRT239</td>
+                                                    <td data-title="Book">------</td>
+                                                    <td data-title="Agency">IOA</td>
+                                                    <td data-title="Effective Dates">7/13/2017</td>
+                                                    <td data-title="Inactive Date">7/15/2018</td>
+                                                    <td data-title="Status">Active</td>
+                                                </tr>
+                                                <tr class="toggle-tr tg4 odd">
+                                                    <td class="hide-small-screen"></td>
+                                                    <td class="hide-small-screen">LNG345</td>
+                                                    <td class="hide-small-screen">------</td>
+                                                    <td class="hide-small-screen">------</td>
+                                                    <td class="hide-small-screen">7/14/2017</td>
+                                                    <td class="hide-small-screen">7/16/2018</td>
+                                                    <td class="hide-small-screen">Active</td>
+                                                </tr>
+
+                                                <tr class="even">
+                                                    <td data-title="Branch"><i style="display: none;" class="fa fa-plus-circle plus-sign" aria-hidden="true" data-tc="tg5"></i><i class="fa fa-minus-circle minus-sign" aria-hidden="true" data-tc="tg5"></i> Marathon, FL</td>
+                                                    <td data-title="Sub codes">MRH43</td>
+                                                    <td data-title="Book">------</td>
+                                                    <td data-title="Agency">IOA</td>
+                                                    <td data-title="Effective Dates">7/12/2017</td>
+                                                    <td data-title="Inactive Date">7/14/2018</td>
+                                                    <td data-title="Status">Active</td>
+                                                </tr>
+                                                <tr class="toggle-tr tg5 even">
+                                                    <td class="hide-small-screen"></td>
+                                                    <td class="hide-small-screen">LNG345</td>
+                                                    <td class="hide-small-screen">------</td>
+                                                    <td class="hide-small-screen">------</td>
+                                                    <td class="hide-small-screen">7/14/2017</td>
+                                                    <td class="hide-small-screen">7/16/2018</td>
+                                                    <td class="hide-small-screen">Active</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="text-center">
+                                    <nav aria-label="Page navigation">
+                                        <ul class="pagination">
+                                            <li>
+                                                <a href="#" aria-label="Previous">
+                                                        <span aria-hidden="true">«</span>
+                                                    </a>
+                                            </li>
+                                            <li class="active"><a href="#">1</a>
+                                            </li>
+                                            <li><a href="#">2</a>
+                                            </li>
+                                            </li>
+                                            <li><a href="#">3</a>
+                                            </li>
+                                            </li>
+                                            <li><a href="#">4</a>
+                                            </li>
+                                            </li>
+                                            <li><a href="#">5</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" aria-label="Next">
+                                                        <span aria-hidden="true">»</span>
+                                                    </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+
+                                <!-- Edit Modal -->
+                                <div id="add-producer" class="modal fade" role="dialog">
+                                    <div class="modal-dialog">
+
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                <h4 class="modal-title">Add Producer </h4>
+                                            </div>
+                                            <div class="modal-body">
+
+                                                <div class="row">
+                                                    <div class="form-group col-sm-12 col-md-5 col-lg-5">
+                                                        <label class="requiredfield control-label" for="branch">User Type:</label>
+                                                        <select id="branch" name="branch" class="form-control">
+                                                            <option value="1">Account Manager</option>
+                                                            <option value="4">Administrator</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+
+                                                    <div class="form-group col-sm-12 col-md-6 col-lg-6">
+                                                        <label class="requiredfield control-label" for="">Employee:</label>
+                                                        <div class="input-group input-group-search">
+                                                            <input class="form-control" id="CarrierId" name="" type="search" value="Hazel Graham" autocomplete="off">
+                                                            <input name="" type="hidden" class="autocompletehidden">
+                                                            <div class="input-group-addon"><i class="fa fa-search"></i></div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group col-sm-12 col-md-6 col-lg-6">
+                                                        <label class="control-label" for="">Role Assignment:</label>
+                                                        <select data-placeholder=" -- Select Role --" multiple class="chosen-select-width" tabindex="16">
+                                                            <option>User Admin</option>
+                                                            <option>User Manager</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button id="cancel" data-dismiss="modal" name="cancel" class="btn btn-default"> Cancel</button>
+                                                <button id="save" data-dismiss="modal" name="save" class="pull-right btn btn-primary"> Save</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Modal -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center copyright">
+        <p>Copyright &#169; 2018 Insurance Office of America. All rights reserved. Version 1.0</p>
+    </div>
+
+    <script type="text/javascript" src="chosen_v1.6.2/docsupport/multi-select.js"></script>
+    <script type="text/javascript" src="js/tooltip.js"></script>
+    <script type="text/javascript" src="js/edit-carrier.js"></script>
+    <script type="text/javascript" src="js/agreement.js"></script>
+
+</body>
+
+</html>

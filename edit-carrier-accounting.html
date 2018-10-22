@@ -1,0 +1,1343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Office of America - Carrier Contact Database</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/edit-carrier-accounting.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/commission-download.js"></script>
+
+    <!-- Chosen Multi Select -->
+    <link rel="stylesheet" href="chosen_v1.6.2/docsupport/style.css">
+    <link rel="stylesheet" href="chosen_v1.6.2/docsupport/prism.css">
+    <link rel="stylesheet" href="chosen_v1.6.2/chosen.css">
+    <script type="text/javascript" src="chosen_v1.6.2/chosen.jquery.js"></script>
+    <script type="text/javascript" src="chosen_v1.6.2/docsupport/prism.js"></script>
+
+    <!-- Bootstrap Date-Picker Plugin -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+    <script type="text/javascript" src="js/date-picker.js"></script>
+
+    <!-- Bootstrap Toggle -->
+    <link rel="stylesheet" href="bootstrap/css/toggle/bootstrap-toggle.min.css">
+    <script type="text/javascript" src="bootstrap/js/toggle/bootstrap-toggle.min.js"></script>
+</head>
+
+<body class="portal-pad portal-page">
+    <nav class="navbar navbar-inverse navbar-fixed-top menu-top">
+        <div class="container-fluid menu-margin">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".sidebar1" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img src="img/logo.png" width="150" alt="Insurance Office of America">
+                </a>
+                <h4 class="company-title">Insurance Office of America</h4>
+                <h5>Carrier Contact Database</h5>
+            </div>
+            <div id="navbar" role="navigation" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Chris Robertson <i class="fa fa-cog" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu">
+                            <div class="arrow-up"></div>
+                            <li><a href="#">Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid content">
+        <div class="row sidebar-container">
+            <div id="sidebar" class="col-xs-12 col-sm-3 col-md-12 sidebar1 sidebar navbar-collapse collapse">
+                <ul class="nav nav-sidebar">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="accounting-dashboard.html"><i class="fa fa-calculator fa-2x" aria-hidden="true"></i><span>Accounting</span><i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                        <a class="desktop-link" href="accounting-dashboard.html">&nbsp;</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="carrier-accounting-search.html">Carriers</a>
+                                <hr />
+                            </li>
+                            <li class="dropdown menu"><a href="#">Administration</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="add-user.html">Add User</a>
+                                        <hr>
+                                    </li>
+                                    <li><a href="view-users.html">View Users</a>
+                                        <hr>
+                                    </li>
+                                    <li><a href="admin-carrier-search-accounting.html">Carriers</a>
+                                        <hr>
+                                    </li>
+                                    <li><a href="admin-accounting-report.html">Report</a>
+                                        <hr>
+                                    </li>
+                                </ul>
+                                <hr />
+                            </li>
+                        </ul>
+                    </li>
+                    <hr />
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="index.html"><i class="fa fa-briefcase fa-2x" aria-hidden="true"></i><span>Field Ops</span><i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                        <a class="desktop-link" href="index.html">&nbsp;</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="carrier-agreement-search.html">Agreements</a>
+                                <hr />
+                            </li>
+                            <li class="dropdown menu"><a href="#">Contacts</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="add-carrier-contact.html">Add New Contact</a></li>
+                                    <li><a href="carrier-contact-search.html">View Contacts</a></li>
+                                </ul>
+                                <hr />
+                            </li>
+                            <li><a href="#">Personnel</a>
+                                <hr />
+                            </li>
+                            <li class="dropdown menu"><a href="#">Administration</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="add-user.html">Add User</a>
+                                        <hr>
+                                    </li>
+                                    <li><a href="view-users.html">View Users</a>
+                                        <hr>
+                                    </li>
+                                    <li><a href="admin-carrier-search.html">Carriers</a>
+                                        <hr>
+                                    </li>
+                                    <li><a href="#">Contact Labels</a>
+                                        <hr>
+                                    </li>
+                                    <li><a href="#">Book of Business</a>
+                                        <hr>
+                                    </li>
+                                    <li><a href="#">Branches</a>
+                                        <hr>
+                                    </li>
+                                </ul>
+                                <hr />
+                            </li>
+                        </ul>
+                    </li>
+                    <hr />
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="carrier-ops-search.html"><i class="fa fa-archive fa-2x" aria-hidden="true"></i><span>Operations</span><i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                        <a class="desktop-link" href="carrier-ops-search.html">&nbsp;</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="carrier-ops-search.html">Carriers</a>
+                                <hr />
+                            </li>
+                            <li class="dropdown menu"><a href="#">Administration</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="add-user.html">Add User</a>
+                                        <hr>
+                                    </li>
+                                    <li><a href="view-users.html">View Users</a>
+                                        <hr>
+                                    </li>
+                                    <li><a href="admin-carrier-search.html">Carriers</a>
+                                        <hr>
+                                    </li>
+                                </ul>
+                                <hr />
+                            </li>
+                        </ul>
+                    </li>
+                    <hr />
+                    <li>
+                        <a href="real-estate-dashboard.html"><i class="fa fa-building fa-2x" aria-hidden="true"></i><span>RE & CA</span></a>
+                    </li>
+                    <hr />
+                    <ul class="nav nav-sidebar nav-sidebar2">
+                        <li class="dropdown">
+                            <hr>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-cog fa-3x" aria-hidden="true"></i><span> Chris Robertson</span>
+                            <i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Edit Profile</a>
+                                </li>
+                                <li><a href="#">Logout</a>
+                                </li>
+                            </ul>
+                            <hr>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+            <!-- Body -->
+            <div class="body-container">
+
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 title-header spacerbottom20">
+                    <div class="pull-left head-drop">
+                        <div class="btn-group">
+                            Edit Carrier
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-content">
+
+                    <form>
+                        <div class="row">
+                            <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-3">
+                                <label class="required control-label" for="">Name:</label>
+                                <span class="form-control-static">CNA</span>
+                            </div>
+
+                            <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-3">
+                                <label class="control-label" for="">Master Code:</label>
+                                <span class="form-control-static">COL323</span>
+                            </div>
+
+                            <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-3">
+                                <label class="control-label" for="">Policy Download:</label>
+                                <span class="form-control-static">Yes</span>
+                            </div>
+
+                            <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-3">
+                                <label class="control-label" for="">Commission Statement:</label>
+
+                                <div class="spacer5">
+                                    <label class="control-label">
+                                        <input id="radio-btn-online" data-is-online="true" value="Carrier" name="radio-commission-statement" type="radio"> Online
+                                    </label>
+
+                                    <label class="control-label">
+                                        <input id="mail" value="Carrier" name="radio-commission-statement" type="radio"> Mail
+                                    </label>
+
+                                    <label class="control-label">
+                                        <input id="requested" value="Carrier" name="radio-commission-statement" type="radio"> Requested
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-3 pull-right recipients-address" style="display: none">
+                                <label class="control-label" for="contact-address">Recipient's Address:</label>
+                                <input id="contact-address" name="contact-address" placeholder="Street Address 1" class="form-control input-md street-address" required type="text">
+
+                                <label class="control-label sr-only" for="street-address-2">Street Address 2</label>
+                                <input id="street-address-2" name="street-address-2" placeholder="Street Address 2" class="form-control input-md street-address" type="text">
+
+                                <label class="control-label sr-only" for="street-city">Street City</label>
+                                <input id="street-city" name="street-city" placeholder="City" class="form-control input-md street-address" required type="text">
+
+                                <!-- State Select -->
+                                <label class="control-label sr-only" for="address-state">Address State</label>
+                                <select id="address-state" name="address-state" class="form-control street-address">
+                                                <option value="AL - Alabama">AL - Alabama</option>
+                                                <option value="AK - Alaska">AK - Alaska</option>
+                                                <option value="AZ - Arizona">AZ - Arizona</option>
+                                                <option value="AR - Arkansas">AR - Arkansas</option>
+                                                <option value="CA - California">CA - California</option>
+                                                <option value="CO - Colorado">CO - Colorado</option>
+                                                <option value="CT - Connecticut">CT - Connecticut</option>
+                                                <option value="DE - Delaware">DE - Delaware</option>
+                                                <option value="DC - District of Columbia">DC - District of Columbia</option>
+                                                <option value="FL - Florida">FL - Florida</option>
+                                                <option value="GA - Georgia">GA - Georgia</option>
+                                                <option value="HI - Hawaii">HI - Hawaii</option>
+                                                <option value="ID - Idaho">ID - Idaho</option>
+                                                <option value="IL - Illinois">IL - Illinois</option>
+                                                <option value="IN - Indiana">IN - Indiana</option>
+                                                <option value="IA - Iowa">IA - Iowa</option>
+                                                <option value="KS - Kansas">KS - Kansas</option>
+                                                <option value="KY - Kentucky">KY - Kentucky</option>
+                                                <option value="LA - Louisiana">LA - Louisiana</option>
+                                                <option value="ME - Maine">ME - Maine</option>
+                                                <option value="MD - Maryland">MD - Maryland</option>
+                                                <option value="MA - Massachusetts">MA - Massachusetts</option>
+                                                <option value="MI - Michigan">MI - Michigan</option>
+                                                <option value="MN - Minnesota">MN - Minnesota</option>
+                                                <option value="MS - Mississippi">MS - Mississippi</option>
+                                                <option value="MO - Missouri">MO - Missouri</option>
+                                                <option value="MT - Montana">MT - Montana</option>
+                                                <option value="NE - Nebraska">NE - Nebraska</option>
+                                                <option value="NV - Nevada">NV - Nevada</option>
+                                                <option value="NH - New Hampshire">NH - New Hampshire</option>
+                                                <option value="NJ - New Jersey">NJ - New Jersey</option>
+                                                <option value="NM - New Mexico">NM - New Mexico</option>
+                                                <option value="NY - New York">NY - New York</option>
+                                                <option value="NC - North Carolina">NC - North Carolina</option>
+                                                <option value="ND - North Dakota">ND - North Dakota</option>
+                                                <option value="OH - Ohio">OH - Ohio</option>
+                                                <option value="OK - Oklahoma">OK - Oklahoma</option>
+                                                <option value="OR - Oregon">OR - Oregon</option>
+                                                <option value="PA - Pennsylvania">PA - Pennsylvania</option>
+                                                <option value="RI - Rhode Island">RI - Rhode Island</option>
+                                                <option value="SC - South Carolina">SC - South Carolina</option>
+                                                <option value="SD - South Dakota">SD - South Dakota</option>
+                                                <option value="TN - Tennessee">TN - Tennessee</option>
+                                                <option value="TX - Texas">TX - Texas</option>
+                                                <option value="UT - Utah">UT - Utah</option>
+                                                <option value="VT - Vermont">VT - Vermont</option>
+                                                <option value="VA - Virginia">VA - Virginia</option>
+                                                <option value="WA - Washington">WA - Washington</option>
+                                                <option value="WV - West Virginia">WV - West Virginia</option>
+                                                <option value="WI - Wisconsin">WI - Wisconsin</option>
+                                                <option value="WY - Wyoming">WY - Wyoming</option>
+                                            </select>
+
+                                <label class="control-label sr-only" for="zip-code">Zip Code</label>
+                                <input id="zip-code" name="zip-code" placeholder="Zip Code" class="form-control input-md street-address" required type="text">
+                            </div>
+
+                            <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-3">
+                                <label class="control-label" for="">Email:</label>
+                                <input id="" name="" value="policies@cna.com" class="form-control input-md" required type="text">
+                            </div>
+
+                            <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-3">
+                                <label class="control-label" for="">Phone Number:</label>
+                                <input id="" name="" value="1-800-262-2000" class="form-control input-md" required type="text">
+                            </div>
+
+                            <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-3 pull-right commission-download" style="display: none;">
+                                <label class="control-label toggle-box" for="">Commission Statement Download:</label>
+                                <input type="checkbox" checked data-toggle="toggle" data-on="Yes" data-off="No">
+                            </div>
+
+
+
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="butttons-footer">
+                                    <button id="cancel" name="cancel" class="btn btn-default"> Cancel</button>
+                                    <button id="save" name="save" class="pull-right btn btn-primary"> Save</button>
+                                </div>
+                                <hr />
+                            </div>
+                        </div>
+
+
+                    </form>
+
+                    <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <div id="nav-tabs">
+                            <ul class="nav nav-tabs spacer20">
+                                <li class="active"><a data-toggle="tab" href="#contacts"><i class="fa fa-address-card"></i> Contacts</a>
+                                </li>
+                                <li class="sep"><a data-toggle="tab" href="#credentials"><i class="fa fa-lock"></i> Credentials</a>
+                                </li>
+                                <li class="sep"><a data-toggle="tab" href="#codes"><i class="fa fa-list-ol"></i> Producer Codes</a>
+                                </li>
+                                <li class="sep"><a data-toggle="tab" href="#notes"><i class="fa fa-sticky-note"></i> Notes</a>
+                                </li>
+                                <div class="pull-right tab-search">
+                                    <div class="form-group">
+                                        <label class="sr-only control-label" for="">Search</label>
+                                        <input id="" name="" class="form-control" type="search" value="" placeholder="Type here to search...">
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                        <div class="tab-content">
+                            <div id="contacts" class="tab-pane fade in active tabs-info">
+                                <div class="pull-right add-button-table add-contact">
+                                    <a name="" data-toggle="modal" data-target="#add-contact" class="btn carrier-btn pull-right add-contact"><i class="fa fa-plus"></i> Add Contact</a>
+                                </div>
+                                <div class="portal-tables">
+                                    <table class="table-hover table-striped table-condensed cf no-border">
+                                        <thead class="cf">
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Phone Number</th>
+                                                <th>Contact Title</th>
+                                                <th>Managed Codes</th>
+                                                <th class="col-lg-3 action">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td data-title="Name">
+                                                    </i>Christopher Jones
+                                                </td>
+                                                <td data-title="Phone Number">407-788-3000</td>
+                                                <td data-title="Contact Title">Agency Principal</td>
+                                                <td data-title="Managed Codes">-----</td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a name="" data-toggle="modal" data-target="#edit-contact" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td data-title="Name"><i class="fa fa-plus-circle plus-sign" aria-hidden="true" data-car-class="car-class-1"></i><i style="display: none" class="fa fa-minus-circle minus-sign" aria-hidden="true" data-car-class="car-class-1"></i>Bernard
+                                                    Ware
+                                                </td>
+                                                <td data-title="Phone Number">407-788-3000</td>
+                                                <td data-title="Contact Title">Internal Contact</td>
+                                                <td data-title="Managed Codes">OER123</td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a name="" data-toggle="modal" data-target="#edit-contact" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="car-class-1 even" style="display: none">
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td data-title="Managed Codes">OER124</td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a name="" data-toggle="modal" data-target="#edit-contact" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="car-class-1 even" style="display: none">
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td data-title="Managed Codes">OER125</td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a name="" data-toggle="modal" data-target="#edit-contact" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="odd">
+                                                <td data-title="Name"><i class="fa fa-plus-circle plus-sign" aria-hidden="true" data-car-class="car-class-2"></i><i style="display: none" class="fa fa-minus-circle minus-sign" aria-hidden="true" data-car-class="car-class-2"></i>William
+                                                    Carter
+                                                </td>
+                                                <td data-title="Phone Number">407-788-3000</td>
+                                                <td data-title="Contact Title">Relationship Manager</td>
+                                                <td data-title="Codes">OER126</td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a name="" data-toggle="modal" data-target="#edit-contact" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="car-class-2 odd" style="display: none">
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td data-title="Managed Codes">OER127</td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a name="" data-toggle="modal" data-target="#edit-contact" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="car-class-2 odd" style="display: none">
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td data-title="Managed Codes">OER128</td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a name="" data-toggle="modal" data-target="#edit-contact" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!-- Edit Modal -->
+                                <div id="add-contact" class="add-contact modal fade" role="dialog">
+
+                                    <div class="modal-dialog">
+
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                <h4 class="modal-title">Add Contact</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="row">
+                                                    <form>
+                                                        <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                            <label class="required control-label" for="">Name:</label>
+                                                            <input id="" name="" class="form-control input-md" required type="text">
+                                                        </div>
+
+                                                        <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                            <label class="required control-label" readonly for="">Phone Number:</label>
+                                                            <input id="" name="" class="form-control input-md" required type="text">
+                                                        </div>
+
+                                                        <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                            <label class="required control-label">Contact Title:</label>
+                                                            <input id="" name="" class="form-control input-md" required type="text">
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+                                                <div class="tablecontainer">
+                                                    <div class="col-md-12 col-xs-12 panel-heading tableheader">
+                                                        <div class="pull-left head-drop">
+                                                            Managed Codes
+                                                        </div>
+                                                        <div class="pull-right">
+                                                            <a href="#" class="btn carrier-btn pull-right add-row add-managed-code"><i class="fa fa-plus"></i> Add Managed Code</a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="panel-body">
+                                                        <div class="portal-tables">
+                                                            <table class="table-hover table-striped table-condensed cf">
+                                                                <thead class="cf">
+                                                                    <tr>
+                                                                        <th class="col-lg-2">Code</th>
+                                                                        <th class="col-lg-1 action">Actions</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody id="managed-code">
+                                                                    <tr>
+                                                                        <td data-title="Managed Code">
+                                                                            <label class="required control-label sr-only" for="">Managed Code:</label>
+                                                                            <input id="name" name="name" class="form-control input-md" required="" type="text">
+                                                                        </td>
+                                                                        <td data-title="Actions" name="action" class="actionBtn">
+                                                                            <div class="btn-cell">
+                                                                                <a href="#" class="actionDarkBlue"><i class="fa fa-save"></i></a>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button id="cancel" data-dismiss="modal" name="cancel" class="btn btn-default"> Cancel</button>
+                                                <button id="save" data-dismiss="modal" name="save" class="pull-right btn btn-primary"> Save</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Modal -->
+
+
+                                <!-- Edit Modal -->
+                                <div id="edit-contact" class="edit-contact modal fade" role="dialog">
+                                    <div class="modal-dialog">
+
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                <h4 class="modal-title">Edit Contact</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="row">
+                                                    <div class="form-group col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                                        <label class="required control-label" for="">Name:</label>
+                                                        <span class="form-control-static">Bernard Ware</span>
+                                                    </div>
+
+                                                    <div class="form-group col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                                        <label class="required control-label" readonly for="">Phone Number:</label>
+                                                        <span class="form-control-static">407-788-3000</span>
+                                                    </div>
+
+                                                    <div class="form-group col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                                        <label class="required control-label">Contact Title:</label>
+                                                        <span class="form-control-static">Internal Contact</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="tablecontainer">
+                                                    <div class="col-md-12 col-xs-12 panel-heading tableheader">
+                                                        <div class="pull-left head-drop">
+                                                            Managed Codes
+                                                        </div>
+                                                        <div class="pull-right">
+                                                            <a href="#" class="btn carrier-btn pull-right add-row add-managed-code"><i class="fa fa-plus"></i> Add Managed Code</a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="panel-body">
+                                                        <div class="portal-tables">
+                                                            <table class="table-hover table-striped table-condensed cf">
+                                                                <thead class="cf">
+                                                                    <tr>
+                                                                        <th class="col-lg-2">Code</th>
+                                                                        <th class="col-lg-1 action">Actions</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody id="managed-code">
+                                                                    <tr>
+                                                                        <td data-title="Managed Code">
+                                                                            <label class="required control-label sr-only" for="">Managed Code:</label>
+                                                                            <input id="name" name="name" class="form-control input-md" required="" type="text">
+                                                                        </td>
+                                                                        <td data-title="Actions" name="action" class="actionBtn">
+                                                                            <div class="btn-cell add-row">
+                                                                                <a href="#" class="actionDarkBlue"><i class="fa fa-save"></i></a>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td data-title="Managed Code">RTY323</td>
+                                                                        <td data-title="Actions" class="actionBtn">
+                                                                            <div class="btn-cell">
+                                                                                <a href="" class="actionRed"><i class="fa fa-close"></i></a>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td data-title="Managed Code">AER341</td>
+                                                                        <td data-title="Actions" class="actionBtn">
+                                                                            <div class="btn-cell">
+                                                                                <a href="" class="actionRed"><i class="fa fa-close"></i></a>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td data-title="Managed Code">TGH434</td>
+                                                                        <td data-title="Actions" class="actionBtn">
+                                                                            <div class="btn-cell">
+                                                                                <a href="" class="actionRed"><i class="fa fa-close"></i></a>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td data-title="Managed Code">OKJ323</td>
+                                                                        <td data-title="Actions" class="actionBtn">
+                                                                            <div class="btn-cell">
+                                                                                <a href="" class="actionRed"><i class="fa fa-close"></i></a>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td data-title="Managed Code">POL123</td>
+                                                                        <td data-title="Actions" class="actionBtn">
+                                                                            <div class="btn-cell">
+                                                                                <a href="" class="actionRed"><i class="fa fa-close"></i></a>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button id="cancel" data-dismiss="modal" name="cancel" class="btn btn-default"> Cancel</button>
+                                                <button id="save" data-dismiss="modal" name="save" class="pull-right btn btn-primary"> Save</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Modal -->
+
+                            </div>
+
+                            <div id="credentials" class="tab-pane fade in tabs-info">
+                                <div class="pull-right add-button-table add-credential">
+                                    <a name="" data-toggle="modal" data-target="#add-credential" class="btn carrier-btn pull-right add-credential"><i class="fa fa-plus"></i> Add Credential</a>
+                                </div>
+
+                                <div class="portal-tables">
+                                    <table class="table-hover table-striped table-condensed cf no-border">
+                                        <thead class="cf">
+                                            <tr>
+                                                <th>Type</th>
+                                                <th>Username</th>
+                                                <th>Password</th>
+                                                <th class="col-lg-3 action">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td data-title="Type">Commission Statements</td>
+                                                <td data-title="Username">ioacom@ioausa.com</td>
+                                                <td data-title="Password"><input type="password" value="IOAcom!@1" class="input-pw-toggle" readonly> <i class="fa fa-eye pw-toggle"></i></td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a href="http://www.cna.com/commissions" target="_blank" class="actionBlue"><i class="fa fa-external-link"></i></a>
+                                                    </div>
+                                                    <div class="btn-cell">
+                                                        <a name="" data-toggle="modal" data-target="#edit-credential" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td data-title="Type">Invoices</td>
+                                                <td data-title="Username">ioainvoice</td>
+                                                <td data-title="Password"><input type="password" value="IOAcom!@1" class="input-pw-toggle" readonly> <i class="fa fa-eye pw-toggle"></i></td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a href="http://www.cna.com/commissions" target="_blank" class="actionBlue"><i class="fa fa-external-link"></i></a>
+                                                    </div>
+                                                    <div class="btn-cell">
+                                                        <a name="" data-toggle="modal" data-target="#edit-credential" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td data-title="Type">Statements</td>
+                                                <td data-title="Username">ioastatement@ioausa.com</td>
+                                                <td data-title="Password"><input type="password" value="IOAcom!@1" class="input-pw-toggle" readonly> <i class="fa fa-eye pw-toggle"></i></td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a href="http://www.cna.com/commissions" target="_blank" class="actionBlue"><i class="fa fa-external-link"></i></a>
+                                                    </div>
+                                                    <div class="btn-cell">
+                                                        <a name="" data-toggle="modal" data-target="#edit-credential" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td data-title="Type">Support</td>
+                                                <td data-title="Username">ioasupport</td>
+                                                <td data-title="Password"><input type="password" value="IOAcom!@1" class="input-pw-toggle" readonly> <i class="fa fa-eye pw-toggle"></i></td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a href="http://www.cna.com/commissions" target="_blank" class="actionBlue"><i class="fa fa-external-link"></i></a>
+                                                    </div>
+                                                    <div class="btn-cell">
+                                                        <a name="" data-toggle="modal" data-target="#edit-credential" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td data-title="Type">General</td>
+                                                <td data-title="Username">ioageneral</td>
+                                                <td data-title="Password"><input type="password" value="IOAcom!@1" class="input-pw-toggle" readonly> <i class="fa fa-eye pw-toggle"></i></td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a href="http://www.cna.com/commissions" target="_blank" class="actionBlue"><i class="fa fa-external-link"></i></a>
+                                                    </div>
+                                                    <div class="btn-cell">
+                                                        <a name="" data-toggle="modal" data-target="#edit-credential" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!-- Edit Modal -->
+                                <div id="add-credential" class="add-credential modal fade" role="dialog">
+                                    <div class="modal-dialog">
+
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                <h4 class="modal-title">Add Credential</h4>
+                                            </div>
+
+                                            <div class="modal-body">
+                                                <div class="row">
+                                                    <form>
+                                                        <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                            <label class="required control-label" for="">Link:</label>
+                                                            <input id="" name="" class="form-control input-md" required type="text">
+                                                        </div>
+
+                                                        <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                            <label class="required control-label" for="">Username:</label>
+                                                            <input id="" name="" class="form-control input-md" required type="text">
+                                                        </div>
+
+                                                        <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                            <label class="required control-label" for="">Password:</label>
+                                                            <input id="" name="" class="form-control input-md" required type="text">
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+                                                <div class="modal-footer">
+                                                    <button id="cancel" data-dismiss="modal" name="cancel" class="btn btn-default"> Cancel</button>
+                                                    <button id="save" data-dismiss="modal" name="save" class="pull-right btn btn-primary"> Save</button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Modal -->
+
+
+                                <!-- Edit Modal -->
+                                <div id="edit-credential" class="edit-credential modal fade" role="dialog">
+                                    <div class="modal-dialog">
+
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                <h4 class="modal-title">Edit Credential</h4>
+                                            </div>
+
+                                            <div class="modal-body">
+                                                <div class="row">
+                                                    <form>
+                                                        <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                            <label class="required control-label" for="">Link:</label>
+                                                            <input id="" name="" value="http://www.cna.com/commissions" class="form-control input-md" required type="text">
+                                                        </div>
+
+                                                        <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                            <label class="required control-label" for="">Username:</label>
+                                                            <input id="" name="" value="ioacom@ioausa.com" class="form-control input-md" required type="text">
+                                                        </div>
+
+                                                        <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                            <label class="required control-label" for="">Password:</label>
+                                                            <input id="" name="" value="IOAcom1!" class="form-control input-md" required type="text">
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+                                                <div class="modal-footer">
+                                                    <button id="cancel" data-dismiss="modal" name="cancel" class="btn btn-default"> Cancel</button>
+                                                    <button id="save" data-dismiss="modal" name="save" class="pull-right btn btn-primary"> Save</button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Modal -->
+
+                                <div class="text-center">
+                                    <nav aria-label="Page navigation">
+                                        <ul class="pagination">
+                                            <li>
+                                                <a href="#" aria-label="Previous">
+                                                            <span aria-hidden="true">«</span>
+                                                        </a>
+                                            </li>
+                                            <li class="active"><a href="#">1</a>
+                                            </li>
+                                            <li><a href="#">2</a>
+                                            </li>
+                                            </li>
+                                            <li><a href="#">3</a>
+                                            </li>
+                                            </li>
+                                            <li><a href="#">4</a>
+                                            </li>
+                                            </li>
+                                            <li><a href="#">5</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" aria-label="Next">
+                                                            <span aria-hidden="true">»</span>
+                                                        </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+
+
+                            <div id="codes" class="tab-pane fade in tabs-info">
+                                <div class="pull-right add-button-table add-address" style="display:none">
+                                    <a name="" data-toggle="modal" data-target="#add-address" class="btn carrier-btn pull-right add-address"><i class="fa fa-plus"></i> Add Address</a>
+                                </div>
+                                <div class="portal-tables">
+                                    <table class="table-hover table-striped table-condensed no-border cf tb-car-search">
+                                        <thead class="cf">
+                                            <tr>
+                                                <th>Branch</th>
+                                                <th>Carrier Codes</th>
+                                                <th>Sub Codes</th>
+                                                <th class="request-col" style="display: none">Address</th>
+                                                <th>Profit Sharing</th>
+                                                <th class="col-lg-3">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td data-title="Branch">
+                                                    <i class="fa fa-plus-circle plus-sign" aria-hidden="true" data-car-class="car-class-1"></i><i style="display: none" class="fa fa-minus-circle minus-sign" aria-hidden="true" data-car-class="car-class-1"></i>Longwood,
+                                                    FL
+                                                </td>
+                                                <td data-title="Carrier Code">LNG0122</td>
+                                                <td data-title="Sub Code">LNG123</td>
+                                                <td data-title="Address" class="request-col" style="display: none">721 West Verona Street Kissimmee Florida 34741</td>
+                                                <td data-title="Profit Sharing">Yes</td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a name="" data-toggle="modal" data-target="#edit-address" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="car-class-1 even" style="display: none">
+                                                <td></td>
+                                                <td data-title="Carrier Code">LNG0190</td>
+                                                <td data-title="Sub Code">LNG345</td>
+                                                <td class="request-col" style="display: none"></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr class="car-class-1 even" style="display: none">
+                                                <td></td>
+                                                <td data-title="Carrier Code">LNG021</td>
+                                                <td data-title="Sub Code">LNG456</td>
+                                                <td class="request-col" style="display: none"></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr class="odd">
+                                                <td data-title="Branch">
+                                                    <i class="fa fa-plus-circle plus-sign" aria-hidden="true" data-car-class="car-class-2"></i><i style="display: none" class="fa fa-minus-circle minus-sign" aria-hidden="true" data-car-class="car-class-2"></i>                                                    Tampa, FL
+                                                </td>
+                                                <td data-title="Carrier Code">TAM012</td>
+                                                <td data-title="Sub Code">TAM505</td>
+                                                <td data-title="Address" class="request-col" style="display: none">723 West Verona Street Kissimmee Florida 34741</td>
+                                                <td data-title="Profit Sharing">Yes</td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a name="" data-toggle="modal" data-target="#edit-address" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="car-class-2 odd" style="display: none">
+                                                <td></td>
+                                                <td data-title="Carrier Code">TAM014</td>
+                                                <td data-title="Sub Code">TAM947</td>
+                                                <td class="request-col" style="display: none"></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+
+                                            <tr class="car-class-2 odd" style="display: none">
+                                                <td></td>
+                                                <td data-title="Carrier Code">TAM016</td>
+                                                <td data-title="Sub Code">TAM774</td>
+                                                <td class="request-col" style="display: none"></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td data-title="Branch">
+                                                    <i class="fa fa-plus-circle plus-sign" aria-hidden="true" data-car-class="car-class-3"></i><i style="display: none" class="fa fa-minus-circle minus-sign" aria-hidden="true" data-car-class="car-class-3"></i>                                                    Ft. Myers, FL
+                                                </td>
+                                                <td data-title="Carrier Code">FTM012</td>
+                                                <td data-title="Sub Code">FTM548</td>
+                                                <td data-title="Address" class="request-col" style="display: none">834 West Powers Street Orlando Florida 34703</td>
+                                                <td data-title="Profit Sharing">-----</td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a name="" data-toggle="modal" data-target="#edit-address" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="car-class-3 even" style="display: none">
+                                                <td></td>
+                                                <td data-title="Carrier Code">FTM014</td>
+                                                <td data-title="Sub Code">FTM422</td>
+                                                <td data-title="Address" class="request-col" style="display: none">832 West Powers Street Orlando Florida 34703</td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr class="car-class-3 even" style="display: none">
+                                                <td></td>
+                                                <td data-title="Carrier Code">FTM018</td>
+                                                <td data-title="Sub Code">FTM392</td>
+                                                <td data-title="Address" data-title="Address" class="request-col" style="display: none">830 West Powers Street Orlando Florida 34703</td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+
+                                            <tr class="odd">
+                                                <td data-title="Branch">
+                                                    <i class="fa fa-plus-circle plus-sign" aria-hidden="true" data-car-class="car-class-4"></i><i style="display: none" class="fa fa-minus-circle minus-sign" aria-hidden="true" data-car-class="car-class-4"></i>                                                    Boca Raton, FL
+                                                </td>
+                                                <td data-title="Carrier Code">BCR102</td>
+                                                <td data-title="Sub Code">BCR382</td>
+                                                <td data-title="Address" class="request-col" style="display: none">-----</td>
+                                                <td data-title="Profit Sharing">Yes</td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a name="" data-toggle="modal" data-target="#edit-address" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="car-class-4 odd" style="display: none">
+                                                <td></td>
+                                                <td data-title="Carrier Code">BCR103</td>
+                                                <td data-title="Sub Code">BCR912</td>
+                                                <td data-title="Address" class="request-col" style="display: none">-----</td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+
+                                            <tr class="car-class-4 odd" style="display: none">
+                                                <td></td>
+                                                <td data-title="Carrier Code">BCR101</td>
+                                                <td data-title="Sub Code">BCR299</td>
+                                                <td data-title="Address" class="request-col" style="display: none">-----</td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td data-title="Branch">
+                                                    <i class="fa fa-plus-circle plus-sign" aria-hidden="true" data-car-class="car-class-5"></i><i style="display: none" class="fa fa-minus-circle minus-sign" aria-hidden="true" data-car-class="car-class-5"></i>                                                    Marathon, FL
+                                                </td>
+                                                <td data-title="Carrier Code">MAR012</td>
+                                                <td data-title="Sub Code">MAR923</td>
+                                                <td data-title="Address" class="request-col" style="display: none">129 East Ronald Street Orlando Florida 34703</td>
+                                                <td data-title="Profit Sharing">-----</td>
+                                                <td data-title="Action" class="actionBtn">
+                                                    <div class="btn-cell">
+                                                        <a name="" data-toggle="modal" data-target="#edit-address" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="car-class-5 even" style="display: none">
+                                                <td></td>
+                                                <td data-title="Carrier Code">MAR012</td>
+                                                <td data-title="Sub Code">MAR392</td>
+                                                <td data-title="Address" class="request-col" style="display: none">126 East Ronald Street Orlando Florida 34703</td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr class="car-class-5 even" style="display: none">
+                                                <td></td>
+                                                <td data-title="Carrier Code">MAR011</td>
+                                                <td data-title="Sub Code">MAR281</td>
+                                                <td data-title="Address" class="request-col" style="display: none">123 East Ronald Street Orlando Florida 34703</td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- Edit Modal -->
+                            <div id="add-address" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">Add Address </h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+
+                                                <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                                    <label class="required control-label" for="">Branch:</label>
+                                                    <div class="input-group">
+                                                        <input class="form-control" id="CarrierId" name="" type="search" value="" autocomplete="off">
+                                                        <input name="" type="hidden" class="autocompletehidden" value="">
+                                                        <div class="input-group-addon"><i class="fa fa-search"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                    <label class="required control-label" for="contact-address">Recipient's Address:</label>
+                                                    <input id="contact-address" name="contact-address" placeholder="Street Address 1" class="form-control input-md street-address" required type="text">
+
+                                                    <label class="control-label sr-only" for="street-address-2">Street Address 2</label>
+                                                    <input id="street-address-2" name="street-address-2" placeholder="Street Address 2" class="form-control input-md street-address" type="text">
+
+                                                    <label class="control-label sr-only" for="street-city">Street City</label>
+                                                    <input id="street-city" name="street-city" placeholder="City" class="form-control input-md street-address" required type="text">
+
+                                                    <!-- State Select -->
+                                                    <label class="control-label sr-only" for="address-state">Address State</label>
+                                                    <select id="address-state" name="address-state" class="form-control street-address">
+                                                                    <option value="AL - Alabama">AL - Alabama</option>
+                                                                    <option value="AK - Alaska">AK - Alaska</option>
+                                                                    <option value="AZ - Arizona">AZ - Arizona</option>
+                                                                    <option value="AR - Arkansas">AR - Arkansas</option>
+                                                                    <option value="CA - California">CA - California</option>
+                                                                    <option value="CO - Colorado">CO - Colorado</option>
+                                                                    <option value="CT - Connecticut">CT - Connecticut</option>
+                                                                    <option value="DE - Delaware">DE - Delaware</option>
+                                                                    <option value="DC - District of Columbia">DC - District of Columbia</option>
+                                                                    <option value="FL - Florida">FL - Florida</option>
+                                                                    <option value="GA - Georgia">GA - Georgia</option>
+                                                                    <option value="HI - Hawaii">HI - Hawaii</option>
+                                                                    <option value="ID - Idaho">ID - Idaho</option>
+                                                                    <option value="IL - Illinois">IL - Illinois</option>
+                                                                    <option value="IN - Indiana">IN - Indiana</option>
+                                                                    <option value="IA - Iowa">IA - Iowa</option>
+                                                                    <option value="KS - Kansas">KS - Kansas</option>
+                                                                    <option value="KY - Kentucky">KY - Kentucky</option>
+                                                                    <option value="LA - Louisiana">LA - Louisiana</option>
+                                                                    <option value="ME - Maine">ME - Maine</option>
+                                                                    <option value="MD - Maryland">MD - Maryland</option>
+                                                                    <option value="MA - Massachusetts">MA - Massachusetts</option>
+                                                                    <option value="MI - Michigan">MI - Michigan</option>
+                                                                    <option value="MN - Minnesota">MN - Minnesota</option>
+                                                                    <option value="MS - Mississippi">MS - Mississippi</option>
+                                                                    <option value="MO - Missouri">MO - Missouri</option>
+                                                                    <option value="MT - Montana">MT - Montana</option>
+                                                                    <option value="NE - Nebraska">NE - Nebraska</option>
+                                                                    <option value="NV - Nevada">NV - Nevada</option>
+                                                                    <option value="NH - New Hampshire">NH - New Hampshire</option>
+                                                                    <option value="NJ - New Jersey">NJ - New Jersey</option>
+                                                                    <option value="NM - New Mexico">NM - New Mexico</option>
+                                                                    <option value="NY - New York">NY - New York</option>
+                                                                    <option value="NC - North Carolina">NC - North Carolina</option>
+                                                                    <option value="ND - North Dakota">ND - North Dakota</option>
+                                                                    <option value="OH - Ohio">OH - Ohio</option>
+                                                                    <option value="OK - Oklahoma">OK - Oklahoma</option>
+                                                                    <option value="OR - Oregon">OR - Oregon</option>
+                                                                    <option value="PA - Pennsylvania">PA - Pennsylvania</option>
+                                                                    <option value="RI - Rhode Island">RI - Rhode Island</option>
+                                                                    <option value="SC - South Carolina">SC - South Carolina</option>
+                                                                    <option value="SD - South Dakota">SD - South Dakota</option>
+                                                                    <option value="TN - Tennessee">TN - Tennessee</option>
+                                                                    <option value="TX - Texas">TX - Texas</option>
+                                                                    <option value="UT - Utah">UT - Utah</option>
+                                                                    <option value="VT - Vermont">VT - Vermont</option>
+                                                                    <option value="VA - Virginia">VA - Virginia</option>
+                                                                    <option value="WA - Washington">WA - Washington</option>
+                                                                    <option value="WV - West Virginia">WV - West Virginia</option>
+                                                                    <option value="WI - Wisconsin">WI - Wisconsin</option>
+                                                                    <option value="WY - Wyoming">WY - Wyoming</option>
+                                                                </select>
+
+                                                    <label class="control-label sr-only" for="zip-code">Zip Code</label>
+                                                    <input id="zip-code" name="zip-code" placeholder="Zip Code" class="form-control input-md street-address" required type="text">
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="modal-footer">
+                                            <button id="cancel" data-dismiss="modal" name="cancel" class="btn btn-default"> Cancel</button>
+                                            <button id="save" data-dismiss="modal" name="save" class="pull-right btn btn-primary"> Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Modal -->
+
+                            <!-- Edit Modal -->
+                            <div id="edit-address" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">Edit Address </h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+
+                                                <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                                    <label class="required control-label" for="">Branch:</label>
+                                                    <div class="input-group">
+                                                        <input class="form-control" id="CarrierId" name="" type="search" value="Longwood, FL" autocomplete="off">
+                                                        <input name="" type="hidden" class="autocompletehidden" value="">
+                                                        <div class="input-group-addon"><i class="fa fa-search"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                    <label class="required control-label" for="contact-address">Recipient's Address:</label>
+                                                    <input id="contact-address" name="contact-address" placeholder="Street Address 1" class="form-control input-md street-address" value="1855 W State Rd 434" required type="text">
+
+                                                    <label class="control-label sr-only" for="street-address-2">Street Address 2</label>
+                                                    <input id="street-address-2" name="street-address-2" placeholder="Street Address 2" class="form-control input-md street-address" type="text">
+
+                                                    <label class="control-label sr-only" for="street-city">Street City</label>
+                                                    <input id="street-city" name="street-city" placeholder="City" class="form-control input-md street-address" value="Longwood" required type="text">
+
+                                                    <!-- State Select -->
+                                                    <label class="control-label sr-only" for="address-state">Address State</label>
+                                                    <select id="address-state" name="address-state" class="form-control street-address">
+                                                                    <option value="AL - Alabama">AL - Alabama</option>
+                                                                    <option value="AK - Alaska">AK - Alaska</option>
+                                                                    <option value="AZ - Arizona">AZ - Arizona</option>
+                                                                    <option value="AR - Arkansas">AR - Arkansas</option>
+                                                                    <option value="CA - California">CA - California</option>
+                                                                    <option value="CO - Colorado">CO - Colorado</option>
+                                                                    <option value="CT - Connecticut">CT - Connecticut</option>
+                                                                    <option value="DE - Delaware">DE - Delaware</option>
+                                                                    <option value="DC - District of Columbia">DC - District of Columbia</option>
+                                                                    <option selected value="FL - Florida">FL - Florida</option>
+                                                                    <option value="GA - Georgia">GA - Georgia</option>
+                                                                    <option value="HI - Hawaii">HI - Hawaii</option>
+                                                                    <option value="ID - Idaho">ID - Idaho</option>
+                                                                    <option value="IL - Illinois">IL - Illinois</option>
+                                                                    <option value="IN - Indiana">IN - Indiana</option>
+                                                                    <option value="IA - Iowa">IA - Iowa</option>
+                                                                    <option value="KS - Kansas">KS - Kansas</option>
+                                                                    <option value="KY - Kentucky">KY - Kentucky</option>
+                                                                    <option value="LA - Louisiana">LA - Louisiana</option>
+                                                                    <option value="ME - Maine">ME - Maine</option>
+                                                                    <option value="MD - Maryland">MD - Maryland</option>
+                                                                    <option value="MA - Massachusetts">MA - Massachusetts</option>
+                                                                    <option value="MI - Michigan">MI - Michigan</option>
+                                                                    <option value="MN - Minnesota">MN - Minnesota</option>
+                                                                    <option value="MS - Mississippi">MS - Mississippi</option>
+                                                                    <option value="MO - Missouri">MO - Missouri</option>
+                                                                    <option value="MT - Montana">MT - Montana</option>
+                                                                    <option value="NE - Nebraska">NE - Nebraska</option>
+                                                                    <option value="NV - Nevada">NV - Nevada</option>
+                                                                    <option value="NH - New Hampshire">NH - New Hampshire</option>
+                                                                    <option value="NJ - New Jersey">NJ - New Jersey</option>
+                                                                    <option value="NM - New Mexico">NM - New Mexico</option>
+                                                                    <option value="NY - New York">NY - New York</option>
+                                                                    <option value="NC - North Carolina">NC - North Carolina</option>
+                                                                    <option value="ND - North Dakota">ND - North Dakota</option>
+                                                                    <option value="OH - Ohio">OH - Ohio</option>
+                                                                    <option value="OK - Oklahoma">OK - Oklahoma</option>
+                                                                    <option value="OR - Oregon">OR - Oregon</option>
+                                                                    <option value="PA - Pennsylvania">PA - Pennsylvania</option>
+                                                                    <option value="RI - Rhode Island">RI - Rhode Island</option>
+                                                                    <option value="SC - South Carolina">SC - South Carolina</option>
+                                                                    <option value="SD - South Dakota">SD - South Dakota</option>
+                                                                    <option value="TN - Tennessee">TN - Tennessee</option>
+                                                                    <option value="TX - Texas">TX - Texas</option>
+                                                                    <option value="UT - Utah">UT - Utah</option>
+                                                                    <option value="VT - Vermont">VT - Vermont</option>
+                                                                    <option value="VA - Virginia">VA - Virginia</option>
+                                                                    <option value="WA - Washington">WA - Washington</option>
+                                                                    <option value="WV - West Virginia">WV - West Virginia</option>
+                                                                    <option value="WI - Wisconsin">WI - Wisconsin</option>
+                                                                    <option value="WY - Wyoming">WY - Wyoming</option>
+                                                                </select>
+
+                                                    <label class="control-label sr-only" for="zip-code">Zip Code</label>
+                                                    <input id="zip-code" name="zip-code" placeholder="Zip Code" class="form-control input-md street-address" value="32750" required type="text">
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="modal-footer">
+                                            <button id="cancel" data-dismiss="modal" name="cancel" class="btn btn-default"> Cancel</button>
+                                            <button id="save" data-dismiss="modal" name="save" class="pull-right btn btn-primary"> Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Modal -->
+
+                            <div id="notes" class="tab-pane fade in tabs-info">
+                                <div class="pull-right add-button-table add-notes">
+                                    <a name="" data-toggle="modal" data-target="#add-notes" class="btn carrier-btn pull-right add-note"><i class="fa fa-plus"></i> Add Note</a>
+                                </div>
+
+                                <div class="portal-tables">
+                                    <table class="table-hover table-striped table-condensed cf no-border">
+                                        <thead class="cf">
+                                            <tr>
+                                                <th>Date</th>
+                                                <th>Created By</th>
+                                                <th>Subject</th>
+                                                <th class="col-lg-8">Note</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td data-title="Date">8/1/2018</td>
+                                                <td data-title="Created By">Donna Kline</td>
+                                                <td data-title="Subject">Commission Statements</td>
+                                                <td data-title="Note">In order to access commission statements, you must first go to the commision statement link, hit the top right button, and do a manual search.</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td data-title="Date">7/31/2018</td>
+                                                <td data-title="Created By">Jason Dotson</td>
+                                                <td data-title="Subject">Invoices</td>
+                                                <td data-title="Note">In order to access invoices, you must first go to the commision statement link, hit the top right button, and do a manual search.</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td data-title="Date">7/30/2018</td>
+                                                <td data-title="Created By">Jason Dotson</td>
+                                                <td data-title="Subject">Support</td>
+                                                <td data-title="Note">In order to access support, you must first go to the commision statement link, hit the top right button, and do a manual search.</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!-- Edit Modal -->
+                                <div id="add-notes" class="modal fade" role="dialog">
+                                    <div class="modal-dialog">
+
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                <h4 class="modal-title">Add Note </h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="row">
+                                                    <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                        <label class="required control-label" for="">Subject:</label>
+                                                        <input id="" name="" value="" class="form-control input-md" required type="text">
+                                                    </div>
+
+                                                    <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                        <label class="required control-label" for="">Note:</label>
+                                                        <textarea class="form-control" maxlength="4000" spellcheck="true" rows="11" cols="20" placeholder="Please enter note (maximum of 4000 characters)" id=""></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button id="cancel" data-dismiss="modal" name="cancel" class="btn btn-default"> Cancel</button>
+                                                <button id="save" data-dismiss="modal" name="save" class="pull-right btn btn-primary"> Save</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Modal -->
+                            </div>
+
+                        </div>
+                    </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="text-center copyright">
+        <p>Copyright &#169; 2018 Insurance Office of America. All rights reserved. Version 1.0</p>
+    </div>
+
+    <script type="text/javascript" src="chosen_v1.6.2/docsupport/multi-select.js"></script>
+    <script type="text/javascript" src="js/tooltip.js"></script>
+    <script type="text/javascript" src="js/carrier-search.js"></script>
+    <script type="text/javascript" src="js/show-hide-pass.js"></script>
+    <script type="text/javascript" src="js/edit-carrier-accounting.js"></script>
+</body>
+
+</html>

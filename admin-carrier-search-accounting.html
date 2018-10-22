@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Office of America - Carrier Contact Database</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/carriers-search.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Chosen Multi Select -->
+    <link rel="stylesheet" href="chosen_v1.6.2/docsupport/style.css">
+    <link rel="stylesheet" href="chosen_v1.6.2/docsupport/prism.css">
+    <link rel="stylesheet" href="chosen_v1.6.2/chosen.css">
+    <script type="text/javascript" src="chosen_v1.6.2/chosen.jquery.js"></script>
+    <script type="text/javascript" src="chosen_v1.6.2/docsupport/prism.js"></script>
+
+    <!-- Bootstrap Date-Picker Plugin -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+    <script type="text/javascript" src="js/date-picker.js"></script>
+
+    <!-- Bootstrap Toggle -->
+    <link rel="stylesheet" href="bootstrap/css/toggle/bootstrap-toggle.min.css">
+    <script type="text/javascript" src="bootstrap/js/toggle/bootstrap-toggle.min.js"></script>
+
+</head>
+
+<body class="portal-pad portal-page">
+    <nav class="navbar navbar-inverse navbar-fixed-top menu-top">
+        <div class="container-fluid menu-margin">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".sidebar1" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img src="img/logo.png" width="150" alt="Insurance Office of America">
+                </a>
+                <h4 class="company-title">Insurance Office of America</h4>
+                <h5>Carrier Contact Database</h5>
+            </div>
+            <div id="navbar" role="navigation" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Chris Robertson <i class="fa fa-cog" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu">
+                            <div class="arrow-up"></div>
+                            <li><a href="#">Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid content">
+        <div class="row sidebar-container">
+            <div id="sidebar" class="col-xs-12 col-sm-3 col-md-12 sidebar1 sidebar navbar-collapse collapse">
+                <ul class="nav nav-sidebar">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="accounting-dashboard.html"><i class="fa fa-calculator fa-2x" aria-hidden="true"></i><span>Accounting</span><i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                        <a class="desktop-link" href="accounting-dashboard.html">&nbsp;</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="carrier-accounting-search.html">Carriers</a>
+                                <hr />
+                            </li>
+                            <li class="dropdown menu"><a href="#">Administration</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="add-user.html">Add User</a>
+                                        <hr>
+                                    </li>
+                                    <li><a href="view-users.html">View Users</a>
+                                        <hr>
+                                    </li>
+                                    <li><a href="admin-carrier-search.html">Carriers</a>
+                                        <hr>
+                                    </li>
+                                </ul>
+                                <hr />
+                            </li>
+                        </ul>
+                    </li>
+                    <hr />
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="index.html"><i class="fa fa-briefcase fa-2x" aria-hidden="true"></i><span>Field Ops</span><i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                        <a class="desktop-link" href="index.html">&nbsp;</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="carrier-agreement-search.html">Agreements</a>
+                                <hr />
+                            </li>
+                            <li class="dropdown menu"><a href="#">Contacts</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="add-carrier-contact.html">Add New Contact</a></li>
+                                    <li><a href="carrier-contact-search.html">View Contacts</a></li>
+                                </ul>
+                                <hr />
+                            </li>
+                            <li><a href="#">Personnel</a>
+                                <hr />
+                            </li>
+                            <li class="dropdown menu"><a href="#">Administration</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="add-user.html">Add User</a>
+                                        <hr>
+                                    </li>
+                                    <li><a href="view-users.html">View Users</a>
+                                        <hr>
+                                    </li>
+                                    <li><a href="admin-carrier-search.html">Carriers</a>
+                                        <hr>
+                                    </li>
+                                    <li><a href="#">Contact Labels</a>
+                                        <hr>
+                                    </li>
+                                    <li><a href="#">Book of Business</a>
+                                        <hr>
+                                    </li>
+                                    <li><a href="#">Branches</a>
+                                        <hr>
+                                    </li>
+                                </ul>
+                                <hr />
+                            </li>
+                        </ul>
+                    </li>
+                    <hr />
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="carrier-ops-search.html"><i class="fa fa-archive fa-2x" aria-hidden="true"></i><span>Operations</span><i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                        <a class="desktop-link" href="carrier-ops-search.html">&nbsp;</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="carrier-ops-search.html">Carriers</a>
+                                <hr />
+                            </li>
+                            <li class="dropdown menu"><a href="#">Contacts</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="add-carrier-contact.html">Add New Contact</a></li>
+                                    <li><a href="carrier-contact-search.html">View Contacts</a></li>
+                                </ul>
+                                <hr />
+                            </li>
+                            <li class="dropdown menu"><a href="#">Administration</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="add-user.html">Add User</a><hr></li>
+                                    <li><a href="view-users.html">View Users</a><hr></li>
+                                    <li><a href="admin-carrier-search.html">Carriers</a><hr></li>
+                                    <li><a href="specialty.html">Specialties</a><hr></li>
+                                </ul>
+                                <hr />
+                            </li>
+                        </ul>
+                    </li>
+                    <hr />
+                    <li>
+                        <a href="real-estate-dashboard.html"><i class="fa fa-building fa-2x" aria-hidden="true"></i><span>RE & CA</span></a>
+                    </li>
+                    <hr />
+                    <ul class="nav nav-sidebar nav-sidebar2">
+                        <li class="dropdown">
+                            <hr>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-cog fa-3x" aria-hidden="true"></i><span> Chris Robertson</span>
+                            <i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Edit Profile</a>
+                                </li>
+                                <li><a href="#">Logout</a>
+                                </li>
+                            </ul>
+                            <hr>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+            <!-- Body -->
+            <div class="body-container">
+
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 title-header spacerbottom20">
+                    <div class="pull-left head-drop">
+                        <div class="btn-group">
+                            Carrier Search
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-content">
+                    <form>
+                        <div class="row">
+                            <div class="form-group col-sm-12 col-md-4 col-lg-4">
+                                <label class="control-label" for="">Carrier:</label>
+                                <div class="custom-group-form">
+                                    <div class="carrier-add">
+                                        <input id="" name="" class="form-control input-md" required="" value="CNA" type="text">
+                                    </div>
+                                    <a data-toggle="modal" data-target="#" class="btn icon-btn add-button pull-right"><i class="fa fa-plus"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-sm-12 col-md-4 col-lg-4 spacer28">
+                                <button id="carriercontact" class="btn btn-primary">Clear Filters</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <hr />
+
+                <div class="tablecontainer">
+                    <div class="col-md-12 col-xs-12 panel-heading tableheader">
+                        <div class="pull-left head-drop">
+                            <strong>Search Results</strong>
+                        </div>
+                    </div>
+
+                    <div class="panel-body">
+                        <div class="portal-tables">
+                            <table class="table-hover table-striped table-condensed cf tb-car-search">
+                                <thead class="cf">
+                                    <tr>
+                                        <th>Carrier</th>
+                                        <th>Branch</th>
+                                        <th>Status</th>
+                                        <th class="action">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-title="Carrier"><i class="fa fa-plus-circle plus-sign" aria-hidden="true" data-car-class="car-class-1"></i><i style="display: none" class="fa fa-minus-circle minus-sign" aria-hidden="true" data-car-class="car-class-1"></i> CNA</td>
+                                        <td data-title="Branch">Longwood, FL</td>
+                                        <td data-title="Status">Active</td>
+                                        <td data-title="Action" class="actionBtn">
+                                            <div class="btn-cell">
+                                                <a href="edit-carrier-accounting.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="car-class-1 even" style="display: none">
+                                        <td></td>
+                                        <td data-title="Branch">Tampa, FL</td>
+                                        <td data-title="Status">Active</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="car-class-1 even" style="display: none">
+                                        <td></td>
+                                        <td data-title="Branch">Ft. Myers, FL</td>
+                                        <td data-title="Status">Active</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="car-class-1 even" style="display: none">
+                                        <td></td>
+                                        <td data-title="Branch">Boca Raton, FL</td>
+                                        <td data-title="Status">Active</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="car-class-1 even" style="display: none">
+                                    	<td></td>
+                                        <td data-title="Branch">Marathon, FL</td>
+                                        <td data-title="Status">Active</td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination">
+                                <li>
+                                    <a href="#" aria-label="Previous">
+                                        <span aria-hidden="true">«</span>
+                                    </a>
+                                </li>
+                                <li class="active"><a href="#">1</a>
+                                </li>
+                                <li>
+                                    <a href="#" aria-label="Next">
+                                        <span aria-hidden="true">»</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center copyright">
+        <p>Copyright &#169; 2018 Insurance Office of America. All rights reserved. Version 1.0</p>
+    </div>
+
+    <script type="text/javascript" src="chosen_v1.6.2/docsupport/multi-select.js"></script>
+    <script type="text/javascript" src="js/tooltip.js"></script>
+    <script type="text/javascript" src="js/carrier-search.js"></script>
+</body>
+
+</html>

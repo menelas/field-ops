@@ -11,4 +11,15 @@ $(document).ready(function(){
 		$(this).hide();
 		$('.'+tgr).hide();
 	});
+	$('#all-codes').on('change', function(){
+		if($(this).is(':checked')){
+			$('.plus-sign').show();
+			$('.minus-sign').hide();
+			$('.toggle-tr').hide();
+		}else{
+			$('.minus-sign').show();
+			$('.toggle-tr').show();
+			$('.plus-sign').hide();
+		}
+	});
 });

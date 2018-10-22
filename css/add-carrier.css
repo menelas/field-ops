@@ -1,0 +1,8 @@
+.role-add ul.chosen-choices {
+	width: 88% !important;
+}
+@media (min-width: 992px) and (max-width: 1190px){
+	.role-add ul.chosen-choices {
+		width: 75% !important;
+	}
+}

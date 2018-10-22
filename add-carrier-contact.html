@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/add-carrier.css">
+
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="bootstrap/js/phone-mask.js"></script>
@@ -55,48 +57,115 @@
         <div class="row sidebar-container">
             <div id="sidebar" class="col-xs-12 col-sm-3 col-md-12 sidebar1 sidebar navbar-collapse collapse">
                 <ul class="nav nav-sidebar">
-                    <li>
-                        <a href="index.html">
-                            <i class="fa fa-dashboard fa-2x" aria-hidden="true"></i><span>Dashboard</span>
-                        </a>
-                        <hr />
-                    </li>
-
-                    <li>
-                        <a href="carrier-search.html">
-                            <i class="fa fa-file-text fa-2x" aria-hidden="true"></i><span>Agreements</span>
-                        </a>
-                        <hr />
-                    </li>
-
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-id-card fa-2x" aria-hidden="true"></i><span>Contact</span><i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="accounting-dashboard.html"><i class="fa fa-calculator fa-2x" aria-hidden="true"></i><span>Accounting</span><i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                        <a class="desktop-link" href="accounting-dashboard.html">&nbsp;</a>
                         <ul class="dropdown-menu">
-                            <li><a href="add-carrier-contact.html">Add New Contacts</a>
-                                <hr>
+                            <li><a href="carrier-accounting-search.html">Carriers</a>
+                                <hr />
                             </li>
-                            <li><a href="carrier-contact-search.html">View Contacts</a>
-                                <hr>
+                            <li class="dropdown menu"><a href="#">Administration</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="add-user.html">Add User</a>
+                                        <hr>
+                                    </li>
+                                    <li><a href="view-users.html">View Users</a>
+                                        <hr>
+                                    </li>
+                                    <li><a href="admin-carrier-search-accounting.html">Carriers</a>
+                                        <hr>
+                                    </li>
+                                    <li><a href="admin-accounting-report.html">Report</a>
+                                        <hr>
+                                    </li>
+                                    <li><a href="admin-accounting-report.html">Report</a>
+                                        <hr>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
-                        <hr />
                     </li>
+                    <hr />
 
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-gears fa-2x" aria-hidden="true"></i><span> Administration </span><i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="index.html"><i class="fa fa-briefcase fa-2x" aria-hidden="true"></i><span>Field Ops</span><i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                        <a class="desktop-link" href="index.html">&nbsp;</a>
                         <ul class="dropdown-menu">
-                            <li><a href="carrier-search.html">Carriers</a>
-                                <hr>
+                            <li><a href="carrier-agreement-search.html">Agreements</a>
+                                <hr />
+                            </li>
+                            <li class="dropdown menu"><a href="#">Contacts</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="add-carrier-contact.html">Add New Contact</a></li>
+                                    <li><a href="carrier-contact-search.html">View Contacts</a></li>
+                                </ul>
+                                <hr />
+                            </li>
+                            <li><a href="#">Personnel</a>
+                                <hr />
+                            </li>
+                            <li class="dropdown menu"><a href="#">Administration</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="add-user.html">Add User</a>
+                                        <hr>
+                                    </li>
+                                    <li><a href="view-users.html">View Users</a>
+                                        <hr>
+                                    </li>
+                                    <li><a href="admin-carrier-search.html">Carriers</a>
+                                        <hr>
+                                    </li>
+                                    <li><a href="#">Contact Labels</a>
+                                        <hr>
+                                    </li>
+                                    <li><a href="#">Book of Business</a>
+                                        <hr>
+                                    </li>
+                                    <li><a href="#">Branches</a>
+                                        <hr>
+                                    </li>
+                                </ul>
+                                <hr />
                             </li>
                         </ul>
-                        <hr />
                     </li>
+                    <hr />
 
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="carrier-ops-search.html"><i class="fa fa-archive fa-2x" aria-hidden="true"></i><span>Operations</span><i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                        <a class="desktop-link" href="carrier-ops-search.html">&nbsp;</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="carrier-ops-search.html">Carriers</a>
+                                <hr />
+                            </li>
+                            <li class="dropdown menu"><a href="#">Contacts</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="add-carrier-contact.html">Add New Contact</a></li>
+                                    <li><a href="carrier-contact-search.html">View Contacts</a></li>
+                                </ul>
+                                <hr />
+                            </li>
+                            <li class="dropdown menu"><a href="#">Administration</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="add-user.html">Add User</a><hr></li>
+                                    <li><a href="view-users.html">View Users</a><hr></li>
+                                    <li><a href="admin-carrier-search.html">Carriers</a><hr></li>
+                                    <li><a href="specialty.html">Specialties</a><hr></li>
+                                </ul>
+                                <hr />
+                            </li>
+                        </ul>
+                    </li>
+                    <hr />
+                    <li>
+                        <a href="real-estate-dashboard.html"><i class="fa fa-building fa-2x" aria-hidden="true"></i><span>RE & CA</span></a>
+                    </li>
+                    <hr />
                     <ul class="nav nav-sidebar nav-sidebar2">
                         <li class="dropdown">
                             <hr>
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-cog fa-3x" aria-hidden="true"></i><span> Chris Robertson</span>
-                     <i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                            <i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">Edit Profile</a>
                                 </li>
@@ -175,6 +244,7 @@
                                     <option>Commercial</option>
                                     <option>Personal</option>
                                     <option>Benefits</option>
+                                    <option>Unknown</option>
                                 </select>
                             </div>
                         </div>
@@ -224,16 +294,17 @@
                                     </div>
                                 </div>
 
+
                             <div class="form-group col-sm-12 col-md-4 col-lg-4">
                                 <label class="control-label" for="">Department:</label>                    
                                 <div class="clearfix title-button">
                                     <select id="" name="" class="form-control">
-                                        <option value="">-- Please Select Department--</option>
-                                        <option value="">Sample Department 1</option>
-                                        <option value="">Sample Department 2</option>
-                                        <option value="">Sample Department 3</option>
-                                        <option value="">Sample Department 4</option>
-                                        <option value="">Sample Department 5</option>
+                                        <option value="">-- Please Select Title--</option>
+                                        <option value="">Accounting</option>
+                                        <option value="">Benefits</option>
+                                        <option value="">Commercial</option>
+                                        <option value="">Operations</option>
+                                        <option value="">Loss Run</option>
                                     </select>
                                     <a data-toggle="modal" data-target="#contact-department" class="btn icon-btn add-button pull-right"><i class="fa fa-plus"></i></a>
                                 </div>
@@ -341,6 +412,17 @@
                         </div>
 
                         <div class="row">
+
+                            <div class="col-sm-12 col-md-4 col-lg-4">
+                                <label class=" control-label" for="">Branch:</label>
+                                <div class="input-group">
+                                    <input class="form-control" id="CarrierId" name="" type="search" value="" autocomplete="off">
+                                    <input name="" type="hidden" class="autocompletehidden" value="">
+                                    <div class="input-group-addon"><i class="fa fa-search"></i>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="form-group col-sm-12 col-md-4 col-lg-4">
                                 <label class="control-label" for="">Region:</label>
                                 <select data-placeholder=" " multiple class="chosen-select-width" tabindex="16">
@@ -350,29 +432,48 @@
                                 </select>
                             </div>
 
-                            <div class="form-group col-sm-12 col-md-4 col-lg-4">
+                            <div class="form-group col-sm-12 col-md-4 col-lg-4 role-add">
                                 <label class="control-label" for="">Role: </label>
-                                <select data-placeholder="-- Select Role -- " multiple class="chosen-select-width" tabindex="16">
-                                    <option>Accounting</option>
-                                    <option>Acquisitions</option>
-                                    <option>Commission Statements</option>
-                                    <option>Contracting</option>
-                                    <option>Licensing</option>
-                                    <option>Logins</option>
-                                    <option>Marketing</option>
-                                    <option>Operations</option>
-                                    <option>Principal</option>
-                                    <option>Underwriter</option>
-                                </select>
+                                     <select data-placeholder="-- Select Role -- " multiple class="chosen-select-width" tabindex="16">
+                                        <option>Accounting</option>
+                                        <option>Acquisitions</option>
+                                        <option>Commission Statements</option>
+                                        <option>Contracting</option>
+                                        <option>Licensing</option>
+                                        <option>Logins</option>
+                                        <option>Marketing</option>
+                                        <option>Operations</option>
+                                        <option>Principal</option>
+                                        <option>Underwriter</option>
+                                    </select>
+ 
+                                <a data-toggle="modal" data-target="#role" class="btn icon-btn add-button pull-right"><i class="fa fa-plus"></i></a>
                             </div>
 
-                            <div class="form-group col-sm-12 col-md-4 col-lg-4">
-                                <label class="control-label" for="">Show on Dashboard:</label>
-                                <input id="show-dashboard" name="" value="true" type="checkbox">
-                            </div>
+                                <div class="modal fade" id="role" tabindex="-1" role="dialog" aria-labelledby="rolelabel">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title" id="contact-titlelabel">Add Role</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <label class="required control-label" for="">Role:</label>
+                                                <input id="" name="" class="required form-control input-md" required="" type="text">
+                                            </div>
+                                            <div class="modal-footer">
+                                                <div class="clearfix">
+                                                    <div class="pull-right">
+                                                        <button id="cancel" data-dismiss="modal" name="cancel" class="btn btn-default btn-cancel pull-right"> Cancel</button>
+
+                                                        <button id="save" data-dismiss="modal" name="save" class="btn btn-primary btn-submit pull-right"> Save</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                         </div>
-
-
                     </form>
 
                     <div class="buttons-footer">

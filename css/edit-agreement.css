@@ -8,3 +8,10 @@
 #add-branch-code tr.odd {
 	background-color: #fff !important;
 }
+#all-codes{
+	vertical-align: middle;
+	margin: 0 0 0 8px;
+}
+.all-code-toggle{
+	font-weight: normal;
+}

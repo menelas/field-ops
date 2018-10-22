@@ -1,3 +1,6 @@
+## 2018-10-22
+• Created new sections within the website
+
 ## 2018-6-1
 • Updated edit agreement page
 
