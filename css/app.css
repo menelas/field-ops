@@ -1577,6 +1577,12 @@ a.view:visited, a.view:hover {
    color: #FFF;
 }
 
+.include-all-branches {
+    margin-right: 170px;
+    margin-top: -4%;
+    width: 15%;
+}
+
 .title-button .add-button, .title-button .add-button:hover {
 	margin-top: 10px;
 	margin-right: 0;
@@ -1596,9 +1602,6 @@ a.view:visited, a.view:hover {
 
 .acquisition-field1 {
    margin-top: -1px;
-}
-.box-with-plus-btn label{
-	display: block;
 }
 .box-with-plus-btn .add-button{
 	margin: 10px 0 0;

@@ -13,10 +13,15 @@ $(document).ready(function(){
 		var raSam = $(this).val();
 		if(raSam=="Carrier"){
 			$(".col-preferred").show();
+            $(".col-master-code").show();
+            $(".col-downloads").show();
             $(".col-specialty").hide();
+
 		}else if(raSam=="Wholesaler"){
             $(".col-specialty").show();
             $(".col-preferred").hide();
+            $(".col-master-code").hide();
+            $(".col-downloads").hide();
 		}
 	});
 });
