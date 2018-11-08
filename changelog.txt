@@ -1,3 +1,7 @@
+## 2018-11-8
+• Updated add/edit carrier and wholesaler 
+• Updated edit carrier contact
+
 ## 2018-11-7
 • Added separate pages for add/edit carrier and wholesalers
 

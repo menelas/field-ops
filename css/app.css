@@ -1152,6 +1152,10 @@ form .form-group:before, form .form-group:after {
    content: '*';
 }
 
+.radio-choice {
+   margin-right: 10px;
+}
+
 .form-divider {
    margin-top: 10px;
 }
