@@ -1,3 +1,7 @@
+## 2018-11-19
+• Updated edit-carrier to fix include all branch responsive issue (edited line 414-419 on edit-carrier.html)
+
+
 ## 2018-11-8
 • Updated add/edit carrier and wholesaler 
 • Updated edit carrier contact
