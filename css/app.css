@@ -1576,7 +1576,7 @@ a.view:visited, a.view:hover {
    margin-top: -41px;
 }
 
-.include-system, .include-inactive {
+.include-system, .include-inactive, .include-notes {
    padding: 10px;
    color: #FFF;
 }

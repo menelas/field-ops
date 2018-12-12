@@ -12,16 +12,12 @@ $(document).ready(function(){
 	$('input[name="radio-sample"]').click(function(){
 		var raSam = $(this).val();
 		if(raSam=="Carrier"){
-			$(".col-preferred").show();
-            $(".col-master-code").show();
-            $(".col-downloads").show();
-            $(".col-specialty").hide();
+			$(".carrier").show();
+            $(".wholesaler").hide();
 
 		}else if(raSam=="Wholesaler"){
-            $(".col-specialty").show();
-            $(".col-preferred").hide();
-            $(".col-master-code").hide();
-            $(".col-downloads").hide();
+            $(".wholesaler").show();
+            $(".carrier").hide();
 		}
 	});
 });

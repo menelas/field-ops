@@ -1,3 +1,6 @@
+## 2018-12-12
+• Updated accounting and operations files
+
 ## 2018-11-19
 • Updated edit-carrier to fix include all branch responsive issue (edited line 414-419 on edit-carrier.html)
 

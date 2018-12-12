@@ -14,3 +14,9 @@
 .carrier-btn {
 	margin-bottom: -50px;
 }
+a, a:hover, a:focus {
+    color: #337ab7;
+}
+.sep.active + .tab-search {
+	display: none;
+}

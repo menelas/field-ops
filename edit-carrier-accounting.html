@@ -65,10 +65,14 @@
             <div id="sidebar" class="col-xs-12 col-sm-3 col-md-12 sidebar1 sidebar navbar-collapse collapse">
                 <ul class="nav nav-sidebar">
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="accounting-dashboard.html"><i class="fa fa-calculator fa-2x" aria-hidden="true"></i><span>Accounting</span><i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
-                        <a class="desktop-link" href="accounting-dashboard.html">&nbsp;</a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="carrier-accounting-search.html"><i class="fa fa-calculator fa-2x" aria-hidden="true"></i><span>Accounting</span><i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                        <a class="desktop-link" href="carrier-accounting-search.html">&nbsp;</a>
                         <ul class="dropdown-menu">
-                            <li><a href="carrier-accounting-search.html">Carriers</a>
+                            <li class="dropdown menu"><a href="#">Contacts</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="add-carrier-contact.html">Add New Contact</a></li>
+                                    <li><a href="carrier-contact-search.html">View Contacts</a></li>
+                                </ul>
                                 <hr />
                             </li>
                             <li class="dropdown menu"><a href="#">Administration</a>
@@ -79,7 +83,7 @@
                                     <li><a href="view-users.html">View Users</a>
                                         <hr>
                                     </li>
-                                    <li><a href="admin-carrier-search-accounting.html">Carriers</a>
+                                    <li><a href="#">Branches</a>
                                         <hr>
                                     </li>
                                     <li><a href="admin-accounting-report.html">Report</a>
@@ -196,18 +200,23 @@
                     <form>
                         <div class="row">
                             <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-3">
-                                <label class="required control-label" for="">Name:</label>
-                                <span class="form-control-static">CNA</span>
+                                <label class="required control-label" for="">Carrier/Wholesaler:</label>
+                                <span class="form-control-static">CNA - Carrier</span>
+                            </div>
+
+                            <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-3">
+                                <label class="control-label" for="">Agency Principal/Designated Contact Person:</label>
+                                <div class="input-group">
+                                    <input class="form-control" id="" name="" type="search" value="Lawson Haney" autocomplete="off">
+                                    <input name="" type="hidden" class="autocompletehidden" value="">
+                                    <div class="input-group-addon"><i class="fa fa-search"></i>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-3">
                                 <label class="control-label" for="">Master Code:</label>
                                 <span class="form-control-static">COL323</span>
-                            </div>
-
-                            <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-3">
-                                <label class="control-label" for="">Policy Download:</label>
-                                <span class="form-control-static">Yes</span>
                             </div>
 
                             <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-3">
@@ -230,7 +239,18 @@
                         </div>
 
                         <div class="row">
+                            <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-3">
+                                <label class="control-label" for="">Policy Download:</label>
+                                <span class="form-control-static">Yes</span>
+                            </div>
+
                             <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-3 pull-right recipients-address" style="display: none">
+                                
+                                <div class="form-group">
+                                    <label class="control-label" for="contact-address">Recipient:</label>
+                                    <input id="contact-name" name="contact-name" value="" placeholder="" class="form-control input-md name" required type="text">
+                                </div>
+     
                                 <label class="control-label" for="contact-address">Recipient's Address:</label>
                                 <input id="contact-address" name="contact-address" placeholder="Street Address 1" class="form-control input-md street-address" required type="text">
 
@@ -302,12 +322,12 @@
 
                             <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-3">
                                 <label class="control-label" for="">Email:</label>
-                                <input id="" name="" value="policies@cna.com" class="form-control input-md" required type="text">
+                                <span class="form-control-static"><a href="mailto:policies@cna.com">policies@cna.com</a></span>
                             </div>
 
                             <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-3">
                                 <label class="control-label" for="">Phone Number:</label>
-                                <input id="" name="" value="1-800-262-2000" class="form-control input-md" required type="text">
+                                <span class="form-control-static"><a href="tel:1-800-262-2000">1-800-262-2000</a></span>
                             </div>
 
                             <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-3 pull-right commission-download" style="display: none;">
@@ -339,7 +359,7 @@
                                 </li>
                                 <li class="sep"><a data-toggle="tab" href="#codes"><i class="fa fa-list-ol"></i> Producer Codes</a>
                                 </li>
-                                <li class="sep"><a data-toggle="tab" href="#notes"><i class="fa fa-sticky-note"></i> Notes</a>
+                                <li class="sep"><a data-toggle="tab" href="#notes"><i class="fa fa-sticky-note"></i> Notes & History</a>
                                 </li>
                                 <div class="pull-right tab-search">
                                     <div class="form-group">
@@ -751,24 +771,56 @@
                                             </div>
 
                                             <div class="modal-body">
-                                                <div class="row">
+
                                                     <form>
-                                                        <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                                            <label class="required control-label" for="">Link:</label>
-                                                            <input id="" name="" class="form-control input-md" required type="text">
+                                                        <div class="row">
+                                                            <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                                                <label class="required control-label" for="">Type:</label>
+                                                                <input id="" name="" value="" class="form-control input-md" required type="text">
+                                                            </div>
+
+                                                            <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                                                <label class="required control-label" for="">IOA Contact Person:</label>
+                                                                <div class="input-group">
+                                                                    <input class="form-control" id="" name="" type="search" value="" autocomplete="off">
+                                                                    <input name="" type="hidden" class="autocompletehidden" value="">
+                                                                    <div class="input-group-addon"><i class="fa fa-search"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+ 
+                                                        <div class="row">
+                                                            <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                                                <label class="required control-label" for="">Email:</label>
+                                                                <input id="" name="" value="" class="form-control input-md" required type="text">
+                                                            </div>
+
+                                                            <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                                                <label class="control-label" for="">Phone:</label>
+                                                                <input id="" name="" value="" class="form-control input-md" required type="text">
+                                                            </div>
                                                         </div>
 
-                                                        <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                                            <label class="required control-label" for="">Username:</label>
-                                                            <input id="" name="" class="form-control input-md" required type="text">
+                                                        <div class="row">
+                                                            <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                                                <label class="required control-label" for="">Username:</label>
+                                                                <input id="" name="" value="" class="form-control input-md" required type="text">
+                                                            </div>
+
+                                                            <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                                                <label class="required control-label" for="">Password:</label>
+                                                                <input id="" name="" value="" class="form-control input-md" required type="text">
+                                                            </div>
                                                         </div>
 
-                                                        <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                                            <label class="required control-label" for="">Password:</label>
-                                                            <input id="" name="" class="form-control input-md" required type="text">
+                                                        <div class="row">
+                                                            <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                                                <label class="required control-label" for="">Link:</label>
+                                                                <input id="" name="" value="" class="form-control input-md" required type="text">
+                                                            </div>
                                                         </div>
                                                     </form>
-                                                </div>
 
                                                 <div class="modal-footer">
                                                     <button id="cancel" data-dismiss="modal" name="cancel" class="btn btn-default"> Cancel</button>
@@ -794,24 +846,43 @@
                                             </div>
 
                                             <div class="modal-body">
-                                                <div class="row">
-                                                    <form>
-                                                        <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                                            <label class="required control-label" for="">Link:</label>
-                                                            <input id="" name="" value="http://www.cna.com/commissions" class="form-control input-md" required type="text">
+                                                <form>
+                                                    <div class="row">
+                                                        <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                                            <label class="control-label" for="">IOA Contact Person:</label>
+                                                            <span class="form-control-static">Bernard Ware</span>
                                                         </div>
 
-                                                        <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                        <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                                            <label class="control-label" for="">Email:</label>
+                                                            <span class="form-control-static"><a <a href="mailto:bernard.ware@ioausa.com">bernard.ware@ioausa.com</a></span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                                            <label class="control-label" for="">Phone:</label>
+                                                            <span class="form-control-static"><a href="tel:407-998-7845">407-998-7845</a></span>
+                                                        </div>
+
+                                                        <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-6">
                                                             <label class="required control-label" for="">Username:</label>
                                                             <input id="" name="" value="ioacom@ioausa.com" class="form-control input-md" required type="text">
                                                         </div>
+                                                    </div>
 
-                                                        <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                    <div class="row">
+                                                        <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-6">
                                                             <label class="required control-label" for="">Password:</label>
                                                             <input id="" name="" value="IOAcom1!" class="form-control input-md" required type="text">
                                                         </div>
-                                                    </form>
-                                                </div>
+
+                                                        <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                                            <label class="required control-label" for="">Link:</label>
+                                                            <input id="" name="" value="http://www.cna.com/commissions" class="form-control input-md" required type="text">
+                                                        </div>
+                                                    </div>
+                                                </form>
 
                                                 <div class="modal-footer">
                                                     <button id="cancel" data-dismiss="modal" name="cancel" class="btn btn-default"> Cancel</button>
@@ -865,6 +936,7 @@
                                         <thead class="cf">
                                             <tr>
                                                 <th>Branch</th>
+                                                <th>Relationship Manager</th>
                                                 <th>Carrier Codes</th>
                                                 <th>Sub Codes</th>
                                                 <th class="request-col" style="display: none">Address</th>
@@ -878,6 +950,7 @@
                                                     <i class="fa fa-plus-circle plus-sign" aria-hidden="true" data-car-class="car-class-1"></i><i style="display: none" class="fa fa-minus-circle minus-sign" aria-hidden="true" data-car-class="car-class-1"></i>Longwood,
                                                     FL
                                                 </td>
+                                                <td data-title="Relationship Manager">Aleah Stein</td>
                                                 <td data-title="Carrier Code">LNG0122</td>
                                                 <td data-title="Sub Code">LNG123</td>
                                                 <td data-title="Address" class="request-col" style="display: none">721 West Verona Street Kissimmee Florida 34741</td>
@@ -908,6 +981,7 @@
                                                 <td data-title="Branch">
                                                     <i class="fa fa-plus-circle plus-sign" aria-hidden="true" data-car-class="car-class-2"></i><i style="display: none" class="fa fa-minus-circle minus-sign" aria-hidden="true" data-car-class="car-class-2"></i>                                                    Tampa, FL
                                                 </td>
+                                                <td data-title="Relationship Manager">Brian Dorsey</td>
                                                 <td data-title="Carrier Code">TAM012</td>
                                                 <td data-title="Sub Code">TAM505</td>
                                                 <td data-title="Address" class="request-col" style="display: none">723 West Verona Street Kissimmee Florida 34741</td>
@@ -940,6 +1014,7 @@
                                                 <td data-title="Branch">
                                                     <i class="fa fa-plus-circle plus-sign" aria-hidden="true" data-car-class="car-class-3"></i><i style="display: none" class="fa fa-minus-circle minus-sign" aria-hidden="true" data-car-class="car-class-3"></i>                                                    Ft. Myers, FL
                                                 </td>
+                                                <td data-title="Relationship Manager">Barbara Kline</td>
                                                 <td data-title="Carrier Code">FTM012</td>
                                                 <td data-title="Sub Code">FTM548</td>
                                                 <td data-title="Address" class="request-col" style="display: none">834 West Powers Street Orlando Florida 34703</td>
@@ -971,6 +1046,7 @@
                                                 <td data-title="Branch">
                                                     <i class="fa fa-plus-circle plus-sign" aria-hidden="true" data-car-class="car-class-4"></i><i style="display: none" class="fa fa-minus-circle minus-sign" aria-hidden="true" data-car-class="car-class-4"></i>                                                    Boca Raton, FL
                                                 </td>
+                                                <td data-title="Relationship Manager">Luca Atkinsr</td>
                                                 <td data-title="Carrier Code">BCR102</td>
                                                 <td data-title="Sub Code">BCR382</td>
                                                 <td data-title="Address" class="request-col" style="display: none">-----</td>
@@ -1003,6 +1079,7 @@
                                                 <td data-title="Branch">
                                                     <i class="fa fa-plus-circle plus-sign" aria-hidden="true" data-car-class="car-class-5"></i><i style="display: none" class="fa fa-minus-circle minus-sign" aria-hidden="true" data-car-class="car-class-5"></i>                                                    Marathon, FL
                                                 </td>
+                                                <td data-title="Relationship Manager">Eliza Collins</td>
                                                 <td data-title="Carrier Code">MAR012</td>
                                                 <td data-title="Sub Code">MAR923</td>
                                                 <td data-title="Address" class="request-col" style="display: none">129 East Ronald Street Orlando Florida 34703</td>
@@ -1059,6 +1136,7 @@
 
                                                 <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                                     <label class="required control-label" for="contact-address">Recipient's Address:</label>
+                                                    <input id="contact-name" name="contact-name" placeholder="Relationship Manager" class="form-control input-md name" required type="text">
                                                     <input id="contact-address" name="contact-address" placeholder="Street Address 1" class="form-control input-md street-address" required type="text">
 
                                                     <label class="control-label sr-only" for="street-address-2">Street Address 2</label>
@@ -1153,9 +1231,19 @@
                                             <div class="row">
 
                                                 <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-6">
-                                                    <label class="required control-label" for="">Branch:</label>
+                                                    <label class="control-label" for="">Branch:</label>
+                                                    <span class="form-control-static">Longwood, FL</span>
+                                                </div>
+
+                                                <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                                    <label class="control-label" for="">Carrier Code:</label>
+                                                    <span class="form-control-static">LNG0122</span>
+                                                </div>
+
+                                                <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                                    <label class="control-label" for="">Relationship Manager:</label>
                                                     <div class="input-group">
-                                                        <input class="form-control" id="CarrierId" name="" type="search" value="Longwood, FL" autocomplete="off">
+                                                        <input class="form-control" id="" name="" type="search" value="Antonio Eisenberg" autocomplete="off">
                                                         <input name="" type="hidden" class="autocompletehidden" value="">
                                                         <div class="input-group-addon"><i class="fa fa-search"></i>
                                                         </div>
@@ -1243,46 +1331,63 @@
                                 </div>
                             </div>
                             <!-- Modal -->
+                                <div id="notes" class="tab-pane fade in tabs-info">
+                                    <div class="pull-right add-button-table add-notes">
+                                        <a name="" data-toggle="modal" data-target="#add-notes" class="btn carrier-btn pull-right add-note"><i class="fa fa-plus"></i> Add Note</a>
+                                        <label for="" class="control-label branch-sub-label include-notes"><input type="checkbox" id="" name="" value="true"> Include Internal</label>
+                                        <label for="" class="control-label branch-sub-label include-notes"><input type="checkbox" id="" name="" value="true"> Include System</label>
+                                    </div>
 
-                            <div id="notes" class="tab-pane fade in tabs-info">
-                                <div class="pull-right add-button-table add-notes">
-                                    <a name="" data-toggle="modal" data-target="#add-notes" class="btn carrier-btn pull-right add-note"><i class="fa fa-plus"></i> Add Note</a>
-                                </div>
+                                    <div class="portal-tables">
+                                        <table class="table-hover table-striped table-condensed cf no-border">
+                                            <thead class="cf">
+                                                <tr>
+                                                    <th>Date</th>
+                                                    <th class="col-lg-8">Note</th>
+                                                    <th>Created By</th>
+                                                    <th>Modified By</th>
+                                                    <th class="action">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td data-title="Date">12/24/2017</td>
+                                                    <td data-title="Note">In order to access commission statements, you must first go to the commision statement link, hit the top right button, and do a manual search.</td>
+                                                    <td data-title="Created By">Donna Kline</td>
+                                                    <td data-title="Modified By">Donna Kline</td>
+                                                    <td data-title="Action" class="actionBtn">
+                                                        <div class="btn-cell">
+                                                            <a class="actionBlue disabled"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
 
-                                <div class="portal-tables">
-                                    <table class="table-hover table-striped table-condensed cf no-border">
-                                        <thead class="cf">
-                                            <tr>
-                                                <th>Date</th>
-                                                <th>Created By</th>
-                                                <th>Subject</th>
-                                                <th class="col-lg-8">Note</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td data-title="Date">8/1/2018</td>
-                                                <td data-title="Created By">Donna Kline</td>
-                                                <td data-title="Subject">Commission Statements</td>
-                                                <td data-title="Note">In order to access commission statements, you must first go to the commision statement link, hit the top right button, and do a manual search.</td>
-                                            </tr>
+                                                <tr>
+                                                    <td data-title="Date">11/23/2017</td>
+                                                    <td data-title="Note">In order to access invoices, you must first go to the commision statement link, hit the top right button, and do a manual search.</td>
+                                                    <td data-title="Created By">Yielena Loubriel</td>
+                                                    <td data-title="Modified By">Jason Lacroix</td>
+                                                    <td data-title="Action" class="actionBtn">
+                                                        <div class="btn-cell">
+                                                            <a class="actionBlue disabled"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
 
-                                            <tr>
-                                                <td data-title="Date">7/31/2018</td>
-                                                <td data-title="Created By">Jason Dotson</td>
-                                                <td data-title="Subject">Invoices</td>
-                                                <td data-title="Note">In order to access invoices, you must first go to the commision statement link, hit the top right button, and do a manual search.</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td data-title="Date">7/30/2018</td>
-                                                <td data-title="Created By">Jason Dotson</td>
-                                                <td data-title="Subject">Support</td>
-                                                <td data-title="Note">In order to access support, you must first go to the commision statement link, hit the top right button, and do a manual search.</td>
-                                            </tr>
-
-                                        </tbody>
-                                    </table>
+                                                <tr>
+                                                    <td data-title="Date">10/1/2017</td>
+                                                    <td data-title="Note">In order to access support, you must first go to the commision statement link, hit the top right button, and do a manual search.</td>
+                                                    <td data-title="Created By">Jason Dotson</td>
+                                                    <td data-title="Modified By">Donna Kline</td>
+                                                    <td data-title="Action" class="actionBtn">
+                                                        <div class="btn-cell">
+                                                            <a class="actionBlue disabled"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
 
                                 <!-- Edit Modal -->
@@ -1298,13 +1403,10 @@
                                             <div class="modal-body">
                                                 <div class="row">
                                                     <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                                        <label class="required control-label" for="">Subject:</label>
-                                                        <input id="" name="" value="" class="form-control input-md" required type="text">
-                                                    </div>
-
-                                                    <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                                         <label class="required control-label" for="">Note:</label>
                                                         <textarea class="form-control" maxlength="4000" spellcheck="true" rows="11" cols="20" placeholder="Please enter note (maximum of 4000 characters)" id=""></textarea>
+
+                                                        <label for="" class="control-label"><input type="checkbox" id="" name="" value="true"> Internal Note</label>
                                                     </div>
                                                 </div>
                                             </div>

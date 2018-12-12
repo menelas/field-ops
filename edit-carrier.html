@@ -8,7 +8,6 @@
     <title>Insurance Office of America - Carrier Contact Database</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/app.bootstrap.css">
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/edit-carrier.css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -81,9 +80,6 @@
                                         <hr>
                                     </li>
                                     <li><a href="admin-carrier-search-accounting.html">Carriers</a>
-                                        <hr>
-                                    </li>
-                                    <li><a href="admin-accounting-report.html">Report</a>
                                         <hr>
                                     </li>
                                 </ul>
@@ -171,10 +167,7 @@
                         </ul>
                     </li>
                     <hr />
-                    <li>
-                        <a href="real-estate-dashboard.html"><i class="fa fa-building fa-2x" aria-hidden="true"></i><span>RE & CA</span></a>
-                    </li>
-                    <hr />
+
                     <ul class="nav nav-sidebar nav-sidebar2">
                         <li class="dropdown">
                             <hr>
@@ -209,22 +202,24 @@
                             <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-3">
                                 <label class="required control-label" for="">Name:</label>
                                 <span class="form-control-static">CNA - Carrier</span>
-                                <input type="checkbox" value="true">
-                                <label class="control-label" for="">Is Active</label>
+                                    <div class="clearfix"></div>
+
+                                    <input type="checkbox" value="true">
+                                    <label class="control-label" for="">Is Active</label>
                             </div>
 
-                            <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-3 col-master-code">
+                            <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-3 carrier">
                                 <label class="control-label" for="">Master Code:</label>
                                 <input id="" name="" value="MNW453" class="form-control input-md" required="" type="text">
                             </div>
 
-                            <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-3">
+                            <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-3 carrier">
                                 <label class="control-label" for="">Carrier URL:</label>
                                 <input id="" name="" value="https://www.cna.com" class="form-control input-md" type="text">
                                 <div class="external"><i class="fa fa-external-link"></i> <a href="https://www.cna.com" target="_blank">Go to site</a></div>
                             </div>
 
-                            <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-3">
+                            <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-3 carrier">
                                 <label class="control-label" for="">Carrier Agent Portal Link:</label>
                                 <input id="" name="" value="https://www.travelers.com/foragents" class="form-control input-md" type="text">
                                 <div class="external"><i class="fa fa-external-link"></i> <a href="https://www.travelers.com/foragents" target="_blank">Go to site</a></div>
@@ -232,19 +227,30 @@
                         </div>
 
                         <div class="row">
-                            <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-6">
+
+                            <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-3">
+                                <label class="control-label" for="">Agency Principal/Designated Contact Person:</label>
+                                <div class="input-group">
+                                    <input class="form-control" id="" name="" type="search" value="Jake Townsend" autocomplete="off">
+                                    <input name="" type="hidden" class="autocompletehidden" value="">
+                                    <div class="input-group-addon"><i class="fa fa-search"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-3">
                                 <label class="control-label loss-run-title" for="">Access:</label>
 
                                 <a data-toggle="modal" class="btn icon-btn add-button" data-toggle="modal" data-target="#add-loss-run"><i class="fa fa-plus"></i></a>
 
                                 <span class="loss-run-text">Title Sample 1: <a href="mailto:sample@company.com">sample@company.com</a></span>
                                 <span class="loss-run-text">Title Sample 2: <a href="mailto:sample@company.com">sample@company.com</a></span>
-                                <span class="loss-run-text">Title Sample 3: <a href="http://www.motionwaysinc.com/insuranceofficeofamerica">http://www.motionwaysinc.com/insuranceofficeofamerica</a></span>
+                                <span class="loss-run-text">Title Sample 3: <a href="http://www.motionwaysinc.com/insuranceo">http://www.motionwaysinc.com/insurance</a></span>
                                 <span class="loss-run-text">Title Sample 4: <a href="mailto:sample@company.com">sample@company.com</a></span>
                                 <span class="loss-run-text">Title Sample 5: <a href="mailto:sample@company.com">sample@company.com</a></span>
                             </div>
 
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-downloads">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 carrier">
                                 <label class="control-label" for="">Downloads:</label>
 
                                 <div class="tablecontainer">
@@ -287,67 +293,95 @@
                             </div>
 
                             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-                                <div class="carrier-lines-checked">Aviation</div>
+                                <div class="carrier-lines-checked">Casualty</div>
                             </div>
 
                             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-                                <div class="carrier-lines-checked">Commercial Package</div>
-                                <div class="carrier-lines-checked">Environmental</div>
+                                <div class="carrier-lines-checked">Contingency</div>
+                                <div class="carrier-lines-checked">Directors & Officers</div>
                             </div>
 
                             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-                                <div class="carrier-lines-checked">Inland Marine</div>
+                                <div class="carrier-lines-checked">Excess Liability</div>
                             </div>
 
                             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-                                <div class="carrier-lines-checked">Property</div>
+                                <div class="carrier-lines-checked">Reinsurance</div>
                             </div>
                         </div>
 
                         <div class="row">
+                            <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-3 col-specialty" style="display: none;">
+                                <label class="control-label" for="">Specialty</label>
+                                <select data-placeholder="-- Select Specialty -- " multiple class="chosen-select-width" tabindex="16">
+                                    <option>Specialty 1</option>
+                                    <option>Specialty 2</option>
+                                    <option>Specialty 3</option>
+                                    <option>Specialty 4</option>
+                                </select>
+                            </div>
+
                             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 toggle-boxes" style="display: none">
                                 <div class="checkbox">
-                                    <label for=""><input class="" name="" id="" value="" type="checkbox" checked>Aviation</label>
-                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Agriculture</label>
-                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Auto</label>
-                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Bonds</label>
-                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Business Owners (BOP)</label>
-                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Builders Risk</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Accident & Health</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Agribusiness & Agriculture</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Aviation</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Boiler & Machinery</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Business Income</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Business Interruption</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Business Owners Policy</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Cargo</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox" checked>Casualty</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Commercial Auto</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Commercial Flood</label>
                                 </div>
                             </div>
 
                             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 toggle-boxes" style="display: none">
                                 <div class="checkbox">
-
-                                    <label for=""><input class="" name="" id="" value="" type="checkbox" checked>Commercial Package</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Commercial Property</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Commercial Umbrella</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Construction</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox" checked>Contingency</label>
                                     <label for=""><input class="" name="" id="" value="" type="checkbox">Credit Insurance</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Crime</label>
                                     <label for=""><input class="" name="" id="" value="" type="checkbox">Cyber Liability</label>
-                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Difference In Conditions (DIC)</label>
-                                    <label for=""><input class="" name="" id="" value="" type="checkbox" checked>Environmental</label>
-                                    <label for=""><input class="" name="" id="" value="" type="checkbox"> Employments Practices Liability/Directors & Offices Liability (Management Liability)</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox" checked>Directors & Officers</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Employers Liability</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Employment Practices Liability</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Employee Benefits</label>
                                 </div>
                             </div>
 
                             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 toggle-boxes" style="display: none">
                                 <div class="checkbox">
-                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Foreign Package</label>
-                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Flood</label>
-                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Garage</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Environmental</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Equine</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Equipment Breakdown</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox" checked>Excess Liability</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Executive & Financial Risks</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Fiduciary Liability</label>
                                     <label for=""><input class="" name="" id="" value="" type="checkbox">General Liability</label>
-                                    <label for=""><input class="" name="" id="" value="" type="checkbox" checked>Inland Marine</label>
-                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Ocean Marine/Cargo</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Inland Marine</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">International</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Kidnap & Ransom</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Professional Liability (Architects & Engineers)</label>
                                 </div>
                             </div>
 
                             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 toggle-boxes" style="display: none">
                                 <div class="checkbox">
-                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Professional Liability/E&O (A&E; Lawyers; Technology; Misc.)</label>
-                                    <label for=""><input class="" name="" id="" value="" type="checkbox" checked>Property</label>
-                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Transportation/Truckers</label>
-                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Travel Accident</label>
-                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Umbrella/Excess Liability</label>
-                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Workers' Compensation</label>
-
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Professional Liability (E&O)</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Professional Liability (Lawyers)</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox" checked>Reinsurance</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Representations & Warranties</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Specie & Fine Art</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Supply Chain Risk</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Trade Credit & Political Risk</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Transportation</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">War & Terrorism</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Workers Compensation</label>
+                                    <label for=""><input class="" name="" id="" value="" type="checkbox">Workplace Violence</label>
                                 </div>
                             </div>
                         </div>
@@ -412,10 +446,14 @@
 
                                 <div id="contacts" class="tab-pane fade in active tabs-info">
                                     <div class="pull-right tab-search">
-                                        <div class="form-inline">
-                                            <label for="" class="control-label branch-sub-label"><input type="checkbox" id="" name="" value="true"> Include All Branches</label>
+                                        <div class="form-group">
+                                            <label class="sr-only control-label" for="">Search</label>
                                             <input id="" name="" class="form-control" type="search" value="" placeholder="Type here to search...">
                                         </div>
+                                    </div>
+
+                                    <div class="pull-right include-all-branches">
+                                        <label for="" class="control-label branch-sub-label"><input type="checkbox" id="" name="" value="true"> Include All Branches</label>
                                     </div>
 
                                     <div class="portal-tables">
@@ -858,7 +896,6 @@
                                     </div>
                                 </div>
                                 <!-- Modal -->
-
                             </div>
                         </div>
                     </div>
@@ -873,8 +910,8 @@
 
     <script type="text/javascript" src="chosen_v1.6.2/docsupport/multi-select.js"></script>
     <script type="text/javascript" src="js/tooltip.js"></script>
-    <script type="text/javascript" src="js/agreement.js"></script>
     <script type="text/javascript" src="js/edit-carrier.js"></script>
+    <script type="text/javascript" src="js/agreement.js"></script>
 
 </body>
 

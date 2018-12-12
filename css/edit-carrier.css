@@ -89,6 +89,10 @@ tr .control-label {
 	margin-top: 0px;
 }
 
+.title-button .chosen-container.chosen-container-multi {
+    width: 86% !important;
+}
+
 /*Code Tab*/
 #add-branch-code .toggle-tr td, #add-branch-code .toggle-tr th {
 	padding-left: 10px !important;
